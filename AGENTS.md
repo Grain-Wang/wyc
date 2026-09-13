@@ -151,7 +151,47 @@ LLM-as-judge 只能作为辅助指标，不能作为核心 claim 的唯一 oracl
 10.9. 必要的独立重复。
 初版原型不赢 baseline 不构成自动淘汰；必须判断是问题不存在、机制假设错误，还是实现与优化尚未充分。不要在问题尚未被最小测试证实时建设通用框架或大规模实验矩阵。
 ---
-11. Candidate Gate
+11. Research Direction Selection Gate
+对于新的研究主题，在首次选题阶段必须保留用户人工确认节点。
+
+Codex 可以自主完成：
+- 系统文献检索；
+- literature map；
+- research gap 分析；
+- 最多 5 个 Research Opportunities；
+- 每个方向的 novelty audit；
+- strongest reviewer rejection；
+- 候选方向排序与推荐理由。
+
+但是，在首次形成候选方向后，必须停止并向用户完整汇报：
+1. 最多 5 个 Research Opportunities；
+2. 每个方向的核心问题；
+3. 最接近的 prior work；
+4. 核心算法创新点；
+5. novelty risk；
+6. 单卡资源可行性；
+7. 推荐排序；
+8. Rank 1 相比 Rank 2 的优势与风险。
+
+在用户明确选择某个 Research Opportunity 之前，禁止：
+- 自动将 Rank 1 视为最终选题；
+- 创建或继续执行针对某个候选方向的 canary；
+- 启动 GPU 训练；
+- 进入完整算法 prototype；
+- 开始大规模 baseline 实验；
+- 将候选方向升级为 Paper Candidate；
+- 撰写完整论文。
+
+只有收到用户明确授权，例如：
+“选择方向 X，开始 canary”
+或语义等价的指令后，才允许进入实验阶段。
+
+该人工确认 Gate 只作用于“首次研究方向选择”这一关键节点。
+方向被用户确认之后，具体实验实现、调试、复现实验、误差分析和常规算法迭代仍由 Codex 在既有权限范围内自主完成。
+
+如果研究方向在后续被证伪，需要切换到另一个 Research Opportunity，也必须再次经过用户确认，不得自动切换方向。
+---
+12. Candidate Gate
 本节只约束从 Research Opportunity 升级到完整 Paper Build，不约束 5 个研究机会的初始入围。研究机会可以在问题已证实但算法仍在迭代时保留。
 只有同时满足以下条件，才允许进入完整 Paper Build：
 - 算法 novelty 清楚；

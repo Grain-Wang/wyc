@@ -1,5 +1,11 @@
 # AutoResearch 当前接续状态
 
+> **2026-09-13 `paper5` NAS/LLM 研究目录与方向选择门禁（优先于下方旧项目内容）**
+>
+> - 当前活动分支为 `paper5`，NAS/LLM 研究内容统一归档于 `paper5/`；不得再建立根目录 `research/nas_llm/` 作为并行研究目录。
+> - 根 `AGENTS.md` 已加入 **Research Direction Selection Gate**：首次形成至多五个候选方向后必须向用户完整汇报并停止；用户明确选择方向前，不得认定 Rank 1、创建或执行 canary、启动训练、进入算法 prototype、大规模 baseline、Paper Candidate 或完整论文阶段。方向被证伪后的切换也必须重新确认。
+> - 现有未运行的 interaction canary 脚本、配置、测试和依赖声明已保留并迁移到 `paper5/` 对应目录；未产生数值结果，亦未启动模型下载、推理或训练。该实现不是选题确认或科学证据，只有用户明确授权相应 Research Opportunity 后才可继续。
+
 > **2026-08-27 Round7/Round8 P0 最终状态（优先于下方全部内容）**
 >
 > - 当前分支为 `paper1`，Round7/Round8 P0 代码与协议提交 `f88ff65`、Depth Anything 本地锁定修复 `04b28d2`、运行时 provenance `65a4b3f`、正式 004-A 结果与停止决定 `9cd7dea`。Round6/Round7 回应文件名已修正为 `response_round6.md`、`response_round7.md`；历史目录名因既有链接保留。本轮新增 `response_round8.md`。
