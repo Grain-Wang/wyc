@@ -1,0 +1,20 @@
+{
+  "batch_size": 1,
+  "calibration_data_url": "https://raw.githubusercontent.com/pytorch/examples/main/word_language_model/data/wikitext-2/train.txt",
+  "calibration_sequences": 8,
+  "dtype": "float16",
+  "edge_exclusion": 1,
+  "edit_count": 6,
+  "edit_family": "whole_transformer_block_skip",
+  "formal_a800_h1_h2_deferred": true,
+  "memory_release_tolerance_mib": 16.0,
+  "model_id": "Qwen/Qwen2.5-0.5B",
+  "pair_count": 15,
+  "reproducibility_tolerance": 1e-08,
+  "revision": "23c3f65dbb728a248a1dbe9ac90216e6ef3de5ac",
+  "run_label": "SMOKE TEST / PRELIMINARY",
+  "seed": 20260917,
+  "sequence_length": 256,
+  "validation_data_url": "https://raw.githubusercontent.com/pytorch/examples/main/word_language_model/data/wikitext-2/valid.txt",
+  "validation_sequences": 8
+}
