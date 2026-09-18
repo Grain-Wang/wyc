@@ -1,5 +1,6 @@
 status: design_only_not_executable
 experiment_id: direction_01_h1_additive_breakdown
+scope: h1_small_hypothesis_validation
 model:
   id: Qwen/Qwen2.5-1.5B
   revision: 8faed761d45a263340a0528343f099c05c9a4323
@@ -24,10 +25,28 @@ sequence_length: 512
 batch_size: 1
 edit:
   family: whole_transformer_block_skip
+  role: structural_intervention_operator
+  purpose: measure_architecture_interaction
+  pruning_objective: false
   layer_indices: [1, 3, 6, 8, 10, 12, 15, 17, 19, 21, 24, 26]
 pair_sampling:
   strategy: exhaustive_unordered
   pair_count: 66
+baselines:
+  fit_split: calibration
+  evaluation_split: validation
+  prediction_features_split: validation
+  additive: single_effect_sum
+  mean_interaction: calibration_mean_pair_residual_offset
+  linear_regression:
+    estimator: ordinary_least_squares
+    features: [delta_first, delta_second]
+    target: delta_pair
+    fit_intercept: true
+h1_extension:
+  condition: stable_decision_relevant_additive_breakdown
+  plan: expand_block_locations_and_evaluate_more_pairs
+  status: requires_separate_protocol_and_approval
 variance:
   bootstrap_replicates: 2000
   bootstrap_unit: validation_window

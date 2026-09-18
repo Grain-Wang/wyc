@@ -7,6 +7,8 @@ frozen design record, not an input accepted by an existing runner. The current
 preliminary. The older `paper5/experiments/interaction_canary.py` is a separate
 generic interaction probe. A dedicated H1 entry point and per-sequence evidence
 writer would be needed after review; neither is implemented here.
+The 12 edits and 66 pairs below define **H1-small hypothesis validation**, not
+a final paper-scale experiment.
 
 ## 1. Research question
 
@@ -64,9 +66,11 @@ against the actual files before an H1 run; they are not H1 evidence.
 
 ## 5. Edit definition
 
-Use the existing `whole_transformer_block_skip` operation: replace one decoder
-block's output with its residual-stream input through a temporary forward hook,
-then restore the parent model. Use zero-based block indices
+Use the existing `whole_transformer_block_skip` operation as a **structural
+intervention operator** for measuring architecture interaction, not as a
+pruning objective or a proposed compression method. Replace one decoder block's
+output with its residual-stream input through a temporary forward hook, then
+restore the parent model. Use zero-based block indices
 `[1, 3, 6, 8, 10, 12, 15, 17, 19, 21, 24, 26]`, the evenly spaced 12-block
 selection with one excluded block at each edge of a 28-block model. A pair
 applies both hooks simultaneously. Before scoring, require finite parent NLL,
@@ -75,10 +79,12 @@ no-edit equality, hook restoration, and order-independent pair effects.
 ## 6. Number of edits
 
 Score one parent, 12 unique single edits, and all $\binom{12}{2}=66$ unique
-two-edit architectures on each split. The edit family and locations are fixed
-before seeing H1 validation results. This is a diagnostic of block removal; a
-positive result alone does not establish generality to locally distilled block
-replacements or prove that the proposed transport method works.
+two-edit architectures on each split. This is **H1-small hypothesis
+validation**, not the final paper-scale experiment. The edit family and
+locations are fixed before seeing H1 validation results. The operator probes
+interactions under block removal; a positive result alone does not establish
+generality to locally distilled block replacements or prove that the proposed
+transport method works.
 
 ## 7. Pair sampling strategy
 
@@ -87,18 +93,46 @@ Use exhaustive unordered pairs from the fixed 12 locations, sorted by
 validation-driven resampling. Report effects by layer distance and by the depth
 of the upstream edit as descriptive slices; keep all 66 pairs in primary metrics.
 
-## 8. Metrics and variance analysis
+## 8. H1 prediction baselines
 
-- **Additive error:** $\widehat\Delta_{ij,S}=\Delta_{i,S}+\Delta_{j,S}$;
-  report mean and median $|\Delta_{ij,S}-\widehat\Delta_{ij,S}|$, RMSE, and
-  scatter against measured $\Delta_{ij,S}$ in NLL units.
+Fit learned baselines using the 66 calibration pair effects only. For the
+held-out comparison, supply every baseline with the same validation single-edit
+effects and predict the 66 validation pair effects without using their labels
+for fitting. Keep pairs ordered by `(first_layer, second_layer)` when forming
+regression features. The three baselines are:
+
+- **Additive baseline:**
+  $\widehat\Delta_{ij,\mathrm{val}}=\Delta_{i,\mathrm{val}}+\Delta_{j,\mathrm{val}}$.
+- **Mean interaction baseline:** estimate
+  $\bar I_{\mathrm{cal}}=\frac{1}{66}\sum_{i<j}I_{ij,\mathrm{cal}}$ and predict
+  $\Delta_{i,\mathrm{val}}+\Delta_{j,\mathrm{val}}+\bar I_{\mathrm{cal}}$.
+  This constant offset can improve error but cannot change pair rankings.
+- **Linear regression baseline:** fit ordinary least squares with an intercept,
+  $\Delta_{ij,\mathrm{cal}}=b_0+b_1\Delta_{i,\mathrm{cal}}+
+  b_2\Delta_{j,\mathrm{cal}}+\epsilon_{ij}$, then predict from
+  $[\Delta_{i,\mathrm{val}},\Delta_{j,\mathrm{val}}]$.
+
+Evaluate all three against measured validation pair effects using the metrics
+below. Because the same block pairs occur in calibration and validation, these
+comparisons test transfer across data windows, not generalization to unseen
+block pairs. The secondary deployment diagnostic replaces validation singles
+with calibration singles for every baseline and reports the resulting additional
+cross-split error separately.
+
+## 9. Metrics and variance analysis
+
+- **Prediction error:** for each baseline, report mean and median
+  $|\Delta_{ij,\mathrm{val}}-\widehat\Delta_{ij,\mathrm{val}}|$, RMSE, and
+  scatter against measured $\Delta_{ij,\mathrm{val}}$ in NLL units. Retain the
+  additive baseline's error as the H1 additive-breakdown diagnostic.
 - **Interaction residual:** report signed $I_{ij,S}$, its sign counts, and the
   median of $|I_{ij,S}|/\max(|\Delta_{i,S}|+|\Delta_{j,S}|,10^{-12})$.
   Flag pairs whose denominator is below `0.01` NLL separately so small singles
   do not create a misleading ratio-only claim.
-- **Rank correlation:** report Spearman $\rho$ and Kendall $\tau_b$ between
-  predicted and measured pair damage, plus overlap of the 17 lowest-damage
-  pairs (the top quartile of 66, rounded up). Lower NLL damage is better.
+- **Rank correlation:** for each baseline, report Spearman $\rho$ and Kendall
+  $\tau_b$ between predicted and measured pair damage, plus overlap of the 17
+  lowest-damage pairs (the top quartile of 66, rounded up). Lower NLL damage is
+  better.
 - **Variance:** future H1 code must retain per-window NLL for the parent, each
   single, and each pair. Compute paired window-level residuals
   $I_{ij,s}=L_s(\{i,j\})-L_s(\{i\})-L_s(\{j\})+L_s(\varnothing)$.
@@ -110,7 +144,7 @@ of the upstream edit as descriptive slices; keep all 66 pairs in primary metrics
   shards. These intervals describe sensitivity to sampled windows from one
   corpus, not cross-domain generalization.
 
-## 9. Expected A800 runtime
+## 10. Expected A800 runtime
 
 The planned workload is 79 architectures per split and 6,471,680 scored input
 tokens in total (79 × (96 + 64) × 512), before repeated safety checks. Plan for
@@ -120,7 +154,7 @@ Direction 1 full-canary estimate cannot establish A800 throughput for this
 1.5B H1 design. A later approved run must record actual wall time and peak
 memory and stop for review if the workload exceeds the planned budget.
 
-## 10. Failure criteria and interpretation
+## 11. Failure criteria and interpretation
 
 Use the existing generic interaction probe's point-estimate thresholds as an
 explicit H1 diagnostic, rather than tuning them after viewing validation:
@@ -143,3 +177,9 @@ remains reliable, H1 has not shown a decision-relevant additive breakdown.
 Even a confirmed H1 supports only this one model, edit family, and corpus;
 Direction 1 remains a Research Opportunity, not a Paper Candidate. No H2
 transport or formal H1 execution is authorized by this document.
+
+If H1-small shows stable, decision-relevant additive breakdown, a later
+approved H1 extension should increase the number of candidate block locations
+and evaluate more block pairs under a separately fixed sampling plan. This
+extension is future hypothesis validation, not an automatic experiment launch
+or a final paper-scale result.
