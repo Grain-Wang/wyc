@@ -1,0 +1,35 @@
+status: pipeline_sanity_only
+model:
+  id: Qwen/Qwen2.5-1.5B
+  revision: 8faed761d45a263340a0528343f099c05c9a4323
+  dtype: bfloat16
+dataset:
+  name: WikiText-2 raw
+  validation:
+    url: https://raw.githubusercontent.com/pytorch/examples/main/word_language_model/data/wikitext-2/valid.txt
+    sha256: f0737ed31fc1329026e95cb8b98e19c2a182c39c240ab909dc31abf2f8af58e8
+random_seed: 20260919
+sequence_length: 128
+validation_sequences: 2
+batch_size: 1
+edit:
+  family: whole_transformer_block_skip
+  layer_indices:
+  - 1
+  - 3
+output_directory: paper5/results/canary/direction_01/H1_sanity
+cache_directory: paper5/.cache/h1_sanity
+actual_run:
+  git_commit: a970d3a4acb7a55a9e8b7f4af78b93d850a887c7
+  python: 3.12.14
+  torch: 2.4.1+cu121
+  transformers: 4.56.1
+  cuda_runtime: '12.1'
+  source_sha256: f0737ed31fc1329026e95cb8b98e19c2a182c39c240ab909dc31abf2f8af58e8
+  resolved_model_revision: 8faed761d45a263340a0528343f099c05c9a4323
+  selected_gpu: '2'
+  cuda_visible_devices: '2'
+  gpu_name: NVIDIA A800 80GB PCIe
+  runtime_seconds: 31.114221792668104
+  peak_gpu_memory_mib: 3125.27880859375
+  pipeline_success: true
