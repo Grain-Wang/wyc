@@ -20,6 +20,7 @@ from typing import TYPE_CHECKING, Any, Mapping, Sequence
 
 REPOSITORY_ROOT = Path(__file__).resolve().parents[4]
 H1_CACHE_ROOT = REPOSITORY_ROOT / "paper5/.cache/h1_small"
+DEFAULT_DATA_ROOT = "~/whr/paper5/data"
 os.environ.setdefault("CUBLAS_WORKSPACE_CONFIG", ":4096:8")
 os.environ["HF_HOME"] = str(H1_CACHE_ROOT / "huggingface")
 os.environ["HF_XET_CACHE"] = str(H1_CACHE_ROOT / "huggingface/xet")
@@ -568,18 +569,38 @@ def load_h1_config(path: Path) -> dict[str, Any]:
     return config
 
 
-def _checked_text(url: str, expected_sha256: str, destination: Path) -> str:
-    """Load one public source file after verifying its frozen SHA-256 digest."""
+def _data_root() -> Path:
+    """Return the configurable local WikiText root with home expansion."""
+    configured = os.environ.get("PAPER5_DATA_ROOT", DEFAULT_DATA_ROOT)
+    if not configured.strip():
+        raise ValueError("PAPER5_DATA_ROOT must not be empty.")
+    return Path(configured).expanduser()
+
+
+def _checked_text(
+    local_source: Path,
+    url: str,
+    expected_sha256: str,
+    destination: Path,
+) -> str:
+    """Prefer a verified local source, otherwise use the verified URL cache."""
     destination.parent.mkdir(parents=True, exist_ok=True)
-    if destination.exists():
+    downloaded = False
+    if local_source.exists():
+        content = local_source.read_bytes()
+        source_name = local_source.name
+    elif destination.exists():
         content = destination.read_bytes()
+        source_name = destination.name
     else:
         with urllib.request.urlopen(url, timeout=120) as response:  # noqa: S310
             content = response.read()
+        source_name = destination.name
+        downloaded = True
     actual_sha256 = hashlib.sha256(content).hexdigest()
     if actual_sha256 != expected_sha256:
-        raise ValueError(f"Source hash mismatch for {destination.name}.")
-    if not destination.exists():
+        raise ValueError(f"Source hash mismatch for {source_name}.")
+    if downloaded:
         destination.write_bytes(content)
     return content.decode("utf-8")
 
@@ -783,12 +804,15 @@ def run_h1_small(config: dict[str, Any]) -> dict[str, Any]:
     if output_dir.exists() and any(output_dir.iterdir()):
         raise FileExistsError("H1-small output directory already contains files.")
     cache_dir = H1_CACHE_ROOT
+    data_root = _data_root()
     calibration_text = _checked_text(
+        data_root / "train.txt",
         str(config["dataset"]["calibration"]["url"]),
         str(config["dataset"]["calibration"]["sha256"]),
         cache_dir / "wikitext-2-train.txt",
     )
     validation_text = _checked_text(
+        data_root / "valid.txt",
         str(config["dataset"]["validation"]["url"]),
         str(config["dataset"]["validation"]["sha256"]),
         cache_dir / "wikitext-2-valid.txt",

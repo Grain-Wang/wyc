@@ -2,14 +2,19 @@
 
 from __future__ import annotations
 
+import hashlib
 import itertools
+import os
 import tempfile
 import unittest
 from pathlib import Path
+from unittest.mock import MagicMock, patch
 
 import numpy as np
 
 from paper5.experiments.canary.direction_01.run_h1_small import (
+    _checked_text,
+    _data_root,
     analyze_h1_small,
     load_h1_config,
     write_interaction_heatmap,
@@ -142,6 +147,115 @@ class H1SmallAnalysisTest(unittest.TestCase):
         )
         self.assertEqual(config["baselines"]["fit_split"], "calibration")
         self.assertEqual(config["baselines"]["evaluation_split"], "validation")
+        self.assertEqual(config["model"]["id"], "Qwen/Qwen2.5-1.5B")
+        self.assertEqual(
+            config["model"]["revision"],
+            "8faed761d45a263340a0528343f099c05c9a4323",
+        )
+        self.assertEqual(config["sequence_length"], 512)
+        self.assertEqual(config["calibration_size"]["sequences"], 96)
+        self.assertEqual(config["validation_size"]["sequences"], 64)
+
+
+class H1SmallDataLoadingTest(unittest.TestCase):
+    """Exercise local-first input loading without network or GPU access."""
+
+    def test_verified_local_file_is_preferred(self) -> None:
+        """A matching local source is read without attempting the URL."""
+        content = b"local WikiText fixture\n"
+        expected_sha256 = hashlib.sha256(content).hexdigest()
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            local_source = root / "data" / "train.txt"
+            local_source.parent.mkdir()
+            local_source.write_bytes(content)
+            destination = root / "cache" / "wikitext-2-train.txt"
+            with patch(
+                "paper5.experiments.canary.direction_01.run_h1_small.urllib.request.urlopen",
+                side_effect=AssertionError("URL fallback must not run"),
+            ):
+                loaded = _checked_text(
+                    local_source,
+                    "https://example.invalid/train.txt",
+                    expected_sha256,
+                    destination,
+                )
+            self.assertEqual(loaded, content.decode("utf-8"))
+            self.assertFalse(destination.exists())
+
+    def test_local_hash_mismatch_fails_without_fallback(self) -> None:
+        """A present but invalid local source cannot silently use the URL."""
+        expected_sha256 = hashlib.sha256(b"expected").hexdigest()
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            local_source = root / "train.txt"
+            local_source.write_bytes(b"wrong")
+            destination = root / "cache" / "wikitext-2-train.txt"
+            destination.parent.mkdir()
+            destination.write_bytes(b"expected")
+            with patch(
+                "paper5.experiments.canary.direction_01.run_h1_small.urllib.request.urlopen",
+                side_effect=AssertionError("URL fallback must not run"),
+            ):
+                with self.assertRaisesRegex(ValueError, "Source hash mismatch"):
+                    _checked_text(
+                        local_source,
+                        "https://example.invalid/train.txt",
+                        expected_sha256,
+                        destination,
+                    )
+
+    def test_missing_local_file_uses_verified_url_fallback(self) -> None:
+        """The URL is used only when the configured local source is absent."""
+        content = b"downloaded WikiText fixture\n"
+        expected_sha256 = hashlib.sha256(content).hexdigest()
+        response = MagicMock()
+        response.__enter__.return_value.read.return_value = content
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            destination = root / "cache" / "wikitext-2-valid.txt"
+            url = "https://example.invalid/valid.txt"
+            with patch(
+                "paper5.experiments.canary.direction_01.run_h1_small.urllib.request.urlopen",
+                return_value=response,
+            ) as urlopen:
+                loaded = _checked_text(
+                    root / "missing" / "valid.txt",
+                    url,
+                    expected_sha256,
+                    destination,
+                )
+            urlopen.assert_called_once_with(url, timeout=120)
+            self.assertEqual(destination.read_bytes(), content)
+        self.assertEqual(loaded, content.decode("utf-8"))
+
+    def test_fallback_hash_mismatch_is_not_cached(self) -> None:
+        """Downloaded bytes must pass the same frozen hash check before caching."""
+        response = MagicMock()
+        response.__enter__.return_value.read.return_value = b"wrong"
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            destination = root / "cache" / "wikitext-2-valid.txt"
+            with patch(
+                "paper5.experiments.canary.direction_01.run_h1_small.urllib.request.urlopen",
+                return_value=response,
+            ):
+                with self.assertRaisesRegex(ValueError, "Source hash mismatch"):
+                    _checked_text(
+                        root / "missing" / "valid.txt",
+                        "https://example.invalid/valid.txt",
+                        hashlib.sha256(b"expected").hexdigest(),
+                        destination,
+                    )
+            self.assertFalse(destination.exists())
+
+    def test_data_root_supports_environment_and_expanduser(self) -> None:
+        """The data root is configurable without a username-specific path."""
+        configured = "~/whr/paper5/data"
+        with patch.dict(os.environ, {"PAPER5_DATA_ROOT": configured}):
+            self.assertEqual(_data_root(), Path(configured).expanduser())
+        with patch.dict(os.environ, {}, clear=True):
+            self.assertEqual(_data_root(), Path("~/whr/paper5/data").expanduser())
 
 
 if __name__ == "__main__":
