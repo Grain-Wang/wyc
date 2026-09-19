@@ -1,0 +1,265 @@
+status: approved_h1_small
+experiment_id: direction_01_h1_additive_breakdown
+scope: h1_small_hypothesis_validation
+model:
+  id: Qwen/Qwen2.5-1.5B
+  revision: 8faed761d45a263340a0528343f099c05c9a4323
+  dtype: bfloat16
+dataset:
+  name: WikiText-2 raw
+  calibration:
+    split: train
+    url: https://raw.githubusercontent.com/pytorch/examples/main/word_language_model/data/wikitext-2/train.txt
+    sha256: 9e9fa1ad55b1c2c95b08e37dd8e653f638fac2c6de904b79e813611eefbc985f
+  validation:
+    split: valid
+    url: https://raw.githubusercontent.com/pytorch/examples/main/word_language_model/data/wikitext-2/valid.txt
+    sha256: f0737ed31fc1329026e95cb8b98e19c2a182c39c240ab909dc31abf2f8af58e8
+calibration_size:
+  sequences: 96
+  shards: 3
+  sequences_per_shard: 32
+validation_size:
+  sequences: 64
+sequence_length: 512
+batch_size: 1
+edit:
+  family: whole_transformer_block_skip
+  role: structural_intervention_operator
+  purpose: measure_architecture_interaction
+  pruning_objective: false
+  layer_indices:
+  - 1
+  - 3
+  - 6
+  - 8
+  - 10
+  - 12
+  - 15
+  - 17
+  - 19
+  - 21
+  - 24
+  - 26
+pair_sampling:
+  strategy: exhaustive_unordered
+  pair_count: 66
+baselines:
+  fit_split: calibration
+  evaluation_split: validation
+  prediction_features_split: validation
+  additive: single_effect_sum
+  mean_interaction: calibration_mean_pair_residual_offset
+  linear_regression:
+    estimator: ordinary_least_squares
+    features:
+    - delta_first
+    - delta_second
+    target: delta_pair
+    fit_intercept: true
+h1_extension:
+  condition: stable_decision_relevant_additive_breakdown
+  plan: expand_block_locations_and_evaluate_more_pairs
+  status: requires_separate_protocol_and_approval
+variance:
+  bootstrap_replicates: 2000
+  bootstrap_unit: validation_window
+random_seed: 20260918
+output_directory: paper5/results/canary/direction_01/H1_small
+run_metadata:
+  scientific_scope: H1-small empirical observation
+  started_at_utc: '2026-09-19T16:22:28.000168+00:00'
+  completed_at_utc: '2026-09-19T16:42:07.538511+00:00'
+  started_from_commit: 5f9b6d76121e562d372862be372341c9c239f582
+  model_id: Qwen/Qwen2.5-1.5B
+  requested_revision: 8faed761d45a263340a0528343f099c05c9a4323
+  resolved_revision: 8faed761d45a263340a0528343f099c05c9a4323
+  tokenizer_id: Qwen/Qwen2.5-1.5B
+  selected_gpu: '0'
+  gpu_name: NVIDIA A800 80GB PCIe
+  gpu_memory_gib: 79.1510009765625
+  peak_allocated_gpu_memory_mib: 3570.78125
+  runtime_seconds: 1179.5383337615058
+  evaluation_runtime_seconds: 860.2479179278016
+  python_version: 3.12.14
+  torch_version: 2.4.1+cu121
+  transformers_version: 4.56.1
+  numpy_version: 2.2.6
+  pyyaml_version: 6.0.3
+  cuda_runtime_version: '12.1'
+  code_sha256:
+    runner: c670b49536053268f41be102aeb4b486babbf6e4678d53e5c4763c02482da127
+    edit_core: a0c957e3c47109b269d3cff4d0a31866ce87ff9013907d096d1981e7aa54fce8
+  selected_source_window_indices:
+    calibration:
+    - 720
+    - 3796
+    - 2979
+    - 3195
+    - 3348
+    - 636
+    - 655
+    - 4470
+    - 3767
+    - 1123
+    - 1907
+    - 4325
+    - 3374
+    - 552
+    - 1983
+    - 279
+    - 3116
+    - 3247
+    - 4798
+    - 2782
+    - 2029
+    - 3681
+    - 252
+    - 2694
+    - 1696
+    - 1
+    - 1432
+    - 3131
+    - 4718
+    - 2055
+    - 4817
+    - 2110
+    - 4972
+    - 3779
+    - 4553
+    - 4505
+    - 779
+    - 375
+    - 3175
+    - 1099
+    - 3387
+    - 3081
+    - 461
+    - 429
+    - 2649
+    - 1815
+    - 4318
+    - 226
+    - 4210
+    - 892
+    - 2021
+    - 2579
+    - 2843
+    - 2661
+    - 426
+    - 768
+    - 2163
+    - 2378
+    - 1777
+    - 2019
+    - 611
+    - 1632
+    - 1668
+    - 2131
+    - 4582
+    - 3185
+    - 3604
+    - 2688
+    - 1024
+    - 3447
+    - 1624
+    - 683
+    - 3712
+    - 4597
+    - 2003
+    - 38
+    - 2557
+    - 648
+    - 2091
+    - 2261
+    - 2086
+    - 4297
+    - 3993
+    - 559
+    - 3219
+    - 3324
+    - 4366
+    - 323
+    - 3151
+    - 2912
+    - 2892
+    - 1031
+    - 2905
+    - 1747
+    - 1426
+    - 1288
+    validation:
+    - 121
+    - 414
+    - 134
+    - 21
+    - 498
+    - 323
+    - 63
+    - 108
+    - 237
+    - 412
+    - 42
+    - 305
+    - 496
+    - 208
+    - 329
+    - 104
+    - 383
+    - 396
+    - 375
+    - 222
+    - 224
+    - 159
+    - 523
+    - 229
+    - 440
+    - 378
+    - 35
+    - 157
+    - 484
+    - 315
+    - 361
+    - 499
+    - 418
+    - 336
+    - 386
+    - 430
+    - 359
+    - 172
+    - 495
+    - 287
+    - 31
+    - 343
+    - 508
+    - 15
+    - 228
+    - 2
+    - 241
+    - 318
+    - 255
+    - 184
+    - 46
+    - 51
+    - 407
+    - 268
+    - 479
+    - 385
+    - 213
+    - 20
+    - 175
+    - 326
+    - 141
+    - 517
+    - 59
+    - 240
+  source_sha256:
+    calibration: 9e9fa1ad55b1c2c95b08e37dd8e653f638fac2c6de904b79e813611eefbc985f
+    validation: f0737ed31fc1329026e95cb8b98e19c2a182c39c240ab909dc31abf2f8af58e8
+  checks:
+    no_edit_matches_parent: true
+    pair_order_independent: true
+    parent_restored: true
+    repeated_no_edit_max_logit_difference: 0.0
+    repeated_no_edit_logits_match: true
+    parent_restored_after_all_edits: true
