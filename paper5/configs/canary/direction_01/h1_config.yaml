@@ -1,4 +1,4 @@
-status: design_only_not_executable
+status: approved_h1_small
 experiment_id: direction_01_h1_additive_breakdown
 scope: h1_small_hypothesis_validation
 model:
@@ -51,4 +51,4 @@ variance:
   bootstrap_replicates: 2000
   bootstrap_unit: validation_window
 random_seed: 20260918
-output_directory: paper5/results/canary/direction_01/h1
+output_directory: paper5/results/canary/direction_01/H1_small
