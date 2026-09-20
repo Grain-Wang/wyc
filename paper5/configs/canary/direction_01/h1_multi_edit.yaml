@@ -1,0 +1,34 @@
+approved_design_commit: abf29124a7acfa0c2b16575b7183468d0ef138df
+archive_commit: 02bdcd523ed2c2715a396fd624b647ef356a1c87
+candidate_manifest_sha256: 7c40b1a1963d76e99144d7b27608fbfc6e68f1831e244f332e217a9c704021b9
+model_revision: 8faed761d45a263340a0528343f099c05c9a4323
+model_id: Qwen/Qwen2.5-1.5B
+dtype: bfloat16
+attention: eager
+edit_family: whole_transformer_block_skip
+layer_indices: [1, 3, 6, 8, 10, 12, 15, 17, 19, 21, 24, 26]
+k_values: [4, 6, 8]
+strata: [global, low]
+candidates_per_stratum: 15
+candidate_seed: 20260920
+direct_seed: 20260921
+holdout_seed: 20260922
+bootstrap_seed: 20260923
+model_seed: 20260918
+sequence_length: 512
+batch_size: 1
+calibration_windows: 96
+calibration_shards: 3
+validation_windows: 64
+bootstrap_replicates: 20000
+direct_budgets: [1, 3, 5, 10, 11, 15]
+shortlist_size: 5
+epsilon_nll: 0.02
+quality_delta_nll: 0.30
+quality_min_candidates: 3
+architecture_window_limit: 14480
+measurement_windows: 14464
+safety_window_limit: 16
+gpu_seconds_limit: 7200
+cpu_analysis_seconds_limit: 1800
+output_directory: paper5/results/canary/direction_01/H1_multi_edit

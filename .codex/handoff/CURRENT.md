@@ -1,5 +1,13 @@
 # AutoResearch 当前接续状态
 
+> **2026-09-20 paper5 H1 多编辑隔离修订 V2（当前任务状态）**
+>
+> - 用户已授权仅修正内部确认窗口隔离，并在测试、提交和 A800 预检通过后继续一次原固定 90 候选诊断；未授权 H2 或扩量。此前阻塞已按源码/数据/原 PyTorch 版本复核成立。
+> - 原 H1-small 六个文件与 INCONCLUSIVE 保留；原多编辑协议不改。V2 补充、冻结 JSON 和执行记录位于 `paper5/experiments/canary/direction_01/`。
+> - V2 保留旧窗及 ±1 排除，再排除所有已核验 smoke/sanity source-token 重叠窗及 ±1；原 hash 规则从 325 合法窗取 64。移除 37/162/163/313/392/393；按 hash 次序补入 436/73/364/527/476/218。候选 manifest 不变。
+> - 修订前未发生新多编辑测量；当前完成 CPU 自检（99+8 tests）、尚未启动正式模型。下一步是提交并以既有 SSH/bundle 路径同步精确提交、CPU prepare 冻结 manifest，再按预算后台启动一次。以实时结果/state/日志为准，不把预检当成实验完成。
+> - 本地原 AutoResearch 的既有修改未触碰；使用已授权独立副本。称谓固定为“项目内隔离后的内部确认集”，无跨文档独立或预训练无污染主张。已披露旧 smoke/sanity 缺 contemporaneous index manifest 的追溯限制。
+
 > **2026-09-13 `paper5` NAS/LLM 研究目录与方向选择门禁（优先于下方旧项目内容）**
 >
 > - 当前活动分支为 `paper5`，NAS/LLM 研究内容统一归档于 `paper5/`；不得再建立根目录 `research/nas_llm/` 作为并行研究目录。
