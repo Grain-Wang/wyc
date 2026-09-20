@@ -1,0 +1,11 @@
+strategy,cold_calibration_units_all_six_panels,cold_calibration_windows,incremental_candidate_units_history_sunk
+s1,13,1248,0
+s1_top5,43,4128,30
+s2,79,7584,0
+s2_top5,109,10464,30
+direct_1,19,1824,6
+direct_3,31,2976,18
+direct_5,43,4128,30
+direct_10,73,7008,60
+direct_11,79,7584,66
+direct_15,103,9888,90

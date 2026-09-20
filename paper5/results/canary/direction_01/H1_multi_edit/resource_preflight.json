@@ -1,0 +1,11 @@
+{
+  "selected_gpu": "1",
+  "cuda_visible_devices": "1",
+  "gpu_uuid": "GPU-e5aa2634-5dc1-ec5a-401b-42a6809b7091",
+  "gpu_name": "NVIDIA A800 80GB PCIe",
+  "memory_used_mib": 21,
+  "memory_free_mib": 81029,
+  "utilization_percent": 0,
+  "minimum_free_mib": 8192,
+  "no_other_processes_terminated": true
+}

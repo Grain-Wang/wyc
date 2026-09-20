@@ -1,0 +1,68 @@
+approved_design_commit: abf29124a7acfa0c2b16575b7183468d0ef138df
+archive_commit: 02bdcd523ed2c2715a396fd624b647ef356a1c87
+candidate_manifest_sha256: 7c40b1a1963d76e99144d7b27608fbfc6e68f1831e244f332e217a9c704021b9
+model_revision: 8faed761d45a263340a0528343f099c05c9a4323
+model_id: Qwen/Qwen2.5-1.5B
+dtype: bfloat16
+attention: eager
+edit_family: whole_transformer_block_skip
+layer_indices:
+- 1
+- 3
+- 6
+- 8
+- 10
+- 12
+- 15
+- 17
+- 19
+- 21
+- 24
+- 26
+k_values:
+- 4
+- 6
+- 8
+strata:
+- global
+- low
+candidates_per_stratum: 15
+candidate_seed: 20260920
+direct_seed: 20260921
+holdout_seed: 20260922
+bootstrap_seed: 20260923
+model_seed: 20260918
+sequence_length: 512
+batch_size: 1
+calibration_windows: 96
+calibration_shards: 3
+validation_windows: 64
+bootstrap_replicates: 20000
+direct_budgets:
+- 1
+- 3
+- 5
+- 10
+- 11
+- 15
+shortlist_size: 5
+epsilon_nll: 0.02
+quality_delta_nll: 0.3
+quality_min_candidates: 3
+architecture_window_limit: 14480
+measurement_windows: 14464
+safety_window_limit: 16
+gpu_seconds_limit: 7200
+cpu_analysis_seconds_limit: 1800
+output_directory: paper5/results/canary/direction_01/H1_multi_edit
+executed_code_commit: eba72bc9e9f59634e0f2f2639d05c1de1c38f308
+input_archive_sha256:
+  config_used.yaml: e164d26699c8f8e8180acec8440d6d74465f6cf7c41cff268807d7a2cdd1cdd6
+  interaction_heatmap.svg: 8b77afaf93ed9843fa3f821bff6aa884dd8a50c1be96084d87bf5508a6545699
+  metrics.json: 9744a0827579042b3c36026b06fc162dee3b793f49846d51b8d5b4983edd39a2
+  per_window_nll.csv: c0b2f17b4320af7664d9e58ba974f8dbeb3662fbf10a9b74826e6bb9185e5c86
+  results.csv: e0cafb3d4859005e7273aaa1abbecb098fa591c8f6a7c0e992353357411e7e17
+  summary.md: e42697f804b1424ece6195a149a2291bca8a5cef9cfe63bfa3f8a789efda0284
+isolation_version: H1_multi_edit_isolation_v2
+isolation_protocol_sha256: 0916ebff023095691e5f1bc6cfa59c993d0865fb353bc66504afb7bb758f204e
+isolation_record_sha256: 401c898fb9aa27857d8a9dfced96be0ea54f1d8655f16db386445971eb4d93cd

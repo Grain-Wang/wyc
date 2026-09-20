@@ -1,0 +1,4575 @@
+{
+  "bootstrap": {
+    "primary_low_G_percentiles": [
+      0.833333,
+      99.166667
+    ],
+    "replicates": 20000,
+    "seed": 20260923,
+    "unit": "paired_V_new_window_all_91_architectures"
+  },
+  "costs": {
+    "full_direct_conditional_units": 91,
+    "full_direct_inclusive_units": 103,
+    "historical_all_windows": 12640,
+    "historical_calibration_used_windows": 7584,
+    "measurement_windows": 14464,
+    "new_calibration_audit_windows": 8640,
+    "new_validation_windows": 5824,
+    "pair_information_extra_windows": 6336,
+    "safety_windows": 8,
+    "total_input_tokens": 7409664
+  },
+  "cpu_analysis_seconds": 2.110655328258872,
+  "decision": {
+    "h2": false,
+    "original_h1_verdict": "INCONCLUSIVE",
+    "qualifying_k": [],
+    "verdict": "STOP_COMPLEX_METHOD_INVESTMENT"
+  },
+  "isolation_version": "H1_multi_edit_isolation_v2",
+  "panels": {
+    "4_global": {
+      "calibration_reference": [
+        6,
+        10,
+        15,
+        17
+      ],
+      "calibration_reference_validation_delta": 0.45137428864836693,
+      "calibration_shards": [
+        {
+          "s1": {
+            "G": 0.0,
+            "R": 0.0,
+            "selected_architecture": [
+              6,
+              10,
+              15,
+              17
+            ]
+          },
+          "s2": {
+            "G": 0.0,
+            "R": 0.0,
+            "selected_architecture": [
+              6,
+              10,
+              15,
+              17
+            ]
+          }
+        },
+        {
+          "s1": {
+            "G": 0.0,
+            "R": 0.0,
+            "selected_architecture": [
+              6,
+              10,
+              15,
+              17
+            ]
+          },
+          "s2": {
+            "G": 0.0,
+            "R": 0.0,
+            "selected_architecture": [
+              6,
+              10,
+              15,
+              17
+            ]
+          }
+        },
+        {
+          "s1": {
+            "G": 0.0,
+            "R": 0.0,
+            "selected_architecture": [
+              6,
+              10,
+              15,
+              17
+            ]
+          },
+          "s2": {
+            "G": 0.0,
+            "R": 0.0,
+            "selected_architecture": [
+              6,
+              10,
+              15,
+              17
+            ]
+          }
+        }
+      ],
+      "confirmation_slice_G": [
+        0.0,
+        0.0
+      ],
+      "practical": false,
+      "prediction_metrics": {
+        "s1": {
+          "calibration_point": {
+            "kendall_tau_b": 0.7714285714285715,
+            "mae": 0.22640783405966242,
+            "pearson": 0.9972443760163979,
+            "rmse": 0.257750864905632,
+            "spearman": 0.8928571428571429,
+            "top_10_overlap_fraction": 0.8,
+            "top_15_overlap_fraction": 1.0,
+            "top_1_overlap_fraction": 1.0,
+            "top_3_overlap_fraction": 0.6666666666666666,
+            "top_5_overlap_fraction": 1.0
+          },
+          "kendall_tau_b": {
+            "interval95": [
+              0.7333333333333333,
+              0.8095238095238095
+            ],
+            "point": 0.7714285714285715
+          },
+          "mae": {
+            "interval95": [
+              0.1359861188319823,
+              0.44942872609529233
+            ],
+            "point": 0.2771211623731588
+          },
+          "pearson": {
+            "interval95": [
+              0.9778865029581899,
+              0.9953054277548935
+            ],
+            "point": 0.9883739193237077
+          },
+          "rmse": {
+            "interval95": [
+              0.15845571516800164,
+              0.6205879597179811
+            ],
+            "point": 0.3487064305014374
+          },
+          "spearman": {
+            "interval95": [
+              0.8535714285714285,
+              0.9321428571428572
+            ],
+            "point": 0.8928571428571429
+          },
+          "top_10_overlap_fraction": {
+            "interval95": [
+              0.8,
+              0.9
+            ],
+            "point": 0.9
+          },
+          "top_15_overlap_fraction": {
+            "interval95": [
+              1.0,
+              1.0
+            ],
+            "point": 1.0
+          },
+          "top_1_overlap_fraction": {
+            "interval95": [
+              1.0,
+              1.0
+            ],
+            "point": 1.0
+          },
+          "top_3_overlap_fraction": {
+            "interval95": [
+              0.6666666666666666,
+              0.6666666666666666
+            ],
+            "point": 0.6666666666666666
+          },
+          "top_5_overlap_fraction": {
+            "interval95": [
+              1.0,
+              1.0
+            ],
+            "point": 1.0
+          }
+        },
+        "s2": {
+          "calibration_point": {
+            "kendall_tau_b": 0.9047619047619048,
+            "mae": 0.037279397497574314,
+            "pearson": 0.9994904523526353,
+            "rmse": 0.05507302766684794,
+            "spearman": 0.975,
+            "top_10_overlap_fraction": 1.0,
+            "top_15_overlap_fraction": 1.0,
+            "top_1_overlap_fraction": 1.0,
+            "top_3_overlap_fraction": 0.6666666666666666,
+            "top_5_overlap_fraction": 1.0
+          },
+          "kendall_tau_b": {
+            "interval95": [
+              0.8476190476190476,
+              0.8857142857142857
+            ],
+            "point": 0.8666666666666667
+          },
+          "mae": {
+            "interval95": [
+              0.09855178745877409,
+              0.30486738621981585
+            ],
+            "point": 0.13722422516180405
+          },
+          "pearson": {
+            "interval95": [
+              0.9855308335635211,
+              0.9984175027758906
+            ],
+            "point": 0.9938011750750277
+          },
+          "rmse": {
+            "interval95": [
+              0.1359655587380841,
+              0.4007190331124359
+            ],
+            "point": 0.17806869296710828
+          },
+          "spearman": {
+            "interval95": [
+              0.9464285714285714,
+              0.9714285714285714
+            ],
+            "point": 0.9642857142857143
+          },
+          "top_10_overlap_fraction": {
+            "interval95": [
+              0.9,
+              1.0
+            ],
+            "point": 0.9
+          },
+          "top_15_overlap_fraction": {
+            "interval95": [
+              1.0,
+              1.0
+            ],
+            "point": 1.0
+          },
+          "top_1_overlap_fraction": {
+            "interval95": [
+              1.0,
+              1.0
+            ],
+            "point": 1.0
+          },
+          "top_3_overlap_fraction": {
+            "interval95": [
+              0.6666666666666666,
+              0.6666666666666666
+            ],
+            "point": 0.6666666666666666
+          },
+          "top_5_overlap_fraction": {
+            "interval95": [
+              1.0,
+              1.0
+            ],
+            "point": 1.0
+          }
+        }
+      },
+      "quality_candidate_count": 0,
+      "shortlists": {
+        "s1": {
+          "1": {
+            "calibration_rerank_architecture": [
+              6,
+              10,
+              15,
+              17
+            ],
+            "calibration_rerank_delta": 0.45137428864836693,
+            "calibration_rerank_regret": 0.0,
+            "deployment_budget_status": "formal",
+            "hindsight_architecture": [
+              6,
+              10,
+              15,
+              17
+            ],
+            "hindsight_delta": 0.45137428864836693,
+            "hindsight_regret": 0.0
+          },
+          "10": {
+            "calibration_rerank_architecture": [
+              6,
+              10,
+              15,
+              17
+            ],
+            "calibration_rerank_delta": 0.45137428864836693,
+            "calibration_rerank_regret": 0.0,
+            "deployment_budget_status": "descriptive_additional_query_cost",
+            "hindsight_architecture": [
+              6,
+              10,
+              15,
+              17
+            ],
+            "hindsight_delta": 0.45137428864836693,
+            "hindsight_regret": 0.0
+          },
+          "15": {
+            "calibration_rerank_architecture": [
+              6,
+              10,
+              15,
+              17
+            ],
+            "calibration_rerank_delta": 0.45137428864836693,
+            "calibration_rerank_regret": 0.0,
+            "deployment_budget_status": "formal",
+            "hindsight_architecture": [
+              6,
+              10,
+              15,
+              17
+            ],
+            "hindsight_delta": 0.45137428864836693,
+            "hindsight_regret": 0.0
+          },
+          "3": {
+            "calibration_rerank_architecture": [
+              6,
+              10,
+              15,
+              17
+            ],
+            "calibration_rerank_delta": 0.45137428864836693,
+            "calibration_rerank_regret": 0.0,
+            "deployment_budget_status": "descriptive_additional_query_cost",
+            "hindsight_architecture": [
+              6,
+              10,
+              15,
+              17
+            ],
+            "hindsight_delta": 0.45137428864836693,
+            "hindsight_regret": 0.0
+          },
+          "5": {
+            "calibration_rerank_architecture": [
+              6,
+              10,
+              15,
+              17
+            ],
+            "calibration_rerank_delta": 0.45137428864836693,
+            "calibration_rerank_regret": 0.0,
+            "deployment_budget_status": "formal",
+            "hindsight_architecture": [
+              6,
+              10,
+              15,
+              17
+            ],
+            "hindsight_delta": 0.45137428864836693,
+            "hindsight_regret": 0.0
+          }
+        },
+        "s2": {
+          "1": {
+            "calibration_rerank_architecture": [
+              6,
+              10,
+              15,
+              17
+            ],
+            "calibration_rerank_delta": 0.45137428864836693,
+            "calibration_rerank_regret": 0.0,
+            "deployment_budget_status": "formal",
+            "hindsight_architecture": [
+              6,
+              10,
+              15,
+              17
+            ],
+            "hindsight_delta": 0.45137428864836693,
+            "hindsight_regret": 0.0
+          },
+          "10": {
+            "calibration_rerank_architecture": [
+              6,
+              10,
+              15,
+              17
+            ],
+            "calibration_rerank_delta": 0.45137428864836693,
+            "calibration_rerank_regret": 0.0,
+            "deployment_budget_status": "descriptive_additional_query_cost",
+            "hindsight_architecture": [
+              6,
+              10,
+              15,
+              17
+            ],
+            "hindsight_delta": 0.45137428864836693,
+            "hindsight_regret": 0.0
+          },
+          "15": {
+            "calibration_rerank_architecture": [
+              6,
+              10,
+              15,
+              17
+            ],
+            "calibration_rerank_delta": 0.45137428864836693,
+            "calibration_rerank_regret": 0.0,
+            "deployment_budget_status": "formal",
+            "hindsight_architecture": [
+              6,
+              10,
+              15,
+              17
+            ],
+            "hindsight_delta": 0.45137428864836693,
+            "hindsight_regret": 0.0
+          },
+          "3": {
+            "calibration_rerank_architecture": [
+              6,
+              10,
+              15,
+              17
+            ],
+            "calibration_rerank_delta": 0.45137428864836693,
+            "calibration_rerank_regret": 0.0,
+            "deployment_budget_status": "descriptive_additional_query_cost",
+            "hindsight_architecture": [
+              6,
+              10,
+              15,
+              17
+            ],
+            "hindsight_delta": 0.45137428864836693,
+            "hindsight_regret": 0.0
+          },
+          "5": {
+            "calibration_rerank_architecture": [
+              6,
+              10,
+              15,
+              17
+            ],
+            "calibration_rerank_delta": 0.45137428864836693,
+            "calibration_rerank_regret": 0.0,
+            "deployment_budget_status": "formal",
+            "hindsight_architecture": [
+              6,
+              10,
+              15,
+              17
+            ],
+            "hindsight_delta": 0.45137428864836693,
+            "hindsight_regret": 0.0
+          }
+        }
+      },
+      "strategies": {
+        "direct_1": {
+          "G": 0.0,
+          "G_interval": [
+            0.0,
+            0.0
+          ],
+          "R": 0.0,
+          "R_interval": [
+            0.0,
+            0.0
+          ],
+          "calibration_delta": 0.4662974526484809,
+          "s1_prediction": 0.34949952488144254,
+          "s2_prediction": 0.46626093486944775,
+          "selected_architecture": [
+            6,
+            10,
+            15,
+            17
+          ],
+          "validation_delta": 0.45137428864836693
+        },
+        "direct_10": {
+          "G": 0.0,
+          "G_interval": [
+            0.0,
+            0.0
+          ],
+          "R": 0.0,
+          "R_interval": [
+            0.0,
+            0.0
+          ],
+          "calibration_delta": 0.4662974526484809,
+          "s1_prediction": 0.34949952488144254,
+          "s2_prediction": 0.46626093486944775,
+          "selected_architecture": [
+            6,
+            10,
+            15,
+            17
+          ],
+          "validation_delta": 0.45137428864836693
+        },
+        "direct_11": {
+          "G": 0.0,
+          "G_interval": [
+            0.0,
+            0.0
+          ],
+          "R": 0.0,
+          "R_interval": [
+            0.0,
+            0.0
+          ],
+          "calibration_delta": 0.4662974526484809,
+          "s1_prediction": 0.34949952488144254,
+          "s2_prediction": 0.46626093486944775,
+          "selected_architecture": [
+            6,
+            10,
+            15,
+            17
+          ],
+          "validation_delta": 0.45137428864836693
+        },
+        "direct_15": {
+          "G": 0.0,
+          "G_interval": [
+            0.0,
+            0.0
+          ],
+          "R": 0.0,
+          "R_interval": [
+            0.0,
+            0.0
+          ],
+          "calibration_delta": 0.4662974526484809,
+          "s1_prediction": 0.34949952488144254,
+          "s2_prediction": 0.46626093486944775,
+          "selected_architecture": [
+            6,
+            10,
+            15,
+            17
+          ],
+          "validation_delta": 0.45137428864836693
+        },
+        "direct_3": {
+          "G": 0.0,
+          "G_interval": [
+            0.0,
+            0.0
+          ],
+          "R": 0.0,
+          "R_interval": [
+            0.0,
+            0.0
+          ],
+          "calibration_delta": 0.4662974526484809,
+          "s1_prediction": 0.34949952488144254,
+          "s2_prediction": 0.46626093486944775,
+          "selected_architecture": [
+            6,
+            10,
+            15,
+            17
+          ],
+          "validation_delta": 0.45137428864836693
+        },
+        "direct_5": {
+          "G": 0.0,
+          "G_interval": [
+            0.0,
+            0.0
+          ],
+          "R": 0.0,
+          "R_interval": [
+            0.0,
+            0.0
+          ],
+          "calibration_delta": 0.4662974526484809,
+          "s1_prediction": 0.34949952488144254,
+          "s2_prediction": 0.46626093486944775,
+          "selected_architecture": [
+            6,
+            10,
+            15,
+            17
+          ],
+          "validation_delta": 0.45137428864836693
+        },
+        "s1": {
+          "G": 0.0,
+          "G_adjusted_interval": [
+            0.0,
+            0.0
+          ],
+          "G_interval": [
+            0.0,
+            0.0
+          ],
+          "R": 0.0,
+          "R_interval": [
+            0.0,
+            0.0
+          ],
+          "calibration_delta": 0.4662974526484809,
+          "s1_prediction": 0.34949952488144254,
+          "s2_prediction": 0.46626093486944775,
+          "selected_architecture": [
+            6,
+            10,
+            15,
+            17
+          ],
+          "validation_delta": 0.45137428864836693
+        },
+        "s1_top5": {
+          "G": 0.0,
+          "G_interval": [
+            0.0,
+            0.0
+          ],
+          "R": 0.0,
+          "R_interval": [
+            0.0,
+            0.0
+          ],
+          "calibration_delta": 0.4662974526484809,
+          "s1_prediction": 0.34949952488144254,
+          "s2_prediction": 0.46626093486944775,
+          "selected_architecture": [
+            6,
+            10,
+            15,
+            17
+          ],
+          "validation_delta": 0.45137428864836693
+        },
+        "s2": {
+          "G": 0.0,
+          "G_interval": [
+            0.0,
+            0.0
+          ],
+          "R": 0.0,
+          "R_interval": [
+            0.0,
+            0.0
+          ],
+          "calibration_delta": 0.4662974526484809,
+          "s1_prediction": 0.34949952488144254,
+          "s2_prediction": 0.46626093486944775,
+          "selected_architecture": [
+            6,
+            10,
+            15,
+            17
+          ],
+          "validation_delta": 0.45137428864836693
+        },
+        "s2_top5": {
+          "G": 0.0,
+          "G_interval": [
+            0.0,
+            0.0
+          ],
+          "R": 0.0,
+          "R_interval": [
+            0.0,
+            0.0
+          ],
+          "calibration_delta": 0.4662974526484809,
+          "s1_prediction": 0.34949952488144254,
+          "s2_prediction": 0.46626093486944775,
+          "selected_architecture": [
+            6,
+            10,
+            15,
+            17
+          ],
+          "validation_delta": 0.45137428864836693
+        }
+      },
+      "validation_hindsight_best": [
+        6,
+        10,
+        15,
+        17
+      ]
+    },
+    "4_low": {
+      "calibration_reference": [
+        12,
+        15,
+        17,
+        24
+      ],
+      "calibration_reference_validation_delta": 0.5152405612170696,
+      "calibration_shards": [
+        {
+          "s1": {
+            "G": 0.10998477227985859,
+            "R": 0.1164902076125145,
+            "selected_architecture": [
+              6,
+              8,
+              10,
+              12
+            ]
+          },
+          "s2": {
+            "G": 0.0,
+            "R": 0.006505435332655907,
+            "selected_architecture": [
+              12,
+              15,
+              17,
+              24
+            ]
+          }
+        },
+        {
+          "s1": {
+            "G": 0.10998477227985859,
+            "R": 0.1164902076125145,
+            "selected_architecture": [
+              6,
+              8,
+              10,
+              12
+            ]
+          },
+          "s2": {
+            "G": -0.006505435332655907,
+            "R": 0.0,
+            "selected_architecture": [
+              3,
+              12,
+              15,
+              17
+            ]
+          }
+        },
+        {
+          "s1": {
+            "G": 0.10998477227985859,
+            "R": 0.1164902076125145,
+            "selected_architecture": [
+              6,
+              8,
+              10,
+              12
+            ]
+          },
+          "s2": {
+            "G": 0.0,
+            "R": 0.006505435332655907,
+            "selected_architecture": [
+              12,
+              15,
+              17,
+              24
+            ]
+          }
+        }
+      ],
+      "confirmation_slice_G": [
+        0.11211583018302917,
+        0.107853714376688
+      ],
+      "practical": false,
+      "prediction_metrics": {
+        "s1": {
+          "calibration_point": {
+            "kendall_tau_b": 0.4666666666666667,
+            "mae": 0.20580145766337718,
+            "pearson": 0.5243065489438822,
+            "rmse": 0.22102742361346248,
+            "spearman": 0.6142857142857143,
+            "top_10_overlap_fraction": 0.9,
+            "top_15_overlap_fraction": 1.0,
+            "top_1_overlap_fraction": 0.0,
+            "top_3_overlap_fraction": 0.3333333333333333,
+            "top_5_overlap_fraction": 0.4
+          },
+          "kendall_tau_b": {
+            "interval95": [
+              0.3904761904761905,
+              0.5047619047619047
+            ],
+            "point": 0.4666666666666667
+          },
+          "mae": {
+            "interval95": [
+              0.14855731811581394,
+              0.18340836457183796
+            ],
+            "point": 0.16593856087161443
+          },
+          "pearson": {
+            "interval95": [
+              0.5374625325768257,
+              0.6136680314251131
+            ],
+            "point": 0.5788180990273919
+          },
+          "rmse": {
+            "interval95": [
+              0.16558151781132738,
+              0.19865523161076723
+            ],
+            "point": 0.18178502681090086
+          },
+          "spearman": {
+            "interval95": [
+              0.5428571428571428,
+              0.6392857142857142
+            ],
+            "point": 0.6071428571428571
+          },
+          "top_10_overlap_fraction": {
+            "interval95": [
+              0.9,
+              0.9
+            ],
+            "point": 0.9
+          },
+          "top_15_overlap_fraction": {
+            "interval95": [
+              1.0,
+              1.0
+            ],
+            "point": 1.0
+          },
+          "top_1_overlap_fraction": {
+            "interval95": [
+              0.0,
+              0.0
+            ],
+            "point": 0.0
+          },
+          "top_3_overlap_fraction": {
+            "interval95": [
+              0.3333333333333333,
+              0.3333333333333333
+            ],
+            "point": 0.3333333333333333
+          },
+          "top_5_overlap_fraction": {
+            "interval95": [
+              0.4,
+              0.6
+            ],
+            "point": 0.4
+          }
+        },
+        "s2": {
+          "calibration_point": {
+            "kendall_tau_b": 0.7714285714285715,
+            "mae": 0.0251561645004483,
+            "pearson": 0.9248800007257807,
+            "rmse": 0.03759990904191201,
+            "spearman": 0.9071428571428571,
+            "top_10_overlap_fraction": 0.9,
+            "top_15_overlap_fraction": 1.0,
+            "top_1_overlap_fraction": 1.0,
+            "top_3_overlap_fraction": 1.0,
+            "top_5_overlap_fraction": 1.0
+          },
+          "kendall_tau_b": {
+            "interval95": [
+              0.6,
+              0.7142857142857143
+            ],
+            "point": 0.6571428571428571
+          },
+          "mae": {
+            "interval95": [
+              0.028358861904384098,
+              0.051351245606525105
+            ],
+            "point": 0.03567728255357976
+          },
+          "pearson": {
+            "interval95": [
+              0.8639549137825094,
+              0.913984857543565
+            ],
+            "point": 0.8932169682747733
+          },
+          "rmse": {
+            "interval95": [
+              0.044738908853684235,
+              0.0688209161962998
+            ],
+            "point": 0.05497727442431226
+          },
+          "spearman": {
+            "interval95": [
+              0.7642857142857142,
+              0.8571428571428571
+            ],
+            "point": 0.8
+          },
+          "top_10_overlap_fraction": {
+            "interval95": [
+              0.9,
+              0.9
+            ],
+            "point": 0.9
+          },
+          "top_15_overlap_fraction": {
+            "interval95": [
+              1.0,
+              1.0
+            ],
+            "point": 1.0
+          },
+          "top_1_overlap_fraction": {
+            "interval95": [
+              0.0,
+              1.0
+            ],
+            "point": 0.0
+          },
+          "top_3_overlap_fraction": {
+            "interval95": [
+              0.6666666666666666,
+              1.0
+            ],
+            "point": 1.0
+          },
+          "top_5_overlap_fraction": {
+            "interval95": [
+              0.6,
+              0.8
+            ],
+            "point": 0.6
+          }
+        }
+      },
+      "quality_candidate_count": 0,
+      "shortlists": {
+        "s1": {
+          "1": {
+            "calibration_rerank_architecture": [
+              6,
+              8,
+              10,
+              12
+            ],
+            "calibration_rerank_delta": 0.6252253334969282,
+            "calibration_rerank_regret": 0.1164902076125145,
+            "deployment_budget_status": "formal",
+            "hindsight_architecture": [
+              6,
+              8,
+              10,
+              12
+            ],
+            "hindsight_delta": 0.6252253334969282,
+            "hindsight_regret": 0.1164902076125145
+          },
+          "10": {
+            "calibration_rerank_architecture": [
+              12,
+              15,
+              17,
+              24
+            ],
+            "calibration_rerank_delta": 0.5152405612170696,
+            "calibration_rerank_regret": 0.006505435332655907,
+            "deployment_budget_status": "descriptive_additional_query_cost",
+            "hindsight_architecture": [
+              3,
+              12,
+              15,
+              17
+            ],
+            "hindsight_delta": 0.5087351258844137,
+            "hindsight_regret": 0.0
+          },
+          "15": {
+            "calibration_rerank_architecture": [
+              12,
+              15,
+              17,
+              24
+            ],
+            "calibration_rerank_delta": 0.5152405612170696,
+            "calibration_rerank_regret": 0.006505435332655907,
+            "deployment_budget_status": "formal",
+            "hindsight_architecture": [
+              3,
+              12,
+              15,
+              17
+            ],
+            "hindsight_delta": 0.5087351258844137,
+            "hindsight_regret": 0.0
+          },
+          "3": {
+            "calibration_rerank_architecture": [
+              3,
+              12,
+              15,
+              17
+            ],
+            "calibration_rerank_delta": 0.5087351258844137,
+            "calibration_rerank_regret": 0.0,
+            "deployment_budget_status": "descriptive_additional_query_cost",
+            "hindsight_architecture": [
+              3,
+              12,
+              15,
+              17
+            ],
+            "hindsight_delta": 0.5087351258844137,
+            "hindsight_regret": 0.0
+          },
+          "5": {
+            "calibration_rerank_architecture": [
+              3,
+              12,
+              15,
+              17
+            ],
+            "calibration_rerank_delta": 0.5087351258844137,
+            "calibration_rerank_regret": 0.0,
+            "deployment_budget_status": "formal",
+            "hindsight_architecture": [
+              3,
+              12,
+              15,
+              17
+            ],
+            "hindsight_delta": 0.5087351258844137,
+            "hindsight_regret": 0.0
+          }
+        },
+        "s2": {
+          "1": {
+            "calibration_rerank_architecture": [
+              12,
+              15,
+              17,
+              24
+            ],
+            "calibration_rerank_delta": 0.5152405612170696,
+            "calibration_rerank_regret": 0.006505435332655907,
+            "deployment_budget_status": "formal",
+            "hindsight_architecture": [
+              12,
+              15,
+              17,
+              24
+            ],
+            "hindsight_delta": 0.5152405612170696,
+            "hindsight_regret": 0.006505435332655907
+          },
+          "10": {
+            "calibration_rerank_architecture": [
+              12,
+              15,
+              17,
+              24
+            ],
+            "calibration_rerank_delta": 0.5152405612170696,
+            "calibration_rerank_regret": 0.006505435332655907,
+            "deployment_budget_status": "descriptive_additional_query_cost",
+            "hindsight_architecture": [
+              3,
+              12,
+              15,
+              17
+            ],
+            "hindsight_delta": 0.5087351258844137,
+            "hindsight_regret": 0.0
+          },
+          "15": {
+            "calibration_rerank_architecture": [
+              12,
+              15,
+              17,
+              24
+            ],
+            "calibration_rerank_delta": 0.5152405612170696,
+            "calibration_rerank_regret": 0.006505435332655907,
+            "deployment_budget_status": "formal",
+            "hindsight_architecture": [
+              3,
+              12,
+              15,
+              17
+            ],
+            "hindsight_delta": 0.5087351258844137,
+            "hindsight_regret": 0.0
+          },
+          "3": {
+            "calibration_rerank_architecture": [
+              12,
+              15,
+              17,
+              24
+            ],
+            "calibration_rerank_delta": 0.5152405612170696,
+            "calibration_rerank_regret": 0.006505435332655907,
+            "deployment_budget_status": "descriptive_additional_query_cost",
+            "hindsight_architecture": [
+              3,
+              12,
+              15,
+              17
+            ],
+            "hindsight_delta": 0.5087351258844137,
+            "hindsight_regret": 0.0
+          },
+          "5": {
+            "calibration_rerank_architecture": [
+              12,
+              15,
+              17,
+              24
+            ],
+            "calibration_rerank_delta": 0.5152405612170696,
+            "calibration_rerank_regret": 0.006505435332655907,
+            "deployment_budget_status": "formal",
+            "hindsight_architecture": [
+              3,
+              12,
+              15,
+              17
+            ],
+            "hindsight_delta": 0.5087351258844137,
+            "hindsight_regret": 0.0
+          }
+        }
+      },
+      "strategies": {
+        "direct_1": {
+          "G": 0.1650059074163437,
+          "G_interval": [
+            0.15164750767871737,
+            0.17809955971315503
+          ],
+          "R": 0.1715113427489996,
+          "R_interval": [
+            0.1557109375949949,
+            0.19036437682807442
+          ],
+          "calibration_delta": 0.7062969232598939,
+          "s1_prediction": 0.5576372233529883,
+          "s2_prediction": 0.6791461557149896,
+          "selected_architecture": [
+            10,
+            12,
+            19,
+            24
+          ],
+          "validation_delta": 0.6802464686334133
+        },
+        "direct_10": {
+          "G": 0.0,
+          "G_interval": [
+            0.0,
+            0.0
+          ],
+          "R": 0.006505435332655907,
+          "R_interval": [
+            0.0,
+            0.02161720604635775
+          ],
+          "calibration_delta": 0.5498860465983548,
+          "s1_prediction": 0.4846142853299775,
+          "s2_prediction": 0.5392984511951608,
+          "selected_architecture": [
+            12,
+            15,
+            17,
+            24
+          ],
+          "validation_delta": 0.5152405612170696
+        },
+        "direct_11": {
+          "G": 0.0,
+          "G_interval": [
+            0.0,
+            0.0
+          ],
+          "R": 0.006505435332655907,
+          "R_interval": [
+            0.0,
+            0.02161720604635775
+          ],
+          "calibration_delta": 0.5498860465983548,
+          "s1_prediction": 0.4846142853299775,
+          "s2_prediction": 0.5392984511951608,
+          "selected_architecture": [
+            12,
+            15,
+            17,
+            24
+          ],
+          "validation_delta": 0.5152405612170696
+        },
+        "direct_15": {
+          "G": 0.0,
+          "G_interval": [
+            0.0,
+            0.0
+          ],
+          "R": 0.006505435332655907,
+          "R_interval": [
+            0.0,
+            0.02161720604635775
+          ],
+          "calibration_delta": 0.5498860465983548,
+          "s1_prediction": 0.4846142853299775,
+          "s2_prediction": 0.5392984511951608,
+          "selected_architecture": [
+            12,
+            15,
+            17,
+            24
+          ],
+          "validation_delta": 0.5152405612170696
+        },
+        "direct_3": {
+          "G": 0.11752251535654068,
+          "G_interval": [
+            0.09826929345726967,
+            0.13766465047374365
+          ],
+          "R": 0.12402795068919659,
+          "R_interval": [
+            0.10884079649113118,
+            0.1415912281256169
+          ],
+          "calibration_delta": 0.6394570581614971,
+          "s1_prediction": 0.45034936194618513,
+          "s2_prediction": 0.6448096695045633,
+          "selected_architecture": [
+            6,
+            12,
+            17,
+            19
+          ],
+          "validation_delta": 0.6327630765736103
+        },
+        "direct_5": {
+          "G": 0.11752251535654068,
+          "G_interval": [
+            0.09826929345726967,
+            0.13766465047374365
+          ],
+          "R": 0.12402795068919659,
+          "R_interval": [
+            0.10884079649113118,
+            0.1415912281256169
+          ],
+          "calibration_delta": 0.6394570581614971,
+          "s1_prediction": 0.45034936194618513,
+          "s2_prediction": 0.6448096695045633,
+          "selected_architecture": [
+            6,
+            12,
+            17,
+            19
+          ],
+          "validation_delta": 0.6327630765736103
+        },
+        "s1": {
+          "G": 0.10998477227985859,
+          "G_adjusted_interval": [
+            0.08717802691137673,
+            0.13371439522173553
+          ],
+          "G_interval": [
+            0.09100190829485655,
+            0.12926633809693155
+          ],
+          "R": 0.1164902076125145,
+          "R_interval": [
+            0.09928661375306547,
+            0.13652862366288898
+          ],
+          "calibration_delta": 0.678974406172832,
+          "s1_prediction": 0.3776551720996699,
+          "s2_prediction": 0.7923144896825152,
+          "selected_architecture": [
+            6,
+            8,
+            10,
+            12
+          ],
+          "validation_delta": 0.6252253334969282
+        },
+        "s1_top5": {
+          "G": -0.006505435332655907,
+          "G_interval": [
+            -0.02161720604635775,
+            0.008097250806167718
+          ],
+          "R": 0.0,
+          "R_interval": [
+            0.0,
+            0.008097250806167718
+          ],
+          "calibration_delta": 0.5570408602555594,
+          "s1_prediction": 0.41942552104592323,
+          "s2_prediction": 0.5451520656545954,
+          "selected_architecture": [
+            3,
+            12,
+            15,
+            17
+          ],
+          "validation_delta": 0.5087351258844137
+        },
+        "s2": {
+          "G": 0.0,
+          "G_interval": [
+            0.0,
+            0.0
+          ],
+          "R": 0.006505435332655907,
+          "R_interval": [
+            0.0,
+            0.02161720604635775
+          ],
+          "calibration_delta": 0.5498860465983548,
+          "s1_prediction": 0.4846142853299775,
+          "s2_prediction": 0.5392984511951608,
+          "selected_architecture": [
+            12,
+            15,
+            17,
+            24
+          ],
+          "validation_delta": 0.5152405612170696
+        },
+        "s2_top5": {
+          "G": 0.0,
+          "G_interval": [
+            0.0,
+            0.0
+          ],
+          "R": 0.006505435332655907,
+          "R_interval": [
+            0.0,
+            0.02161720604635775
+          ],
+          "calibration_delta": 0.5498860465983548,
+          "s1_prediction": 0.4846142853299775,
+          "s2_prediction": 0.5392984511951608,
+          "selected_architecture": [
+            12,
+            15,
+            17,
+            24
+          ],
+          "validation_delta": 0.5152405612170696
+        }
+      },
+      "validation_hindsight_best": [
+        3,
+        12,
+        15,
+        17
+      ]
+    },
+    "6_global": {
+      "calibration_reference": [
+        3,
+        6,
+        12,
+        17,
+        19,
+        26
+      ],
+      "calibration_reference_validation_delta": 1.2598718665540218,
+      "calibration_shards": [
+        {
+          "s1": {
+            "G": 0.14888275414705276,
+            "R": 0.14974964782595634,
+            "selected_architecture": [
+              3,
+              6,
+              8,
+              15,
+              17,
+              19
+            ]
+          },
+          "s2": {
+            "G": 0.0,
+            "R": 0.0008668936789035797,
+            "selected_architecture": [
+              3,
+              6,
+              12,
+              17,
+              19,
+              26
+            ]
+          }
+        },
+        {
+          "s1": {
+            "G": 0.14888275414705276,
+            "R": 0.14974964782595634,
+            "selected_architecture": [
+              3,
+              6,
+              8,
+              15,
+              17,
+              19
+            ]
+          },
+          "s2": {
+            "G": 0.0,
+            "R": 0.0008668936789035797,
+            "selected_architecture": [
+              3,
+              6,
+              12,
+              17,
+              19,
+              26
+            ]
+          }
+        },
+        {
+          "s1": {
+            "G": 0.14888275414705276,
+            "R": 0.14974964782595634,
+            "selected_architecture": [
+              3,
+              6,
+              8,
+              15,
+              17,
+              19
+            ]
+          },
+          "s2": {
+            "G": 0.0,
+            "R": 0.0008668936789035797,
+            "selected_architecture": [
+              3,
+              6,
+              12,
+              17,
+              19,
+              26
+            ]
+          }
+        }
+      ],
+      "confirmation_slice_G": [
+        0.15817465633153915,
+        0.13959085196256638
+      ],
+      "practical": false,
+      "prediction_metrics": {
+        "s1": {
+          "calibration_point": {
+            "kendall_tau_b": 0.44761904761904764,
+            "mae": 0.9315797694855266,
+            "pearson": 0.9590839143383585,
+            "rmse": 1.1530726399321147,
+            "spearman": 0.7107142857142857,
+            "top_10_overlap_fraction": 0.9,
+            "top_15_overlap_fraction": 1.0,
+            "top_1_overlap_fraction": 0.0,
+            "top_3_overlap_fraction": 0.3333333333333333,
+            "top_5_overlap_fraction": 0.8
+          },
+          "kendall_tau_b": {
+            "interval95": [
+              0.4857142857142857,
+              0.6190476190476191
+            ],
+            "point": 0.5428571428571428
+          },
+          "mae": {
+            "interval95": [
+              0.7706175613413665,
+              1.0375691135134544
+            ],
+            "point": 0.8950729824602601
+          },
+          "pearson": {
+            "interval95": [
+              0.9540831439290819,
+              0.9670902485815145
+            ],
+            "point": 0.9635085646609355
+          },
+          "rmse": {
+            "interval95": [
+              0.9621507286527784,
+              1.3294942235390663
+            ],
+            "point": 1.1322966891017567
+          },
+          "spearman": {
+            "interval95": [
+              0.7392857142857143,
+              0.8071428571428572
+            ],
+            "point": 0.7785714285714286
+          },
+          "top_10_overlap_fraction": {
+            "interval95": [
+              0.8,
+              0.9
+            ],
+            "point": 0.9
+          },
+          "top_15_overlap_fraction": {
+            "interval95": [
+              1.0,
+              1.0
+            ],
+            "point": 1.0
+          },
+          "top_1_overlap_fraction": {
+            "interval95": [
+              0.0,
+              0.0
+            ],
+            "point": 0.0
+          },
+          "top_3_overlap_fraction": {
+            "interval95": [
+              0.3333333333333333,
+              0.3333333333333333
+            ],
+            "point": 0.3333333333333333
+          },
+          "top_5_overlap_fraction": {
+            "interval95": [
+              0.8,
+              0.8
+            ],
+            "point": 0.8
+          }
+        },
+        "s2": {
+          "calibration_point": {
+            "kendall_tau_b": 0.8285714285714286,
+            "mae": 0.20427876023782632,
+            "pearson": 0.9869939318899759,
+            "rmse": 0.38453592068083287,
+            "spearman": 0.9464285714285714,
+            "top_10_overlap_fraction": 1.0,
+            "top_15_overlap_fraction": 1.0,
+            "top_1_overlap_fraction": 1.0,
+            "top_3_overlap_fraction": 0.6666666666666666,
+            "top_5_overlap_fraction": 1.0
+          },
+          "kendall_tau_b": {
+            "interval95": [
+              0.8285714285714286,
+              0.9047619047619048
+            ],
+            "point": 0.8857142857142857
+          },
+          "mae": {
+            "interval95": [
+              0.16760910095957396,
+              0.3717802152989627
+            ],
+            "point": 0.2433740971816905
+          },
+          "pearson": {
+            "interval95": [
+              0.983639891795476,
+              0.992633371240412
+            ],
+            "point": 0.991065909010305
+          },
+          "rmse": {
+            "interval95": [
+              0.2551916118711371,
+              0.5446130279336425
+            ],
+            "point": 0.354762826405536
+          },
+          "spearman": {
+            "interval95": [
+              0.9392857142857143,
+              0.9678571428571429
+            ],
+            "point": 0.9607142857142857
+          },
+          "top_10_overlap_fraction": {
+            "interval95": [
+              0.9,
+              1.0
+            ],
+            "point": 1.0
+          },
+          "top_15_overlap_fraction": {
+            "interval95": [
+              1.0,
+              1.0
+            ],
+            "point": 1.0
+          },
+          "top_1_overlap_fraction": {
+            "interval95": [
+              0.0,
+              1.0
+            ],
+            "point": 0.0
+          },
+          "top_3_overlap_fraction": {
+            "interval95": [
+              0.6666666666666666,
+              0.6666666666666666
+            ],
+            "point": 0.6666666666666666
+          },
+          "top_5_overlap_fraction": {
+            "interval95": [
+              1.0,
+              1.0
+            ],
+            "point": 1.0
+          }
+        }
+      },
+      "quality_candidate_count": 0,
+      "shortlists": {
+        "s1": {
+          "1": {
+            "calibration_rerank_architecture": [
+              3,
+              6,
+              8,
+              15,
+              17,
+              19
+            ],
+            "calibration_rerank_delta": 1.4087546207010746,
+            "calibration_rerank_regret": 0.14974964782595634,
+            "deployment_budget_status": "formal",
+            "hindsight_architecture": [
+              3,
+              6,
+              8,
+              15,
+              17,
+              19
+            ],
+            "hindsight_delta": 1.4087546207010746,
+            "hindsight_regret": 0.14974964782595634
+          },
+          "10": {
+            "calibration_rerank_architecture": [
+              3,
+              6,
+              12,
+              17,
+              19,
+              26
+            ],
+            "calibration_rerank_delta": 1.2598718665540218,
+            "calibration_rerank_regret": 0.0008668936789035797,
+            "deployment_budget_status": "descriptive_additional_query_cost",
+            "hindsight_architecture": [
+              6,
+              8,
+              12,
+              15,
+              19,
+              26
+            ],
+            "hindsight_delta": 1.2590049728751183,
+            "hindsight_regret": 0.0
+          },
+          "15": {
+            "calibration_rerank_architecture": [
+              3,
+              6,
+              12,
+              17,
+              19,
+              26
+            ],
+            "calibration_rerank_delta": 1.2598718665540218,
+            "calibration_rerank_regret": 0.0008668936789035797,
+            "deployment_budget_status": "formal",
+            "hindsight_architecture": [
+              6,
+              8,
+              12,
+              15,
+              19,
+              26
+            ],
+            "hindsight_delta": 1.2590049728751183,
+            "hindsight_regret": 0.0
+          },
+          "3": {
+            "calibration_rerank_architecture": [
+              6,
+              8,
+              12,
+              15,
+              19,
+              26
+            ],
+            "calibration_rerank_delta": 1.2590049728751183,
+            "calibration_rerank_regret": 0.0,
+            "deployment_budget_status": "descriptive_additional_query_cost",
+            "hindsight_architecture": [
+              6,
+              8,
+              12,
+              15,
+              19,
+              26
+            ],
+            "hindsight_delta": 1.2590049728751183,
+            "hindsight_regret": 0.0
+          },
+          "5": {
+            "calibration_rerank_architecture": [
+              8,
+              10,
+              15,
+              17,
+              21,
+              26
+            ],
+            "calibration_rerank_delta": 1.2767562009394169,
+            "calibration_rerank_regret": 0.01775122806429863,
+            "deployment_budget_status": "formal",
+            "hindsight_architecture": [
+              6,
+              8,
+              12,
+              15,
+              19,
+              26
+            ],
+            "hindsight_delta": 1.2590049728751183,
+            "hindsight_regret": 0.0
+          }
+        },
+        "s2": {
+          "1": {
+            "calibration_rerank_architecture": [
+              3,
+              6,
+              12,
+              17,
+              19,
+              26
+            ],
+            "calibration_rerank_delta": 1.2598718665540218,
+            "calibration_rerank_regret": 0.0008668936789035797,
+            "deployment_budget_status": "formal",
+            "hindsight_architecture": [
+              3,
+              6,
+              12,
+              17,
+              19,
+              26
+            ],
+            "hindsight_delta": 1.2598718665540218,
+            "hindsight_regret": 0.0008668936789035797
+          },
+          "10": {
+            "calibration_rerank_architecture": [
+              3,
+              6,
+              12,
+              17,
+              19,
+              26
+            ],
+            "calibration_rerank_delta": 1.2598718665540218,
+            "calibration_rerank_regret": 0.0008668936789035797,
+            "deployment_budget_status": "descriptive_additional_query_cost",
+            "hindsight_architecture": [
+              6,
+              8,
+              12,
+              15,
+              19,
+              26
+            ],
+            "hindsight_delta": 1.2590049728751183,
+            "hindsight_regret": 0.0
+          },
+          "15": {
+            "calibration_rerank_architecture": [
+              3,
+              6,
+              12,
+              17,
+              19,
+              26
+            ],
+            "calibration_rerank_delta": 1.2598718665540218,
+            "calibration_rerank_regret": 0.0008668936789035797,
+            "deployment_budget_status": "formal",
+            "hindsight_architecture": [
+              6,
+              8,
+              12,
+              15,
+              19,
+              26
+            ],
+            "hindsight_delta": 1.2590049728751183,
+            "hindsight_regret": 0.0
+          },
+          "3": {
+            "calibration_rerank_architecture": [
+              3,
+              6,
+              12,
+              17,
+              19,
+              26
+            ],
+            "calibration_rerank_delta": 1.2598718665540218,
+            "calibration_rerank_regret": 0.0008668936789035797,
+            "deployment_budget_status": "descriptive_additional_query_cost",
+            "hindsight_architecture": [
+              6,
+              8,
+              12,
+              15,
+              19,
+              26
+            ],
+            "hindsight_delta": 1.2590049728751183,
+            "hindsight_regret": 0.0
+          },
+          "5": {
+            "calibration_rerank_architecture": [
+              3,
+              6,
+              12,
+              17,
+              19,
+              26
+            ],
+            "calibration_rerank_delta": 1.2598718665540218,
+            "calibration_rerank_regret": 0.0008668936789035797,
+            "deployment_budget_status": "formal",
+            "hindsight_architecture": [
+              6,
+              8,
+              12,
+              15,
+              19,
+              26
+            ],
+            "hindsight_delta": 1.2590049728751183,
+            "hindsight_regret": 0.0
+          }
+        }
+      },
+      "strategies": {
+        "direct_1": {
+          "G": 0.01688433438539505,
+          "G_interval": [
+            -0.01801641136407852,
+            0.049434419441968136
+          ],
+          "R": 0.01775122806429863,
+          "R_interval": [
+            0.0,
+            0.05105504374951123
+          ],
+          "calibration_delta": 1.3302854225039482,
+          "s1_prediction": 1.0207387519379458,
+          "s2_prediction": 1.3248521002630382,
+          "selected_architecture": [
+            8,
+            10,
+            15,
+            17,
+            21,
+            26
+          ],
+          "validation_delta": 1.2767562009394169
+        },
+        "direct_10": {
+          "G": 0.01688433438539505,
+          "G_interval": [
+            -0.01801641136407852,
+            0.049434419441968136
+          ],
+          "R": 0.01775122806429863,
+          "R_interval": [
+            0.0,
+            0.05105504374951123
+          ],
+          "calibration_delta": 1.3302854225039482,
+          "s1_prediction": 1.0207387519379458,
+          "s2_prediction": 1.3248521002630382,
+          "selected_architecture": [
+            8,
+            10,
+            15,
+            17,
+            21,
+            26
+          ],
+          "validation_delta": 1.2767562009394169
+        },
+        "direct_11": {
+          "G": 0.01688433438539505,
+          "G_interval": [
+            -0.01801641136407852,
+            0.049434419441968136
+          ],
+          "R": 0.01775122806429863,
+          "R_interval": [
+            0.0,
+            0.05105504374951123
+          ],
+          "calibration_delta": 1.3302854225039482,
+          "s1_prediction": 1.0207387519379458,
+          "s2_prediction": 1.3248521002630382,
+          "selected_architecture": [
+            8,
+            10,
+            15,
+            17,
+            21,
+            26
+          ],
+          "validation_delta": 1.2767562009394169
+        },
+        "direct_15": {
+          "G": 0.0,
+          "G_interval": [
+            0.0,
+            0.0
+          ],
+          "R": 0.0008668936789035797,
+          "R_interval": [
+            0.0,
+            0.025110246520489425
+          ],
+          "calibration_delta": 1.3133951437970004,
+          "s1_prediction": 1.0325008817017078,
+          "s2_prediction": 1.2234071170290313,
+          "selected_architecture": [
+            3,
+            6,
+            12,
+            17,
+            19,
+            26
+          ],
+          "validation_delta": 1.2598718665540218
+        },
+        "direct_3": {
+          "G": 0.01688433438539505,
+          "G_interval": [
+            -0.01801641136407852,
+            0.049434419441968136
+          ],
+          "R": 0.01775122806429863,
+          "R_interval": [
+            0.0,
+            0.05105504374951123
+          ],
+          "calibration_delta": 1.3302854225039482,
+          "s1_prediction": 1.0207387519379458,
+          "s2_prediction": 1.3248521002630382,
+          "selected_architecture": [
+            8,
+            10,
+            15,
+            17,
+            21,
+            26
+          ],
+          "validation_delta": 1.2767562009394169
+        },
+        "direct_5": {
+          "G": 0.01688433438539505,
+          "G_interval": [
+            -0.01801641136407852,
+            0.049434419441968136
+          ],
+          "R": 0.01775122806429863,
+          "R_interval": [
+            0.0,
+            0.05105504374951123
+          ],
+          "calibration_delta": 1.3302854225039482,
+          "s1_prediction": 1.0207387519379458,
+          "s2_prediction": 1.3248521002630382,
+          "selected_architecture": [
+            8,
+            10,
+            15,
+            17,
+            21,
+            26
+          ],
+          "validation_delta": 1.2767562009394169
+        },
+        "s1": {
+          "G": 0.14888275414705276,
+          "G_adjusted_interval": [
+            0.10243885421361595,
+            0.19396763538568673
+          ],
+          "G_interval": [
+            0.11100480007007718,
+            0.18571517085656522
+          ],
+          "R": 0.14974964782595634,
+          "R_interval": [
+            0.1216803852468729,
+            0.18744515394791958
+          ],
+          "calibration_delta": 1.505976901700099,
+          "s1_prediction": 0.7653582456211252,
+          "s2_prediction": 1.495421038319665,
+          "selected_architecture": [
+            3,
+            6,
+            8,
+            15,
+            17,
+            19
+          ],
+          "validation_delta": 1.4087546207010746
+        },
+        "s1_top5": {
+          "G": 0.01688433438539505,
+          "G_interval": [
+            -0.01801641136407852,
+            0.049434419441968136
+          ],
+          "R": 0.01775122806429863,
+          "R_interval": [
+            0.0,
+            0.05105504374951123
+          ],
+          "calibration_delta": 1.3302854225039482,
+          "s1_prediction": 1.0207387519379458,
+          "s2_prediction": 1.3248521002630382,
+          "selected_architecture": [
+            8,
+            10,
+            15,
+            17,
+            21,
+            26
+          ],
+          "validation_delta": 1.2767562009394169
+        },
+        "s2": {
+          "G": 0.0,
+          "G_interval": [
+            0.0,
+            0.0
+          ],
+          "R": 0.0008668936789035797,
+          "R_interval": [
+            0.0,
+            0.025110246520489425
+          ],
+          "calibration_delta": 1.3133951437970004,
+          "s1_prediction": 1.0325008817017078,
+          "s2_prediction": 1.2234071170290313,
+          "selected_architecture": [
+            3,
+            6,
+            12,
+            17,
+            19,
+            26
+          ],
+          "validation_delta": 1.2598718665540218
+        },
+        "s2_top5": {
+          "G": 0.0,
+          "G_interval": [
+            0.0,
+            0.0
+          ],
+          "R": 0.0008668936789035797,
+          "R_interval": [
+            0.0,
+            0.025110246520489425
+          ],
+          "calibration_delta": 1.3133951437970004,
+          "s1_prediction": 1.0325008817017078,
+          "s2_prediction": 1.2234071170290313,
+          "selected_architecture": [
+            3,
+            6,
+            12,
+            17,
+            19,
+            26
+          ],
+          "validation_delta": 1.2598718665540218
+        }
+      },
+      "validation_hindsight_best": [
+        6,
+        8,
+        12,
+        15,
+        19,
+        26
+      ]
+    },
+    "6_low": {
+      "calibration_reference": [
+        6,
+        10,
+        15,
+        17,
+        19,
+        26
+      ],
+      "calibration_reference_validation_delta": 1.0491951256990433,
+      "calibration_shards": [
+        {
+          "s1": {
+            "G": 0.12056675180792809,
+            "R": 0.12056675180792809,
+            "selected_architecture": [
+              3,
+              6,
+              8,
+              10,
+              15,
+              17
+            ]
+          },
+          "s2": {
+            "G": 0.0,
+            "R": 0.0,
+            "selected_architecture": [
+              6,
+              10,
+              15,
+              17,
+              19,
+              26
+            ]
+          }
+        },
+        {
+          "s1": {
+            "G": 0.12056675180792809,
+            "R": 0.12056675180792809,
+            "selected_architecture": [
+              3,
+              6,
+              8,
+              10,
+              15,
+              17
+            ]
+          },
+          "s2": {
+            "G": 0.0,
+            "R": 0.0,
+            "selected_architecture": [
+              6,
+              10,
+              15,
+              17,
+              19,
+              26
+            ]
+          }
+        },
+        {
+          "s1": {
+            "G": 0.12056675180792809,
+            "R": 0.12056675180792809,
+            "selected_architecture": [
+              3,
+              6,
+              8,
+              10,
+              15,
+              17
+            ]
+          },
+          "s2": {
+            "G": 0.0,
+            "R": 0.0,
+            "selected_architecture": [
+              6,
+              10,
+              15,
+              17,
+              19,
+              26
+            ]
+          }
+        }
+      ],
+      "confirmation_slice_G": [
+        0.13202433288097382,
+        0.10910917073488235
+      ],
+      "practical": false,
+      "prediction_metrics": {
+        "s1": {
+          "calibration_point": {
+            "kendall_tau_b": 0.3333333333333333,
+            "mae": 0.601669754501846,
+            "pearson": 0.44111257926237324,
+            "rmse": 0.6288080410381839,
+            "spearman": 0.4392857142857143,
+            "top_10_overlap_fraction": 0.8,
+            "top_15_overlap_fraction": 1.0,
+            "top_1_overlap_fraction": 0.0,
+            "top_3_overlap_fraction": 0.3333333333333333,
+            "top_5_overlap_fraction": 0.6
+          },
+          "kendall_tau_b": {
+            "interval95": [
+              0.29523809523809524,
+              0.3904761904761905
+            ],
+            "point": 0.3523809523809524
+          },
+          "mae": {
+            "interval95": [
+              0.47877169551741733,
+              0.5365585991129691
+            ],
+            "point": 0.5075006230837767
+          },
+          "pearson": {
+            "interval95": [
+              0.4509009091734396,
+              0.49647332654503395
+            ],
+            "point": 0.4747496537225169
+          },
+          "rmse": {
+            "interval95": [
+              0.5121973291684665,
+              0.5668501501668219
+            ],
+            "point": 0.5392519278707867
+          },
+          "spearman": {
+            "interval95": [
+              0.375,
+              0.4785714285714286
+            ],
+            "point": 0.42857142857142855
+          },
+          "top_10_overlap_fraction": {
+            "interval95": [
+              0.6,
+              0.8
+            ],
+            "point": 0.7
+          },
+          "top_15_overlap_fraction": {
+            "interval95": [
+              1.0,
+              1.0
+            ],
+            "point": 1.0
+          },
+          "top_1_overlap_fraction": {
+            "interval95": [
+              0.0,
+              0.0
+            ],
+            "point": 0.0
+          },
+          "top_3_overlap_fraction": {
+            "interval95": [
+              0.3333333333333333,
+              0.3333333333333333
+            ],
+            "point": 0.3333333333333333
+          },
+          "top_5_overlap_fraction": {
+            "interval95": [
+              0.4,
+              0.6
+            ],
+            "point": 0.6
+          }
+        },
+        "s2": {
+          "calibration_point": {
+            "kendall_tau_b": 0.7904761904761904,
+            "mae": 0.08650586969322628,
+            "pearson": 0.9109057462896937,
+            "rmse": 0.10382492024577919,
+            "spearman": 0.925,
+            "top_10_overlap_fraction": 0.9,
+            "top_15_overlap_fraction": 1.0,
+            "top_1_overlap_fraction": 1.0,
+            "top_3_overlap_fraction": 1.0,
+            "top_5_overlap_fraction": 0.8
+          },
+          "kendall_tau_b": {
+            "interval95": [
+              0.6190476190476191,
+              0.7523809523809524
+            ],
+            "point": 0.6952380952380952
+          },
+          "mae": {
+            "interval95": [
+              0.08581012485341859,
+              0.11238955159464575
+            ],
+            "point": 0.09689296219083951
+          },
+          "pearson": {
+            "interval95": [
+              0.818212180109133,
+              0.8653929116170568
+            ],
+            "point": 0.84343011075762
+          },
+          "rmse": {
+            "interval95": [
+              0.10309755877545602,
+              0.13477135070170101
+            ],
+            "point": 0.11620355106723168
+          },
+          "spearman": {
+            "interval95": [
+              0.7928571428571428,
+              0.8785714285714286
+            ],
+            "point": 0.8464285714285714
+          },
+          "top_10_overlap_fraction": {
+            "interval95": [
+              0.7,
+              0.9
+            ],
+            "point": 0.8
+          },
+          "top_15_overlap_fraction": {
+            "interval95": [
+              1.0,
+              1.0
+            ],
+            "point": 1.0
+          },
+          "top_1_overlap_fraction": {
+            "interval95": [
+              0.0,
+              1.0
+            ],
+            "point": 1.0
+          },
+          "top_3_overlap_fraction": {
+            "interval95": [
+              1.0,
+              1.0
+            ],
+            "point": 1.0
+          },
+          "top_5_overlap_fraction": {
+            "interval95": [
+              0.6,
+              0.8
+            ],
+            "point": 0.8
+          }
+        }
+      },
+      "quality_candidate_count": 0,
+      "shortlists": {
+        "s1": {
+          "1": {
+            "calibration_rerank_architecture": [
+              3,
+              6,
+              8,
+              10,
+              15,
+              17
+            ],
+            "calibration_rerank_delta": 1.1697618775069714,
+            "calibration_rerank_regret": 0.12056675180792809,
+            "deployment_budget_status": "formal",
+            "hindsight_architecture": [
+              3,
+              6,
+              8,
+              10,
+              15,
+              17
+            ],
+            "hindsight_delta": 1.1697618775069714,
+            "hindsight_regret": 0.12056675180792809
+          },
+          "10": {
+            "calibration_rerank_architecture": [
+              6,
+              8,
+              10,
+              15,
+              17,
+              21
+            ],
+            "calibration_rerank_delta": 1.0588009804487228,
+            "calibration_rerank_regret": 0.009605854749679565,
+            "deployment_budget_status": "descriptive_additional_query_cost",
+            "hindsight_architecture": [
+              6,
+              8,
+              10,
+              15,
+              17,
+              21
+            ],
+            "hindsight_delta": 1.0588009804487228,
+            "hindsight_regret": 0.009605854749679565
+          },
+          "15": {
+            "calibration_rerank_architecture": [
+              6,
+              10,
+              15,
+              17,
+              19,
+              26
+            ],
+            "calibration_rerank_delta": 1.0491951256990433,
+            "calibration_rerank_regret": 0.0,
+            "deployment_budget_status": "formal",
+            "hindsight_architecture": [
+              6,
+              10,
+              15,
+              17,
+              19,
+              26
+            ],
+            "hindsight_delta": 1.0491951256990433,
+            "hindsight_regret": 0.0
+          },
+          "3": {
+            "calibration_rerank_architecture": [
+              6,
+              8,
+              10,
+              15,
+              17,
+              21
+            ],
+            "calibration_rerank_delta": 1.0588009804487228,
+            "calibration_rerank_regret": 0.009605854749679565,
+            "deployment_budget_status": "descriptive_additional_query_cost",
+            "hindsight_architecture": [
+              6,
+              8,
+              10,
+              15,
+              17,
+              21
+            ],
+            "hindsight_delta": 1.0588009804487228,
+            "hindsight_regret": 0.009605854749679565
+          },
+          "5": {
+            "calibration_rerank_architecture": [
+              6,
+              8,
+              10,
+              15,
+              17,
+              21
+            ],
+            "calibration_rerank_delta": 1.0588009804487228,
+            "calibration_rerank_regret": 0.009605854749679565,
+            "deployment_budget_status": "formal",
+            "hindsight_architecture": [
+              6,
+              8,
+              10,
+              15,
+              17,
+              21
+            ],
+            "hindsight_delta": 1.0588009804487228,
+            "hindsight_regret": 0.009605854749679565
+          }
+        },
+        "s2": {
+          "1": {
+            "calibration_rerank_architecture": [
+              6,
+              10,
+              15,
+              17,
+              19,
+              26
+            ],
+            "calibration_rerank_delta": 1.0491951256990433,
+            "calibration_rerank_regret": 0.0,
+            "deployment_budget_status": "formal",
+            "hindsight_architecture": [
+              6,
+              10,
+              15,
+              17,
+              19,
+              26
+            ],
+            "hindsight_delta": 1.0491951256990433,
+            "hindsight_regret": 0.0
+          },
+          "10": {
+            "calibration_rerank_architecture": [
+              6,
+              10,
+              15,
+              17,
+              19,
+              26
+            ],
+            "calibration_rerank_delta": 1.0491951256990433,
+            "calibration_rerank_regret": 0.0,
+            "deployment_budget_status": "descriptive_additional_query_cost",
+            "hindsight_architecture": [
+              6,
+              10,
+              15,
+              17,
+              19,
+              26
+            ],
+            "hindsight_delta": 1.0491951256990433,
+            "hindsight_regret": 0.0
+          },
+          "15": {
+            "calibration_rerank_architecture": [
+              6,
+              10,
+              15,
+              17,
+              19,
+              26
+            ],
+            "calibration_rerank_delta": 1.0491951256990433,
+            "calibration_rerank_regret": 0.0,
+            "deployment_budget_status": "formal",
+            "hindsight_architecture": [
+              6,
+              10,
+              15,
+              17,
+              19,
+              26
+            ],
+            "hindsight_delta": 1.0491951256990433,
+            "hindsight_regret": 0.0
+          },
+          "3": {
+            "calibration_rerank_architecture": [
+              6,
+              10,
+              15,
+              17,
+              19,
+              26
+            ],
+            "calibration_rerank_delta": 1.0491951256990433,
+            "calibration_rerank_regret": 0.0,
+            "deployment_budget_status": "descriptive_additional_query_cost",
+            "hindsight_architecture": [
+              6,
+              10,
+              15,
+              17,
+              19,
+              26
+            ],
+            "hindsight_delta": 1.0491951256990433,
+            "hindsight_regret": 0.0
+          },
+          "5": {
+            "calibration_rerank_architecture": [
+              6,
+              10,
+              15,
+              17,
+              19,
+              26
+            ],
+            "calibration_rerank_delta": 1.0491951256990433,
+            "calibration_rerank_regret": 0.0,
+            "deployment_budget_status": "formal",
+            "hindsight_architecture": [
+              6,
+              10,
+              15,
+              17,
+              19,
+              26
+            ],
+            "hindsight_delta": 1.0491951256990433,
+            "hindsight_regret": 0.0
+          }
+        }
+      },
+      "strategies": {
+        "direct_1": {
+          "G": 0.009605854749679565,
+          "G_interval": [
+            -0.01684404443949461,
+            0.03697338607162237
+          ],
+          "R": 0.009605854749679565,
+          "R_interval": [
+            0.0,
+            0.03697338607162237
+          ],
+          "calibration_delta": 1.1387717065711818,
+          "s1_prediction": 0.7306593519945941,
+          "s2_prediction": 1.183764883627493,
+          "selected_architecture": [
+            6,
+            8,
+            10,
+            15,
+            17,
+            21
+          ],
+          "validation_delta": 1.0588009804487228
+        },
+        "direct_10": {
+          "G": 0.009605854749679565,
+          "G_interval": [
+            -0.01684404443949461,
+            0.03697338607162237
+          ],
+          "R": 0.009605854749679565,
+          "R_interval": [
+            0.0,
+            0.03697338607162237
+          ],
+          "calibration_delta": 1.1387717065711818,
+          "s1_prediction": 0.7306593519945941,
+          "s2_prediction": 1.183764883627493,
+          "selected_architecture": [
+            6,
+            8,
+            10,
+            15,
+            17,
+            21
+          ],
+          "validation_delta": 1.0588009804487228
+        },
+        "direct_11": {
+          "G": 0.0,
+          "G_interval": [
+            0.0,
+            0.0
+          ],
+          "R": 0.0,
+          "R_interval": [
+            0.0,
+            0.01684404443949459
+          ],
+          "calibration_delta": 1.065017692744732,
+          "s1_prediction": 0.9207371858259044,
+          "s2_prediction": 1.0159871007005363,
+          "selected_architecture": [
+            6,
+            10,
+            15,
+            17,
+            19,
+            26
+          ],
+          "validation_delta": 1.0491951256990433
+        },
+        "direct_15": {
+          "G": 0.0,
+          "G_interval": [
+            0.0,
+            0.0
+          ],
+          "R": 0.0,
+          "R_interval": [
+            0.0,
+            0.01684404443949459
+          ],
+          "calibration_delta": 1.065017692744732,
+          "s1_prediction": 0.9207371858259044,
+          "s2_prediction": 1.0159871007005363,
+          "selected_architecture": [
+            6,
+            10,
+            15,
+            17,
+            19,
+            26
+          ],
+          "validation_delta": 1.0491951256990433
+        },
+        "direct_3": {
+          "G": 0.009605854749679565,
+          "G_interval": [
+            -0.01684404443949461,
+            0.03697338607162237
+          ],
+          "R": 0.009605854749679565,
+          "R_interval": [
+            0.0,
+            0.03697338607162237
+          ],
+          "calibration_delta": 1.1387717065711818,
+          "s1_prediction": 0.7306593519945941,
+          "s2_prediction": 1.183764883627493,
+          "selected_architecture": [
+            6,
+            8,
+            10,
+            15,
+            17,
+            21
+          ],
+          "validation_delta": 1.0588009804487228
+        },
+        "direct_5": {
+          "G": 0.009605854749679565,
+          "G_interval": [
+            -0.01684404443949461,
+            0.03697338607162237
+          ],
+          "R": 0.009605854749679565,
+          "R_interval": [
+            0.0,
+            0.03697338607162237
+          ],
+          "calibration_delta": 1.1387717065711818,
+          "s1_prediction": 0.7306593519945941,
+          "s2_prediction": 1.183764883627493,
+          "selected_architecture": [
+            6,
+            8,
+            10,
+            15,
+            17,
+            21
+          ],
+          "validation_delta": 1.0588009804487228
+        },
+        "s1": {
+          "G": 0.12056675180792809,
+          "G_adjusted_interval": [
+            0.07568865884708677,
+            0.16478556981881276
+          ],
+          "G_interval": [
+            0.0840836220420897,
+            0.15679918313398955
+          ],
+          "R": 0.12056675180792809,
+          "R_interval": [
+            0.09319174028933049,
+            0.15679918313398955
+          ],
+          "calibration_delta": 1.2702307812869549,
+          "s1_prediction": 0.6639074161648755,
+          "s2_prediction": 1.3512302649517829,
+          "selected_architecture": [
+            3,
+            6,
+            8,
+            10,
+            15,
+            17
+          ],
+          "validation_delta": 1.1697618775069714
+        },
+        "s1_top5": {
+          "G": 0.009605854749679565,
+          "G_interval": [
+            -0.01684404443949461,
+            0.03697338607162237
+          ],
+          "R": 0.009605854749679565,
+          "R_interval": [
+            0.0,
+            0.03697338607162237
+          ],
+          "calibration_delta": 1.1387717065711818,
+          "s1_prediction": 0.7306593519945941,
+          "s2_prediction": 1.183764883627493,
+          "selected_architecture": [
+            6,
+            8,
+            10,
+            15,
+            17,
+            21
+          ],
+          "validation_delta": 1.0588009804487228
+        },
+        "s2": {
+          "G": 0.0,
+          "G_interval": [
+            0.0,
+            0.0
+          ],
+          "R": 0.0,
+          "R_interval": [
+            0.0,
+            0.01684404443949459
+          ],
+          "calibration_delta": 1.065017692744732,
+          "s1_prediction": 0.9207371858259044,
+          "s2_prediction": 1.0159871007005363,
+          "selected_architecture": [
+            6,
+            10,
+            15,
+            17,
+            19,
+            26
+          ],
+          "validation_delta": 1.0491951256990433
+        },
+        "s2_top5": {
+          "G": 0.0,
+          "G_interval": [
+            0.0,
+            0.0
+          ],
+          "R": 0.0,
+          "R_interval": [
+            0.0,
+            0.01684404443949459
+          ],
+          "calibration_delta": 1.065017692744732,
+          "s1_prediction": 0.9207371858259044,
+          "s2_prediction": 1.0159871007005363,
+          "selected_architecture": [
+            6,
+            10,
+            15,
+            17,
+            19,
+            26
+          ],
+          "validation_delta": 1.0491951256990433
+        }
+      },
+      "validation_hindsight_best": [
+        6,
+        10,
+        15,
+        17,
+        19,
+        26
+      ]
+    },
+    "8_global": {
+      "calibration_reference": [
+        3,
+        6,
+        10,
+        12,
+        15,
+        17,
+        19,
+        24
+      ],
+      "calibration_reference_validation_delta": 1.7568278461694717,
+      "calibration_shards": [
+        {
+          "s1": {
+            "G": 0.0,
+            "R": 0.0,
+            "selected_architecture": [
+              3,
+              6,
+              10,
+              12,
+              15,
+              17,
+              19,
+              24
+            ]
+          },
+          "s2": {
+            "G": 0.0,
+            "R": 0.0,
+            "selected_architecture": [
+              3,
+              6,
+              10,
+              12,
+              15,
+              17,
+              19,
+              24
+            ]
+          }
+        },
+        {
+          "s1": {
+            "G": 0.0,
+            "R": 0.0,
+            "selected_architecture": [
+              3,
+              6,
+              10,
+              12,
+              15,
+              17,
+              19,
+              24
+            ]
+          },
+          "s2": {
+            "G": 0.0,
+            "R": 0.0,
+            "selected_architecture": [
+              3,
+              6,
+              10,
+              12,
+              15,
+              17,
+              19,
+              24
+            ]
+          }
+        },
+        {
+          "s1": {
+            "G": 0.0,
+            "R": 0.0,
+            "selected_architecture": [
+              3,
+              6,
+              10,
+              12,
+              15,
+              17,
+              19,
+              24
+            ]
+          },
+          "s2": {
+            "G": 0.0,
+            "R": 0.0,
+            "selected_architecture": [
+              3,
+              6,
+              10,
+              12,
+              15,
+              17,
+              19,
+              24
+            ]
+          }
+        }
+      ],
+      "confirmation_slice_G": [
+        0.0,
+        0.0
+      ],
+      "practical": false,
+      "prediction_metrics": {
+        "s1": {
+          "calibration_point": {
+            "kendall_tau_b": 0.5428571428571428,
+            "mae": 1.3171696556939023,
+            "pearson": 0.944074111072303,
+            "rmse": 1.448328795182464,
+            "spearman": 0.725,
+            "top_10_overlap_fraction": 0.7,
+            "top_15_overlap_fraction": 1.0,
+            "top_1_overlap_fraction": 1.0,
+            "top_3_overlap_fraction": 0.6666666666666666,
+            "top_5_overlap_fraction": 0.8
+          },
+          "kendall_tau_b": {
+            "interval95": [
+              0.5238095238095238,
+              0.580952380952381
+            ],
+            "point": 0.5428571428571428
+          },
+          "mae": {
+            "interval95": [
+              1.1368679032733457,
+              1.4086141050306873
+            ],
+            "point": 1.2722539712157515
+          },
+          "pearson": {
+            "interval95": [
+              0.9228326028706776,
+              0.948050126470646
+            ],
+            "point": 0.9376954281347374
+          },
+          "rmse": {
+            "interval95": [
+              1.268562053228019,
+              1.6011167059649434
+            ],
+            "point": 1.4263452408935495
+          },
+          "spearman": {
+            "interval95": [
+              0.6964285714285714,
+              0.7428571428571429
+            ],
+            "point": 0.725
+          },
+          "top_10_overlap_fraction": {
+            "interval95": [
+              0.7,
+              0.7
+            ],
+            "point": 0.7
+          },
+          "top_15_overlap_fraction": {
+            "interval95": [
+              1.0,
+              1.0
+            ],
+            "point": 1.0
+          },
+          "top_1_overlap_fraction": {
+            "interval95": [
+              1.0,
+              1.0
+            ],
+            "point": 1.0
+          },
+          "top_3_overlap_fraction": {
+            "interval95": [
+              0.6666666666666666,
+              0.6666666666666666
+            ],
+            "point": 0.6666666666666666
+          },
+          "top_5_overlap_fraction": {
+            "interval95": [
+              0.8,
+              0.8
+            ],
+            "point": 0.8
+          }
+        },
+        "s2": {
+          "calibration_point": {
+            "kendall_tau_b": 0.8476190476190476,
+            "mae": 0.3012119789090418,
+            "pearson": 0.98218613389755,
+            "rmse": 0.36645003354318406,
+            "spearman": 0.9464285714285714,
+            "top_10_overlap_fraction": 0.9,
+            "top_15_overlap_fraction": 1.0,
+            "top_1_overlap_fraction": 1.0,
+            "top_3_overlap_fraction": 1.0,
+            "top_5_overlap_fraction": 0.8
+          },
+          "kendall_tau_b": {
+            "interval95": [
+              0.8095238095238095,
+              0.8666666666666667
+            ],
+            "point": 0.8476190476190476
+          },
+          "mae": {
+            "interval95": [
+              0.2647085711442761,
+              0.46643637091335266
+            ],
+            "point": 0.35927750633822503
+          },
+          "pearson": {
+            "interval95": [
+              0.9581887049470946,
+              0.9809979620232049
+            ],
+            "point": 0.9724060882050697
+          },
+          "rmse": {
+            "interval95": [
+              0.33708743007452896,
+              0.5939815216228921
+            ],
+            "point": 0.4276674837186803
+          },
+          "spearman": {
+            "interval95": [
+              0.9285714285714286,
+              0.95
+            ],
+            "point": 0.9464285714285714
+          },
+          "top_10_overlap_fraction": {
+            "interval95": [
+              0.9,
+              0.9
+            ],
+            "point": 0.9
+          },
+          "top_15_overlap_fraction": {
+            "interval95": [
+              1.0,
+              1.0
+            ],
+            "point": 1.0
+          },
+          "top_1_overlap_fraction": {
+            "interval95": [
+              1.0,
+              1.0
+            ],
+            "point": 1.0
+          },
+          "top_3_overlap_fraction": {
+            "interval95": [
+              1.0,
+              1.0
+            ],
+            "point": 1.0
+          },
+          "top_5_overlap_fraction": {
+            "interval95": [
+              0.8,
+              0.8
+            ],
+            "point": 0.8
+          }
+        }
+      },
+      "quality_candidate_count": 0,
+      "shortlists": {
+        "s1": {
+          "1": {
+            "calibration_rerank_architecture": [
+              3,
+              6,
+              10,
+              12,
+              15,
+              17,
+              19,
+              24
+            ],
+            "calibration_rerank_delta": 1.7568278461694717,
+            "calibration_rerank_regret": 0.0,
+            "deployment_budget_status": "formal",
+            "hindsight_architecture": [
+              3,
+              6,
+              10,
+              12,
+              15,
+              17,
+              19,
+              24
+            ],
+            "hindsight_delta": 1.7568278461694717,
+            "hindsight_regret": 0.0
+          },
+          "10": {
+            "calibration_rerank_architecture": [
+              3,
+              6,
+              10,
+              12,
+              15,
+              17,
+              19,
+              24
+            ],
+            "calibration_rerank_delta": 1.7568278461694717,
+            "calibration_rerank_regret": 0.0,
+            "deployment_budget_status": "descriptive_additional_query_cost",
+            "hindsight_architecture": [
+              3,
+              6,
+              10,
+              12,
+              15,
+              17,
+              19,
+              24
+            ],
+            "hindsight_delta": 1.7568278461694717,
+            "hindsight_regret": 0.0
+          },
+          "15": {
+            "calibration_rerank_architecture": [
+              3,
+              6,
+              10,
+              12,
+              15,
+              17,
+              19,
+              24
+            ],
+            "calibration_rerank_delta": 1.7568278461694717,
+            "calibration_rerank_regret": 0.0,
+            "deployment_budget_status": "formal",
+            "hindsight_architecture": [
+              3,
+              6,
+              10,
+              12,
+              15,
+              17,
+              19,
+              24
+            ],
+            "hindsight_delta": 1.7568278461694717,
+            "hindsight_regret": 0.0
+          },
+          "3": {
+            "calibration_rerank_architecture": [
+              3,
+              6,
+              10,
+              12,
+              15,
+              17,
+              19,
+              24
+            ],
+            "calibration_rerank_delta": 1.7568278461694717,
+            "calibration_rerank_regret": 0.0,
+            "deployment_budget_status": "descriptive_additional_query_cost",
+            "hindsight_architecture": [
+              3,
+              6,
+              10,
+              12,
+              15,
+              17,
+              19,
+              24
+            ],
+            "hindsight_delta": 1.7568278461694717,
+            "hindsight_regret": 0.0
+          },
+          "5": {
+            "calibration_rerank_architecture": [
+              3,
+              6,
+              10,
+              12,
+              15,
+              17,
+              19,
+              24
+            ],
+            "calibration_rerank_delta": 1.7568278461694717,
+            "calibration_rerank_regret": 0.0,
+            "deployment_budget_status": "formal",
+            "hindsight_architecture": [
+              3,
+              6,
+              10,
+              12,
+              15,
+              17,
+              19,
+              24
+            ],
+            "hindsight_delta": 1.7568278461694717,
+            "hindsight_regret": 0.0
+          }
+        },
+        "s2": {
+          "1": {
+            "calibration_rerank_architecture": [
+              3,
+              6,
+              10,
+              12,
+              15,
+              17,
+              19,
+              24
+            ],
+            "calibration_rerank_delta": 1.7568278461694717,
+            "calibration_rerank_regret": 0.0,
+            "deployment_budget_status": "formal",
+            "hindsight_architecture": [
+              3,
+              6,
+              10,
+              12,
+              15,
+              17,
+              19,
+              24
+            ],
+            "hindsight_delta": 1.7568278461694717,
+            "hindsight_regret": 0.0
+          },
+          "10": {
+            "calibration_rerank_architecture": [
+              3,
+              6,
+              10,
+              12,
+              15,
+              17,
+              19,
+              24
+            ],
+            "calibration_rerank_delta": 1.7568278461694717,
+            "calibration_rerank_regret": 0.0,
+            "deployment_budget_status": "descriptive_additional_query_cost",
+            "hindsight_architecture": [
+              3,
+              6,
+              10,
+              12,
+              15,
+              17,
+              19,
+              24
+            ],
+            "hindsight_delta": 1.7568278461694717,
+            "hindsight_regret": 0.0
+          },
+          "15": {
+            "calibration_rerank_architecture": [
+              3,
+              6,
+              10,
+              12,
+              15,
+              17,
+              19,
+              24
+            ],
+            "calibration_rerank_delta": 1.7568278461694717,
+            "calibration_rerank_regret": 0.0,
+            "deployment_budget_status": "formal",
+            "hindsight_architecture": [
+              3,
+              6,
+              10,
+              12,
+              15,
+              17,
+              19,
+              24
+            ],
+            "hindsight_delta": 1.7568278461694717,
+            "hindsight_regret": 0.0
+          },
+          "3": {
+            "calibration_rerank_architecture": [
+              3,
+              6,
+              10,
+              12,
+              15,
+              17,
+              19,
+              24
+            ],
+            "calibration_rerank_delta": 1.7568278461694717,
+            "calibration_rerank_regret": 0.0,
+            "deployment_budget_status": "descriptive_additional_query_cost",
+            "hindsight_architecture": [
+              3,
+              6,
+              10,
+              12,
+              15,
+              17,
+              19,
+              24
+            ],
+            "hindsight_delta": 1.7568278461694717,
+            "hindsight_regret": 0.0
+          },
+          "5": {
+            "calibration_rerank_architecture": [
+              3,
+              6,
+              10,
+              12,
+              15,
+              17,
+              19,
+              24
+            ],
+            "calibration_rerank_delta": 1.7568278461694717,
+            "calibration_rerank_regret": 0.0,
+            "deployment_budget_status": "formal",
+            "hindsight_architecture": [
+              3,
+              6,
+              10,
+              12,
+              15,
+              17,
+              19,
+              24
+            ],
+            "hindsight_delta": 1.7568278461694717,
+            "hindsight_regret": 0.0
+          }
+        }
+      },
+      "strategies": {
+        "direct_1": {
+          "G": 4.138167578727007,
+          "G_interval": [
+            3.7488753205165266,
+            4.547866319492459
+          ],
+          "R": 4.138167578727007,
+          "R_interval": [
+            3.7488753205165266,
+            4.547866319492459
+          ],
+          "calibration_delta": 5.690814396987358,
+          "s1_prediction": 3.8648005078236256,
+          "s2_prediction": 5.544188053657614,
+          "selected_architecture": [
+            1,
+            8,
+            10,
+            12,
+            15,
+            17,
+            19,
+            21
+          ],
+          "validation_delta": 5.894995424896479
+        },
+        "direct_10": {
+          "G": 0.4121779501438141,
+          "G_interval": [
+            0.36774930357933044,
+            0.4593892401084303
+          ],
+          "R": 0.4121779501438141,
+          "R_interval": [
+            0.36774930357933044,
+            0.4593892401084303
+          ],
+          "calibration_delta": 2.166332660863797,
+          "s1_prediction": 1.237122549364964,
+          "s2_prediction": 1.919809330254794,
+          "selected_architecture": [
+            6,
+            10,
+            12,
+            15,
+            17,
+            19,
+            21,
+            26
+          ],
+          "validation_delta": 2.169005796313286
+        },
+        "direct_11": {
+          "G": 0.4121779501438141,
+          "G_interval": [
+            0.36774930357933044,
+            0.4593892401084303
+          ],
+          "R": 0.4121779501438141,
+          "R_interval": [
+            0.36774930357933044,
+            0.4593892401084303
+          ],
+          "calibration_delta": 2.166332660863797,
+          "s1_prediction": 1.237122549364964,
+          "s2_prediction": 1.919809330254794,
+          "selected_architecture": [
+            6,
+            10,
+            12,
+            15,
+            17,
+            19,
+            21,
+            26
+          ],
+          "validation_delta": 2.169005796313286
+        },
+        "direct_15": {
+          "G": 0.0,
+          "G_interval": [
+            0.0,
+            0.0
+          ],
+          "R": 0.0,
+          "R_interval": [
+            0.0,
+            0.0
+          ],
+          "calibration_delta": 1.8328658553461237,
+          "s1_prediction": 1.0195014365017414,
+          "s2_prediction": 1.6891133685906725,
+          "selected_architecture": [
+            3,
+            6,
+            10,
+            12,
+            15,
+            17,
+            19,
+            24
+          ],
+          "validation_delta": 1.7568278461694717
+        },
+        "direct_3": {
+          "G": 0.41850968822836876,
+          "G_interval": [
+            0.382207359559834,
+            0.45391860557720065
+          ],
+          "R": 0.41850968822836876,
+          "R_interval": [
+            0.382207359559834,
+            0.45391860557720065
+          ],
+          "calibration_delta": 2.308391761034727,
+          "s1_prediction": 1.1195030026137829,
+          "s2_prediction": 1.9869808182120319,
+          "selected_architecture": [
+            3,
+            8,
+            10,
+            12,
+            15,
+            17,
+            21,
+            24
+          ],
+          "validation_delta": 2.1753375343978405
+        },
+        "direct_5": {
+          "G": 0.4121779501438141,
+          "G_interval": [
+            0.36774930357933044,
+            0.4593892401084303
+          ],
+          "R": 0.4121779501438141,
+          "R_interval": [
+            0.36774930357933044,
+            0.4593892401084303
+          ],
+          "calibration_delta": 2.166332660863797,
+          "s1_prediction": 1.237122549364964,
+          "s2_prediction": 1.919809330254794,
+          "selected_architecture": [
+            6,
+            10,
+            12,
+            15,
+            17,
+            19,
+            21,
+            26
+          ],
+          "validation_delta": 2.169005796313286
+        },
+        "s1": {
+          "G": 0.0,
+          "G_adjusted_interval": [
+            0.0,
+            0.0
+          ],
+          "G_interval": [
+            0.0,
+            0.0
+          ],
+          "R": 0.0,
+          "R_interval": [
+            0.0,
+            0.0
+          ],
+          "calibration_delta": 1.8328658553461237,
+          "s1_prediction": 1.0195014365017414,
+          "s2_prediction": 1.6891133685906725,
+          "selected_architecture": [
+            3,
+            6,
+            10,
+            12,
+            15,
+            17,
+            19,
+            24
+          ],
+          "validation_delta": 1.7568278461694717
+        },
+        "s1_top5": {
+          "G": 0.0,
+          "G_interval": [
+            0.0,
+            0.0
+          ],
+          "R": 0.0,
+          "R_interval": [
+            0.0,
+            0.0
+          ],
+          "calibration_delta": 1.8328658553461237,
+          "s1_prediction": 1.0195014365017414,
+          "s2_prediction": 1.6891133685906725,
+          "selected_architecture": [
+            3,
+            6,
+            10,
+            12,
+            15,
+            17,
+            19,
+            24
+          ],
+          "validation_delta": 1.7568278461694717
+        },
+        "s2": {
+          "G": 0.0,
+          "G_interval": [
+            0.0,
+            0.0
+          ],
+          "R": 0.0,
+          "R_interval": [
+            0.0,
+            0.0
+          ],
+          "calibration_delta": 1.8328658553461237,
+          "s1_prediction": 1.0195014365017414,
+          "s2_prediction": 1.6891133685906725,
+          "selected_architecture": [
+            3,
+            6,
+            10,
+            12,
+            15,
+            17,
+            19,
+            24
+          ],
+          "validation_delta": 1.7568278461694717
+        },
+        "s2_top5": {
+          "G": 0.0,
+          "G_interval": [
+            0.0,
+            0.0
+          ],
+          "R": 0.0,
+          "R_interval": [
+            0.0,
+            0.0
+          ],
+          "calibration_delta": 1.8328658553461237,
+          "s1_prediction": 1.0195014365017414,
+          "s2_prediction": 1.6891133685906725,
+          "selected_architecture": [
+            3,
+            6,
+            10,
+            12,
+            15,
+            17,
+            19,
+            24
+          ],
+          "validation_delta": 1.7568278461694717
+        }
+      },
+      "validation_hindsight_best": [
+        3,
+        6,
+        10,
+        12,
+        15,
+        17,
+        19,
+        24
+      ]
+    },
+    "8_low": {
+      "calibration_reference": [
+        8,
+        10,
+        12,
+        15,
+        17,
+        19,
+        24,
+        26
+      ],
+      "calibration_reference_validation_delta": 2.017375845462084,
+      "calibration_shards": [
+        {
+          "s1": {
+            "G": 0.2682706378400326,
+            "R": 0.37288547679781914,
+            "selected_architecture": [
+              3,
+              6,
+              10,
+              12,
+              15,
+              17,
+              19,
+              21
+            ]
+          },
+          "s2": {
+            "G": 0.2682706378400326,
+            "R": 0.37288547679781914,
+            "selected_architecture": [
+              3,
+              6,
+              10,
+              12,
+              15,
+              17,
+              19,
+              21
+            ]
+          }
+        },
+        {
+          "s1": {
+            "G": 0.2682706378400326,
+            "R": 0.37288547679781914,
+            "selected_architecture": [
+              3,
+              6,
+              10,
+              12,
+              15,
+              17,
+              19,
+              21
+            ]
+          },
+          "s2": {
+            "G": 0.2682706378400326,
+            "R": 0.37288547679781914,
+            "selected_architecture": [
+              3,
+              6,
+              10,
+              12,
+              15,
+              17,
+              19,
+              21
+            ]
+          }
+        },
+        {
+          "s1": {
+            "G": 0.1849573664367199,
+            "R": 0.28957220539450645,
+            "selected_architecture": [
+              6,
+              8,
+              10,
+              12,
+              15,
+              17,
+              21,
+              24
+            ]
+          },
+          "s2": {
+            "G": 0.057160716503858566,
+            "R": 0.16177555546164513,
+            "selected_architecture": [
+              3,
+              6,
+              8,
+              12,
+              15,
+              17,
+              19,
+              26
+            ]
+          }
+        }
+      ],
+      "confirmation_slice_G": [
+        0.28459908813238144,
+        0.2519421875476837
+      ],
+      "practical": false,
+      "prediction_metrics": {
+        "s1": {
+          "calibration_point": {
+            "kendall_tau_b": 0.12380952380952381,
+            "mae": 1.197450535164939,
+            "pearson": 0.19798140110351897,
+            "rmse": 1.2334320980015367,
+            "spearman": 0.125,
+            "top_10_overlap_fraction": 0.8,
+            "top_15_overlap_fraction": 1.0,
+            "top_1_overlap_fraction": 0.0,
+            "top_3_overlap_fraction": 0.0,
+            "top_5_overlap_fraction": 0.0
+          },
+          "kendall_tau_b": {
+            "interval95": [
+              0.08571428571428572,
+              0.14285714285714285
+            ],
+            "point": 0.10476190476190476
+          },
+          "mae": {
+            "interval95": [
+              1.0637196269631384,
+              1.1321634053500989
+            ],
+            "point": 1.0975055580337842
+          },
+          "pearson": {
+            "interval95": [
+              0.2287745249331485,
+              0.28986618053483654
+            ],
+            "point": 0.2600691449689744
+          },
+          "rmse": {
+            "interval95": [
+              1.0993606587514502,
+              1.1661158492638002
+            ],
+            "point": 1.1322192718078818
+          },
+          "spearman": {
+            "interval95": [
+              0.09285714285714286,
+              0.17142857142857143
+            ],
+            "point": 0.11071428571428571
+          },
+          "top_10_overlap_fraction": {
+            "interval95": [
+              0.8,
+              0.8
+            ],
+            "point": 0.8
+          },
+          "top_15_overlap_fraction": {
+            "interval95": [
+              1.0,
+              1.0
+            ],
+            "point": 1.0
+          },
+          "top_1_overlap_fraction": {
+            "interval95": [
+              0.0,
+              0.0
+            ],
+            "point": 0.0
+          },
+          "top_3_overlap_fraction": {
+            "interval95": [
+              0.0,
+              0.0
+            ],
+            "point": 0.0
+          },
+          "top_5_overlap_fraction": {
+            "interval95": [
+              0.0,
+              0.2
+            ],
+            "point": 0.0
+          }
+        },
+        "s2": {
+          "calibration_point": {
+            "kendall_tau_b": 0.6,
+            "mae": 0.22101073910792693,
+            "pearson": 0.8390291180196101,
+            "rmse": 0.26309017808851465,
+            "spearman": 0.8214285714285714,
+            "top_10_overlap_fraction": 0.9,
+            "top_15_overlap_fraction": 1.0,
+            "top_1_overlap_fraction": 0.0,
+            "top_3_overlap_fraction": 0.3333333333333333,
+            "top_5_overlap_fraction": 0.6
+          },
+          "kendall_tau_b": {
+            "interval95": [
+              0.5619047619047619,
+              0.6190476190476191
+            ],
+            "point": 0.580952380952381
+          },
+          "mae": {
+            "interval95": [
+              0.15078128135556093,
+              0.1824377935359047
+            ],
+            "point": 0.16448065108723078
+          },
+          "pearson": {
+            "interval95": [
+              0.8013677830088222,
+              0.8468452646728057
+            ],
+            "point": 0.8261076286477288
+          },
+          "rmse": {
+            "interval95": [
+              0.17819557770696823,
+              0.21809448378418478
+            ],
+            "point": 0.19588007394335222
+          },
+          "spearman": {
+            "interval95": [
+              0.7821428571428571,
+              0.8178571428571428
+            ],
+            "point": 0.7964285714285714
+          },
+          "top_10_overlap_fraction": {
+            "interval95": [
+              0.9,
+              0.9
+            ],
+            "point": 0.9
+          },
+          "top_15_overlap_fraction": {
+            "interval95": [
+              1.0,
+              1.0
+            ],
+            "point": 1.0
+          },
+          "top_1_overlap_fraction": {
+            "interval95": [
+              0.0,
+              0.0
+            ],
+            "point": 0.0
+          },
+          "top_3_overlap_fraction": {
+            "interval95": [
+              0.3333333333333333,
+              0.3333333333333333
+            ],
+            "point": 0.3333333333333333
+          },
+          "top_5_overlap_fraction": {
+            "interval95": [
+              0.6,
+              0.8
+            ],
+            "point": 0.6
+          }
+        }
+      },
+      "quality_candidate_count": 0,
+      "shortlists": {
+        "s1": {
+          "1": {
+            "calibration_rerank_architecture": [
+              3,
+              6,
+              10,
+              12,
+              15,
+              17,
+              19,
+              21
+            ],
+            "calibration_rerank_delta": 2.2856464833021164,
+            "calibration_rerank_regret": 0.37288547679781914,
+            "deployment_budget_status": "formal",
+            "hindsight_architecture": [
+              3,
+              6,
+              10,
+              12,
+              15,
+              17,
+              19,
+              21
+            ],
+            "hindsight_delta": 2.2856464833021164,
+            "hindsight_regret": 0.37288547679781914
+          },
+          "10": {
+            "calibration_rerank_architecture": [
+              8,
+              10,
+              12,
+              15,
+              17,
+              19,
+              24,
+              26
+            ],
+            "calibration_rerank_delta": 2.017375845462084,
+            "calibration_rerank_regret": 0.10461483895778656,
+            "deployment_budget_status": "descriptive_additional_query_cost",
+            "hindsight_architecture": [
+              3,
+              6,
+              8,
+              10,
+              15,
+              17,
+              21,
+              26
+            ],
+            "hindsight_delta": 1.9127610065042973,
+            "hindsight_regret": 0.0
+          },
+          "15": {
+            "calibration_rerank_architecture": [
+              8,
+              10,
+              12,
+              15,
+              17,
+              19,
+              24,
+              26
+            ],
+            "calibration_rerank_delta": 2.017375845462084,
+            "calibration_rerank_regret": 0.10461483895778656,
+            "deployment_budget_status": "formal",
+            "hindsight_architecture": [
+              3,
+              6,
+              8,
+              10,
+              15,
+              17,
+              21,
+              26
+            ],
+            "hindsight_delta": 1.9127610065042973,
+            "hindsight_regret": 0.0
+          },
+          "3": {
+            "calibration_rerank_architecture": [
+              6,
+              8,
+              10,
+              12,
+              15,
+              17,
+              21,
+              24
+            ],
+            "calibration_rerank_delta": 2.2023332118988037,
+            "calibration_rerank_regret": 0.28957220539450645,
+            "deployment_budget_status": "descriptive_additional_query_cost",
+            "hindsight_architecture": [
+              6,
+              8,
+              10,
+              12,
+              15,
+              17,
+              21,
+              24
+            ],
+            "hindsight_delta": 2.2023332118988037,
+            "hindsight_regret": 0.28957220539450645
+          },
+          "5": {
+            "calibration_rerank_architecture": [
+              6,
+              8,
+              10,
+              12,
+              15,
+              17,
+              21,
+              24
+            ],
+            "calibration_rerank_delta": 2.2023332118988037,
+            "calibration_rerank_regret": 0.28957220539450645,
+            "deployment_budget_status": "formal",
+            "hindsight_architecture": [
+              6,
+              8,
+              10,
+              12,
+              15,
+              17,
+              21,
+              24
+            ],
+            "hindsight_delta": 2.2023332118988037,
+            "hindsight_regret": 0.28957220539450645
+          }
+        },
+        "s2": {
+          "1": {
+            "calibration_rerank_architecture": [
+              3,
+              6,
+              10,
+              12,
+              15,
+              17,
+              19,
+              21
+            ],
+            "calibration_rerank_delta": 2.2856464833021164,
+            "calibration_rerank_regret": 0.37288547679781914,
+            "deployment_budget_status": "formal",
+            "hindsight_architecture": [
+              3,
+              6,
+              10,
+              12,
+              15,
+              17,
+              19,
+              21
+            ],
+            "hindsight_delta": 2.2856464833021164,
+            "hindsight_regret": 0.37288547679781914
+          },
+          "10": {
+            "calibration_rerank_architecture": [
+              8,
+              10,
+              12,
+              15,
+              17,
+              19,
+              24,
+              26
+            ],
+            "calibration_rerank_delta": 2.017375845462084,
+            "calibration_rerank_regret": 0.10461483895778656,
+            "deployment_budget_status": "descriptive_additional_query_cost",
+            "hindsight_architecture": [
+              3,
+              6,
+              8,
+              10,
+              15,
+              17,
+              21,
+              26
+            ],
+            "hindsight_delta": 1.9127610065042973,
+            "hindsight_regret": 0.0
+          },
+          "15": {
+            "calibration_rerank_architecture": [
+              8,
+              10,
+              12,
+              15,
+              17,
+              19,
+              24,
+              26
+            ],
+            "calibration_rerank_delta": 2.017375845462084,
+            "calibration_rerank_regret": 0.10461483895778656,
+            "deployment_budget_status": "formal",
+            "hindsight_architecture": [
+              3,
+              6,
+              8,
+              10,
+              15,
+              17,
+              21,
+              26
+            ],
+            "hindsight_delta": 1.9127610065042973,
+            "hindsight_regret": 0.0
+          },
+          "3": {
+            "calibration_rerank_architecture": [
+              8,
+              10,
+              12,
+              15,
+              17,
+              19,
+              24,
+              26
+            ],
+            "calibration_rerank_delta": 2.017375845462084,
+            "calibration_rerank_regret": 0.10461483895778656,
+            "deployment_budget_status": "descriptive_additional_query_cost",
+            "hindsight_architecture": [
+              8,
+              10,
+              12,
+              15,
+              17,
+              19,
+              24,
+              26
+            ],
+            "hindsight_delta": 2.017375845462084,
+            "hindsight_regret": 0.10461483895778656
+          },
+          "5": {
+            "calibration_rerank_architecture": [
+              8,
+              10,
+              12,
+              15,
+              17,
+              19,
+              24,
+              26
+            ],
+            "calibration_rerank_delta": 2.017375845462084,
+            "calibration_rerank_regret": 0.10461483895778656,
+            "deployment_budget_status": "formal",
+            "hindsight_architecture": [
+              8,
+              10,
+              12,
+              15,
+              17,
+              19,
+              24,
+              26
+            ],
+            "hindsight_delta": 2.017375845462084,
+            "hindsight_regret": 0.10461483895778656
+          }
+        }
+      },
+      "strategies": {
+        "direct_1": {
+          "G": 0.014836736023426056,
+          "G_interval": [
+            -0.015325539745390415,
+            0.04441156415268773
+          ],
+          "R": 0.11945157498121262,
+          "R_interval": [
+            0.0855017569847405,
+            0.15387797085568308
+          ],
+          "calibration_delta": 2.154825149724881,
+          "s1_prediction": 1.3160017045835657,
+          "s2_prediction": 2.0290608232219998,
+          "selected_architecture": [
+            3,
+            6,
+            10,
+            12,
+            15,
+            19,
+            24,
+            26
+          ],
+          "validation_delta": 2.03221258148551
+        },
+        "direct_10": {
+          "G": 0.014836736023426056,
+          "G_interval": [
+            -0.015325539745390415,
+            0.04441156415268773
+          ],
+          "R": 0.11945157498121262,
+          "R_interval": [
+            0.0855017569847405,
+            0.15387797085568308
+          ],
+          "calibration_delta": 2.154825149724881,
+          "s1_prediction": 1.3160017045835657,
+          "s2_prediction": 2.0290608232219998,
+          "selected_architecture": [
+            3,
+            6,
+            10,
+            12,
+            15,
+            19,
+            24,
+            26
+          ],
+          "validation_delta": 2.03221258148551
+        },
+        "direct_11": {
+          "G": 0.014836736023426056,
+          "G_interval": [
+            -0.015325539745390415,
+            0.04441156415268773
+          ],
+          "R": 0.11945157498121262,
+          "R_interval": [
+            0.0855017569847405,
+            0.15387797085568308
+          ],
+          "calibration_delta": 2.154825149724881,
+          "s1_prediction": 1.3160017045835657,
+          "s2_prediction": 2.0290608232219998,
+          "selected_architecture": [
+            3,
+            6,
+            10,
+            12,
+            15,
+            19,
+            24,
+            26
+          ],
+          "validation_delta": 2.03221258148551
+        },
+        "direct_15": {
+          "G": 0.0,
+          "G_interval": [
+            0.0,
+            0.0
+          ],
+          "R": 0.10461483895778656,
+          "R_interval": [
+            0.06290273237973451,
+            0.14766591619700192
+          ],
+          "calibration_delta": 2.0024017182489233,
+          "s1_prediction": 1.2578951492905617,
+          "s2_prediction": 1.9289142886797586,
+          "selected_architecture": [
+            8,
+            10,
+            12,
+            15,
+            17,
+            19,
+            24,
+            26
+          ],
+          "validation_delta": 2.017375845462084
+        },
+        "direct_3": {
+          "G": 0.014836736023426056,
+          "G_interval": [
+            -0.015325539745390415,
+            0.04441156415268773
+          ],
+          "R": 0.11945157498121262,
+          "R_interval": [
+            0.0855017569847405,
+            0.15387797085568308
+          ],
+          "calibration_delta": 2.154825149724881,
+          "s1_prediction": 1.3160017045835657,
+          "s2_prediction": 2.0290608232219998,
+          "selected_architecture": [
+            3,
+            6,
+            10,
+            12,
+            15,
+            19,
+            24,
+            26
+          ],
+          "validation_delta": 2.03221258148551
+        },
+        "direct_5": {
+          "G": 0.014836736023426056,
+          "G_interval": [
+            -0.015325539745390415,
+            0.04441156415268773
+          ],
+          "R": 0.11945157498121262,
+          "R_interval": [
+            0.0855017569847405,
+            0.15387797085568308
+          ],
+          "calibration_delta": 2.154825149724881,
+          "s1_prediction": 1.3160017045835657,
+          "s2_prediction": 2.0290608232219998,
+          "selected_architecture": [
+            3,
+            6,
+            10,
+            12,
+            15,
+            19,
+            24,
+            26
+          ],
+          "validation_delta": 2.03221258148551
+        },
+        "s1": {
+          "G": 0.2682706378400326,
+          "G_adjusted_interval": [
+            0.2121493512865508,
+            0.3240580660944089
+          ],
+          "G_interval": [
+            0.22208606293424965,
+            0.31424838220700624
+          ],
+          "R": 0.37288547679781914,
+          "R_interval": [
+            0.3170101648196578,
+            0.43048965185880655
+          ],
+          "calibration_delta": 2.3817724150915938,
+          "s1_prediction": 1.0210646080474057,
+          "s2_prediction": 1.9114239191015572,
+          "selected_architecture": [
+            3,
+            6,
+            10,
+            12,
+            15,
+            17,
+            19,
+            21
+          ],
+          "validation_delta": 2.2856464833021164
+        },
+        "s1_top5": {
+          "G": 0.1849573664367199,
+          "G_interval": [
+            0.13608442470431328,
+            0.23390297815203664
+          ],
+          "R": 0.28957220539450645,
+          "R_interval": [
+            0.2539713236503303,
+            0.32665794687345623
+          ],
+          "calibration_delta": 2.3339260307451086,
+          "s1_prediction": 1.0454815439879894,
+          "s2_prediction": 1.9810681131978827,
+          "selected_architecture": [
+            6,
+            8,
+            10,
+            12,
+            15,
+            17,
+            21,
+            24
+          ],
+          "validation_delta": 2.2023332118988037
+        },
+        "s2": {
+          "G": 0.2682706378400326,
+          "G_interval": [
+            0.22208606293424965,
+            0.31424838220700624
+          ],
+          "R": 0.37288547679781914,
+          "R_interval": [
+            0.3170101648196578,
+            0.43048965185880655
+          ],
+          "calibration_delta": 2.3817724150915938,
+          "s1_prediction": 1.0210646080474057,
+          "s2_prediction": 1.9114239191015572,
+          "selected_architecture": [
+            3,
+            6,
+            10,
+            12,
+            15,
+            17,
+            19,
+            21
+          ],
+          "validation_delta": 2.2856464833021164
+        },
+        "s2_top5": {
+          "G": 0.0,
+          "G_interval": [
+            0.0,
+            0.0
+          ],
+          "R": 0.10461483895778656,
+          "R_interval": [
+            0.06290273237973451,
+            0.14766591619700192
+          ],
+          "calibration_delta": 2.0024017182489233,
+          "s1_prediction": 1.2578951492905617,
+          "s2_prediction": 1.9289142886797586,
+          "selected_architecture": [
+            8,
+            10,
+            12,
+            15,
+            17,
+            19,
+            24,
+            26
+          ],
+          "validation_delta": 2.017375845462084
+        }
+      },
+      "validation_hindsight_best": [
+        3,
+        6,
+        8,
+        10,
+        15,
+        17,
+        21,
+        26
+      ]
+    }
+  }
+}

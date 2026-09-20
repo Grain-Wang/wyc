@@ -1,0 +1,78 @@
+{
+  "choices": {
+    "4_global": {
+      "direct_1": 11,
+      "direct_10": 11,
+      "direct_11": 11,
+      "direct_15": 11,
+      "direct_3": 11,
+      "direct_5": 11,
+      "s1": 11,
+      "s1_top5": 11,
+      "s2": 11,
+      "s2_top5": 11
+    },
+    "4_low": {
+      "direct_1": 12,
+      "direct_10": 14,
+      "direct_11": 14,
+      "direct_15": 14,
+      "direct_3": 7,
+      "direct_5": 7,
+      "s1": 6,
+      "s1_top5": 4,
+      "s2": 14,
+      "s2_top5": 14
+    },
+    "6_global": {
+      "direct_1": 13,
+      "direct_10": 13,
+      "direct_11": 13,
+      "direct_15": 8,
+      "direct_3": 13,
+      "direct_5": 13,
+      "s1": 7,
+      "s1_top5": 13,
+      "s2": 8,
+      "s2_top5": 8
+    },
+    "6_low": {
+      "direct_1": 10,
+      "direct_10": 10,
+      "direct_11": 11,
+      "direct_15": 11,
+      "direct_3": 10,
+      "direct_5": 10,
+      "s1": 1,
+      "s1_top5": 10,
+      "s2": 11,
+      "s2_top5": 11
+    },
+    "8_global": {
+      "direct_1": 8,
+      "direct_10": 14,
+      "direct_11": 14,
+      "direct_15": 10,
+      "direct_3": 11,
+      "direct_5": 14,
+      "s1": 10,
+      "s1_top5": 10,
+      "s2": 10,
+      "s2_top5": 10
+    },
+    "8_low": {
+      "direct_1": 6,
+      "direct_10": 6,
+      "direct_11": 6,
+      "direct_15": 14,
+      "direct_3": 6,
+      "direct_5": 6,
+      "s1": 5,
+      "s1_top5": 11,
+      "s2": 5,
+      "s2_top5": 14
+    }
+  },
+  "frozen_at_utc": "2026-09-20T13:39:31.306558+00:00",
+  "predictions_sha256": "7d229f58793b5e274cd264f53730ac7c89bdbdcad87547ac36a0ade721fa2ae7"
+}
