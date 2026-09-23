@@ -1,0 +1,7 @@
+{
+  "candidate_manifest_sha256": "8ef24b80b4a2a58bdb384ec4cc4c21e86704bed9b50f3e6245a591e8437bc60e",
+  "data_manifest_sha256": "11f95b9701278bde962067512a795399fcace3a44df99e925ea722f9435a8445",
+  "model_forwards": 0,
+  "prepared_at_utc": "2026-09-23T07:49:47.938386+00:00",
+  "status": "PREPARED_NOT_PILOTED"
+}

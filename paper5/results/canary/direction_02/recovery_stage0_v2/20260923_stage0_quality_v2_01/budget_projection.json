@@ -1,0 +1,19 @@
+{
+  "counts": {
+    "checkpoint_writes": 64,
+    "constructions": 33,
+    "e_windows": 1088,
+    "s_windows": 4096,
+    "updates": 1600
+  },
+  "hard_limit_seconds": 14400,
+  "prior_gpu_seconds": 418.11011994164437,
+  "projected_total_gpu_seconds": 10766.517654102296,
+  "unit_cost_bounds": {
+    "checkpoint_seconds": 0.18290200270712376,
+    "construction_seconds": 9.242491690441966,
+    "eval_window_seconds": 0.11707269924227148,
+    "historical_preselection_estimate_seconds": 753.0116015262902,
+    "update_seconds": 3.609578455798328
+  }
+}

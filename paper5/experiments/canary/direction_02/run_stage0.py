@@ -11,7 +11,9 @@ import importlib.metadata
 import os
 import signal
 import subprocess
+import sys
 import time
+from contextlib import ExitStack
 from datetime import UTC, datetime
 from pathlib import Path
 from typing import Any
@@ -28,6 +30,10 @@ CACHE = (
     / CFG["run_id"]
 )
 PROTOCOL = data.ROOT / "paper5/experiments/canary/direction_02/STAGE0_PROTOCOL.md"
+EXEC_CONFIG = data.CONFIG
+EXEC_PROTOCOL = PROTOCOL
+TOKEN_CACHE: Path | None = None
+QUALITY_V2 = False
 
 
 def now() -> str:
@@ -139,7 +145,7 @@ def load_split(
             raise RuntimeError("E is sealed")
         validate_selection()
     filename = f"{split}.npy" if split != "E" else "E.sealed.npy"
-    path = CACHE / filename
+    path = (TOKEN_CACHE or CACHE) / filename
     spec = manifest["splits"][split]
     if data.file_hash(path) != spec["npy_sha256"]:
         raise ValueError("Token file hash mismatch")
@@ -238,6 +244,11 @@ class GpuBudget:
 
     def check(self) -> None:
         """Check before each forward; leave checkpoint-save margin."""
+        if QUALITY_V2 and time.monotonic() >= getattr(self, "next_resource_check", 0):
+            from .stage0_quality_v2 import check_live_resource
+
+            check_live_resource()
+            self.next_resource_check = time.monotonic() + 30
         if time.monotonic() - self.start >= self.limit - 30:
             raise BudgetStop("Insufficient time for another update/evaluation")
         data.write_json(
@@ -392,7 +403,7 @@ def checkpoint(
                 "training_order": order,
                 "mapping": mapping,
                 "executed_code_sha": executed,
-                "config_sha256": data.file_hash(data.CONFIG),
+                "config_sha256": data.file_hash(EXEC_CONFIG),
                 "cpu_rng": torch.get_rng_state(),
                 "cuda_rng": torch.cuda.get_rng_state_all(),
             },
@@ -693,6 +704,11 @@ def pilot(snapshot: Path, budget: GpuBudget, executed: str) -> None:
 
 def freeze() -> None:
     """After pilot review, bind the feasible recipe without changing any thresholds."""
+    if QUALITY_V2:
+        from .stage0_quality_v2 import freeze_v2
+
+        freeze_v2(sys.modules[__name__])
+        return
     validate_artifacts()
     result = data.read_json(OUT / "pilot.json")
     ledger = data.read_json(OUT / "gpu_budget.json")
@@ -734,8 +750,8 @@ def formal(snapshot: Path, budget: GpuBudget, executed: str) -> None:
     manifest, pool = validate_artifacts()
     frozen = data.read_json(OUT / "formal_freeze.json")
     for key, path in [
-        ("config_sha256", data.CONFIG),
-        ("protocol_sha256", PROTOCOL),
+        ("config_sha256", EXEC_CONFIG),
+        ("protocol_sha256", EXEC_PROTOCOL),
         ("pilot_sha256", OUT / "pilot.json"),
         ("data_manifest_sha256", OUT / "data_manifest.json"),
         ("candidate_manifest_sha256", OUT / "candidate_manifest.json"),
@@ -1062,13 +1078,18 @@ def validate_measurement_rows(manifest: dict[str, Any]) -> list[dict[str, str]]:
 
 def gpu_stage(stage: str, snapshot: Path) -> None:
     """Execute one unique single-A800 phase, preserving failure/time evidence."""
-    from .stage0_resources import admission
+    from . import stage0_resources as resources
+
+    if QUALITY_V2:
+        from .stage0_quality_v2 import prepare_gpu
+
+        prepare_gpu(sys.modules[__name__], resources)
 
     selected = os.environ.get("CUDA_VISIBLE_DEVICES", "")
     if not selected.isdigit():
         raise RuntimeError("One explicitly selected GPU index is required")
     # Guard direct Python entry as well as the detached launcher; no CUDA context yet.
-    admission(stage, selected=int(selected))
+    resources.admission(stage, selected=int(selected))
     import torch
 
     if (
@@ -1119,10 +1140,22 @@ def main() -> None:
     parser.add_argument("--source", type=Path)
     parser.add_argument("--tokenizer", type=Path)
     parser.add_argument("--snapshot", type=Path)
+    parser.add_argument("--quality-v2", action="store_true")
     args = parser.parse_args()
+    if args.quality_v2:
+        if args.stage not in {"freeze", "formal", "analyze"}:
+            parser.error("V2 only reuses frozen inputs; no new preparation or pilot")
+        from .stage0_quality_v2 import activate
+
+        activate(sys.modules[__name__])
     CACHE.mkdir(parents=True, exist_ok=True)
-    with (CACHE / "task.lock").open("a") as lock:
-        fcntl.flock(lock, fcntl.LOCK_EX | fcntl.LOCK_NB)
+    with ExitStack() as stack:
+        paths = [CACHE / "task.lock"]
+        if QUALITY_V2 and args.stage == "formal":
+            paths.append(TOKEN_CACHE / "task.lock")
+        for path in paths:
+            lock = stack.enter_context(path.open("a"))
+            fcntl.flock(lock, fcntl.LOCK_EX | fcntl.LOCK_NB)
         if args.stage == "prepare":
             if args.source is None or args.tokenizer is None:
                 parser.error("prepare requires --source and --tokenizer")
@@ -1131,6 +1164,10 @@ def main() -> None:
             freeze()
         elif args.stage == "analyze":
             analyze()
+            if QUALITY_V2:
+                from .stage0_quality_v2 import supplement_analysis
+
+                supplement_analysis(sys.modules[__name__])
         else:
             if args.snapshot is None:
                 parser.error("GPU stages require --snapshot")
