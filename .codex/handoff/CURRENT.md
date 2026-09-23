@@ -1,5 +1,9 @@
 # AutoResearch 当前接续状态
 
+> **2026-09-23 paper5 / 单候选 exploratory capacity 续训已授权，尚未运行**
+>
+> 用户授权同一 a00（移除原层 12/15）、seed 17 从既有 step10 checkpoint 继续至 100；20/50/100 仅评价 S，1.15 PPL 比值门槛不变。新增独立 recovery_capacity 协议、入口及输出目录；不改下方原 Stage0 停止结论，不打开 E，不自动启动 8×2。先通过 CPU 续训一致性测试，提交并同步代码后在物理 GPU2 共享许可下运行，计入原 4 小时预算。无论容量是否通过，完成后停止等待用户重新批准正式协议。
+
 > **2026-09-23 paper5 Direction 2 / D2-Stage0（先导完成，质量门禁停止）**
 >
 > - 当前用户选择仍是 Direction 2 的一次 LoRA + next-token CE / NLL 问题探针；不是 FHRD/KL 复现，不实现 Hessian、NTK、JVP/VJP、NAS 或完整方法。下方旧 paper1 等任务不继承。

@@ -1,0 +1,20 @@
+{
+  "design_version": "D2_EXPLORATORY_CAPACITY_V1",
+  "run_id": "20260923_a00_seed17_resume10",
+  "source_run_id": "20260923_stage0_01",
+  "source_code_sha": "75e3253b8f8b78c5998730c039ad346231d350bc",
+  "source_archive_sha": "66d1b974c4379cc0866fc10f29a739a228e819d8",
+  "source_checkpoint_sha256": "dde8faf491844aaa57d6de87bdb1e4ff0a61cc16f718ba634750de94cfad8f5f",
+  "source_config_sha256": "143d3a71ea0a45dea419060ca8ba953ef3bf33a40134a1ad68cdc686fcf58526",
+  "candidate": "a00",
+  "removed": [12, 15],
+  "seed": 17,
+  "resume_step": 10,
+  "endpoint": 100,
+  "s_checkpoints": [20, 50, 100],
+  "quality_max_ppl_ratio": 1.15,
+  "physical_gpu": 2,
+  "gpu_uuid": "GPU-5c9c1a6d-52ff-000a-11e9-be3f1b36d43d",
+  "e_access_allowed": false,
+  "formal_launch_allowed": false
+}
