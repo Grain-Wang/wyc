@@ -5,10 +5,11 @@
 > - 用户明确选择 Direction 2，授权一次固定恢复预算问题探针，含实现、CPU 测试、A800 先导、通过门禁后的 16 条恢复轨迹及小型结果归档。不是完整 FHRD/RSC，不实现 Hessian、NTK、JVP/VJP 或 NAS 搜索器；下方 paper1 等旧任务不继承。
 > - D1 当前整层跳过路线结束，CET 暂停；基准 `6ee61e753d8e67b21c56adfb2edeec082e076f10` 的 H1-small INCONCLUSIVE 和多编辑 STOP_COMPLEX_METHOD_INVESTMENT 保留不改。
 > - 新协议：`paper5/experiments/canary/direction_02/STAGE0_PROTOCOL.md`；原 `direction_02_terminal_recovery_nas.md` 不覆盖。Qwen2.5-1.5B 固定 revision、真实移除两个 block、8 个候选、LoRA q/v r=8、CE 恢复、NLL 评价；seeds 17/29，100 updates，0/20/50/100 checkpoints。
-> - 当前独立副本以 D1 归档提交开始；原 AutoResearch 已有修改未动。当前 A800 SSH 连续超时，尚未登录或运行 D2 模型；继续本地数据准备与 CPU 检查，不把它写成先导或实验完成。
-> - 本地准备已完成：624 篇文档中按文档划分，T/S/E 选定 400/64/64 窗，分别来自 400/64/64 篇互斥文档。8 个双删层候选已按 D1 calibration 的 top-16 / best-plus-hash 规则冻结；22 项 D2 CPU tests、Ruff、逐文件 Black 和 shell 语法检查通过。产物只有准备/预检证据，尚无 pilot、正式恢复、E 测量或科学判定。
+> - 当前独立副本以 D1 归档提交开始；原 AutoResearch 已有修改未动。SSH 已恢复，未发现既有 D2 GPU 任务；三张 A800 实时均忙，且无本轮明确共用许可，GPU 阶段暂停。新增 GPU_ACCESS.md 和双入口许可/占用/重复启动检查；不根据空闲显存自动开跑，不创建虚构许可、不抢占或终止他人进程。
+> - 本地准备已完成：624 篇文档中按文档划分，T/S/E 选定 400/64/64 窗，分别来自 400/64/64 篇互斥文档。8 个双删层候选已按 D1 calibration 的 top-16 / best-plus-hash 规则冻结；25 项 D2 CPU tests、Ruff、逐文件 Black 和 shell 语法检查通过。产物只有准备/预检证据，尚无 pilot、正式恢复、E 测量或科学判定。
 > - 无现成可用小型 C4/FineWeb 子集，按授权使用已缓存 WikiText-2 train，按文档划分 T/S/E，并声明 D1 calibration 历史曝光；仅为内部探索评价。E 只能在全部正式轨迹结束、S 策略持久化后读取。
-> - 质量标准目前为待先导核验的工作假设，先导/预算通过并提交正式冻结记录之前，不可启动完整恢复。总 GPU 上限 4 小时含先导；CPU 分析 30 分钟。连接恢复后先检查远端环境及占用，再继续已有授权步骤；科学设定如需改变则停止说明。
+> - 初始实现提交为 `66926eeac7df801783a228ea2907738904646359`，此前普通推送因本地 GitHub 认证失败，不能将其写成已上传。恢复链路的实际执行 SHA 和结果归档 SHA 均尚不存在；后续交付必须按实际 Git 状态复核。
+> - 质量标准目前为待先导核验的工作假设，先导/预算通过并提交正式冻结记录之前，不可启动完整恢复。总 GPU 上限 4 小时含先导；CPU 分析 30 分钟。取得适用使用许可后重新检查资源，先单候选 10 步先导；科学设定如需改变则停止说明。
 
 > **2026-09-20 paper5 H1 多编辑隔离修订 V2（当前任务状态）**
 >

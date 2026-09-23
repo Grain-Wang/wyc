@@ -1062,6 +1062,13 @@ def validate_measurement_rows(manifest: dict[str, Any]) -> list[dict[str, str]]:
 
 def gpu_stage(stage: str, snapshot: Path) -> None:
     """Execute one unique single-A800 phase, preserving failure/time evidence."""
+    from .stage0_resources import admission
+
+    selected = os.environ.get("CUDA_VISIBLE_DEVICES", "")
+    if not selected.isdigit():
+        raise RuntimeError("One explicitly selected GPU index is required")
+    # Guard direct Python entry as well as the detached launcher; no CUDA context yet.
+    admission(stage, selected=int(selected))
     import torch
 
     if (

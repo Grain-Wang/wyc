@@ -9,6 +9,7 @@ stage=${1:?pilot or formal required}
 : "${D2_PYTHON:?set the checked project interpreter}"
 : "${D2_MODEL_SNAPSHOT:?set the existing pinned D1 model snapshot}"
 : "${D2_CACHE:?set project D2 cache parent directory}"
+: "${D2_GPU_PERMISSION_FILE:?verified server allocation/permission record required}"
 run_id=20260923_stage0_01
 run_directory="$HOME/whr/paper5/scratch/direction_02/$run_id/$stage"
 umask 077
@@ -19,6 +20,7 @@ trap 'code=$?; printf "%s\n" "$code" > "$run_directory/exit_code"' EXIT
 printf '%s\n' "$$" > "$run_directory/launcher_pid"
 export PYTHONPATH=.
 export PYTHONUNBUFFERED=1
+export PYTHONDONTWRITEBYTECODE=1
 export OPENBLAS_NUM_THREADS=1
 export OMP_NUM_THREADS=1
 export HF_HUB_OFFLINE=1

@@ -14,6 +14,7 @@ from paper5.experiments.canary.direction_02 import stage0_data as data
 from paper5.experiments.canary.direction_02 import stage0_model as model_code
 from paper5.experiments.canary.direction_02 import run_stage0 as runner
 from paper5.experiments.canary.direction_02.stage0_resources import choose_gpu
+from paper5.experiments.canary.direction_02 import stage0_resources as resources
 
 
 def tiny_model() -> Qwen2ForCausalLM:
@@ -376,6 +377,7 @@ def test_gpu_selection_checks_model_and_memory_reserve() -> None:
             "free_mib": 50000,
             "used_mib": 0,
             "utilization_percent": 0,
+            "existing_compute_process_count": 0,
         },
         {
             "index": 1,
@@ -383,6 +385,7 @@ def test_gpu_selection_checks_model_and_memory_reserve() -> None:
             "free_mib": 30000,
             "used_mib": 50000,
             "utilization_percent": 80,
+            "existing_compute_process_count": 1,
         },
         {
             "index": 2,
@@ -390,11 +393,93 @@ def test_gpu_selection_checks_model_and_memory_reserve() -> None:
             "free_mib": 70000,
             "used_mib": 10000,
             "utilization_percent": 10,
+            "existing_compute_process_count": 1,
         },
     ]
-    assert choose_gpu(rows, 24576)["index"] == 2
+    allocation = {"mode": "shared", "gpu_indices": [1, 2]}
+    assert choose_gpu(rows, 24576, allocation)["index"] == 2
     with pytest.raises(RuntimeError):
-        choose_gpu(rows, 75000)
+        choose_gpu(rows, 75000, allocation)
+    with pytest.raises(RuntimeError, match="allocation"):
+        choose_gpu(rows, 24576)
+    with pytest.raises(RuntimeError):
+        choose_gpu(rows, 24576, {"mode": "exclusive", "gpu_indices": [1, 2]})
+
+
+def test_idle_gpu_requires_permission_and_busy_gpu_requires_shared_mode() -> None:
+    rows = [
+        {
+            "index": 0,
+            "name": "A800",
+            "free_mib": 47000,
+            "used_mib": 34000,
+            "utilization_percent": 100,
+            "existing_compute_process_count": 1,
+        },
+        {
+            "index": 1,
+            "name": "A800",
+            "free_mib": 81000,
+            "used_mib": 10,
+            "utilization_percent": 0,
+            "existing_compute_process_count": 0,
+        },
+    ]
+    grant = {"mode": "exclusive", "gpu_indices": [0, 1]}
+    assert choose_gpu(rows, 24576, grant)["index"] == 1
+    with pytest.raises(RuntimeError):
+        choose_gpu(rows, 24576, {"mode": "exclusive", "gpu_indices": [0]})
+    assert choose_gpu(rows, 24576, {"mode": "shared", "gpu_indices": [0]})["index"] == 0
+
+
+def test_permission_record_must_cover_stage_task_and_expiry(
+    monkeypatch: pytest.MonkeyPatch, tmp_path: Path
+) -> None:
+    monkeypatch.delenv("D2_GPU_PERMISSION_FILE", raising=False)
+    with pytest.raises(RuntimeError, match="permission"):
+        resources.permission("pilot")
+    path = tmp_path / "grant.json"
+    record = {
+        "run_id": data.config()["run_id"],
+        "mode": "shared",
+        "gpu_indices": [0],
+        "stages": ["pilot"],
+        "evidence": "synthetic test allocation, not a real permit",
+        "expires_at_utc": "2999-01-01T00:00:00+00:00",
+    }
+    data.write_json(path, record)
+    monkeypatch.setenv("D2_GPU_PERMISSION_FILE", str(path))
+    assert resources.permission("pilot") == record
+    with pytest.raises(RuntimeError):
+        resources.permission("formal")
+    record["expires_at_utc"] = "2000-01-01T00:00:00+00:00"
+    data.write_json(path, record, replace=True)
+    with pytest.raises(RuntimeError, match="expired"):
+        resources.permission("pilot")
+
+
+def test_resource_recheck_and_duplicate_launch_stop(
+    monkeypatch: pytest.MonkeyPatch,
+) -> None:
+    grant = {"mode": "exclusive", "gpu_indices": [0]}
+    monkeypatch.setattr(resources, "permission", lambda stage: grant)
+    monkeypatch.setattr(resources, "existing_task_processes", lambda: [123])
+    with pytest.raises(RuntimeError, match="duplicate"):
+        resources.admission("pilot")
+    monkeypatch.setattr(resources, "existing_task_processes", lambda: [])
+    idle = {
+        "index": 0,
+        "name": "A800",
+        "free_mib": 81000,
+        "used_mib": 10,
+        "utilization_percent": 0,
+        "existing_compute_process_count": 0,
+    }
+    busy = {**idle, "utilization_percent": 100, "existing_compute_process_count": 1}
+    states = iter([[idle], [busy]])
+    monkeypatch.setattr(resources, "inspect_gpus", lambda: next(states))
+    with pytest.raises(RuntimeError):
+        resources.admission("pilot")
 
 
 def test_budget_rejects_duplicate_and_exhausted_runs(
