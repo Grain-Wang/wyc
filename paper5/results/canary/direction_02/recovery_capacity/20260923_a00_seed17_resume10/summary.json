@@ -1,0 +1,70 @@
+{
+  "adapter_squared_change_from_step10": 16.59931600559503,
+  "additional_effective_labels": 183960,
+  "additional_input_tokens": 184320,
+  "base_sha256": "81ce80e6cbaf60900cdb64973e4338142941f0c3518e878b49b2622638101f3e",
+  "base_unchanged": true,
+  "candidate": "a00",
+  "checkpoints_sha256": {
+    "100": "295fc6633ac818236d9ad8158b4eb0567ffc64fd7f458fad7ccea3f4f1e24503",
+    "20": "5dccdc479fe6c3e1d122c3e2ce842e3e9bef33badb9f2e3bdf37ba367b03b8cb",
+    "50": "5521f59ff9ee1d209487e95ad1b69d3e7a829f1dc112907044ab72af176393cc"
+  },
+  "e_accessed": false,
+  "endpoint": 100,
+  "executed_code_sha": "c63ec1a028d8f8fdc901a208b67a82e8b15c51c5",
+  "exploratory": true,
+  "formal_started": false,
+  "historical_s_scores": {
+    "0": 2.624146956950426,
+    "10": 2.608408061787486
+  },
+  "metrics": [
+    {
+      "checkpoint_seconds": 0.15995885897427797,
+      "eval_window_seconds": 0.03509237374237273,
+      "nll_ratio": 1.0421504770081178,
+      "parent_s_nll": 2.4612011834979057,
+      "ppl_ratio": 1.1093128880719165,
+      "quality_passed": true,
+      "s_nll": 2.5649419873952866,
+      "s_ppl": 12.999904189491813,
+      "step": 20
+    },
+    {
+      "checkpoint_seconds": 0.15588064026087523,
+      "eval_window_seconds": 0.03484671926707961,
+      "nll_ratio": 1.0003403745493944,
+      "parent_s_nll": 2.4612011834979057,
+      "ppl_ratio": 1.0008380812377886,
+      "quality_passed": true,
+      "s_nll": 2.462038913741708,
+      "s_ppl": 11.728700987058748,
+      "step": 50
+    },
+    {
+      "checkpoint_seconds": 0.18290200270712376,
+      "eval_window_seconds": 0.03520826117892284,
+      "nll_ratio": 0.960315738301673,
+      "parent_s_nll": 2.4612011834979057,
+      "ppl_ratio": 0.9069472839790369,
+      "quality_passed": true,
+      "s_nll": 2.363530231639743,
+      "s_ppl": 10.628406037127863,
+      "step": 100
+    }
+  ],
+  "new_updates": 90,
+  "next_action": "STOP; any formal Stage0 requires renewed user approval",
+  "peak_allocated_mib": 3737.0927734375,
+  "peak_reserved_mib": 4182.0,
+  "quality_max_ppl_ratio": 1.15,
+  "resume_absolute_nll_difference": 0.0,
+  "resumed_from_step": 10,
+  "seed": 17,
+  "source_artifacts_unchanged": true,
+  "source_code_sha": "75e3253b8f8b78c5998730c039ad346231d350bc",
+  "status": "EXPLORATORY_CAPACITY_FEASIBLE",
+  "unique_training_windows_additional": 360,
+  "unique_training_windows_total": 400
+}

@@ -1,0 +1,89 @@
+{
+  "diagnostic": {
+    "candidate": "a00",
+    "design_version": "D2_EXPLORATORY_CAPACITY_V1",
+    "e_access_allowed": false,
+    "endpoint": 100,
+    "formal_launch_allowed": false,
+    "gpu_uuid": "GPU-5c9c1a6d-52ff-000a-11e9-be3f1b36d43d",
+    "physical_gpu": 2,
+    "quality_max_ppl_ratio": 1.15,
+    "removed": [
+      12,
+      15
+    ],
+    "resume_step": 10,
+    "run_id": "20260923_a00_seed17_resume10",
+    "s_checkpoints": [
+      20,
+      50,
+      100
+    ],
+    "seed": 17,
+    "source_archive_sha": "66d1b974c4379cc0866fc10f29a739a228e819d8",
+    "source_checkpoint_sha256": "dde8faf491844aaa57d6de87bdb1e4ff0a61cc16f718ba634750de94cfad8f5f",
+    "source_code_sha": "75e3253b8f8b78c5998730c039ad346231d350bc",
+    "source_config_sha256": "143d3a71ea0a45dea419060ca8ba953ef3bf33a40134a1ad68cdc686fcf58526",
+    "source_run_id": "20260923_stage0_01"
+  },
+  "recipe": {
+    "attention": "eager",
+    "bootstrap_replicates": 2000,
+    "bootstrap_seed": 20260924,
+    "budget_fixed_reserve_seconds": 300,
+    "budget_safety_factor": 1.5,
+    "candidate_count": 8,
+    "candidate_seed": 20260923,
+    "checkpoints": [
+      0,
+      20,
+      50,
+      100
+    ],
+    "competitive_pool_size": 16,
+    "cpu_seconds_limit": 1800,
+    "d1_archive_commit": "6ee61e753d8e67b21c56adfb2edeec082e076f10",
+    "data_seed": 20260923,
+    "design_version": "D2_STAGE0_V1",
+    "dtype": "bfloat16",
+    "gpu_seconds_limit": 14400,
+    "gradient_accumulation": 4,
+    "gradient_clip": 1.0,
+    "initial_free_memory_mib": 24576,
+    "learning_rate": 0.0001,
+    "lora_alpha": 16,
+    "lora_dropout": 0.0,
+    "lora_parameter_dtype": "float32",
+    "lora_rank": 8,
+    "lora_targets": [
+      "q_proj",
+      "v_proj"
+    ],
+    "material_gap_nats": 0.02,
+    "memory_reserve_mib": 4096,
+    "microbatch": 1,
+    "model_id": "Qwen/Qwen2.5-1.5B",
+    "model_revision": "8faed761d45a263340a0528343f099c05c9a4323",
+    "optimizer": "AdamW",
+    "pilot_seconds_limit": 1800,
+    "pilot_seed": 17,
+    "pilot_updates": 10,
+    "proposed_quality_max_ppl_ratio": 1.15,
+    "quality_min_candidates": 2,
+    "removed_blocks": 2,
+    "run_id": "20260923_stage0_01",
+    "sequence_length": 512,
+    "source_sha256": "9e9fa1ad55b1c2c95b08e37dd8e653f638fac2c6de904b79e813611eefbc985f",
+    "training_seeds": [
+      17,
+      29
+    ],
+    "updates": 100,
+    "weight_decay": 0.0,
+    "windows": {
+      "E": 64,
+      "S": 64,
+      "T": 400
+    }
+  }
+}

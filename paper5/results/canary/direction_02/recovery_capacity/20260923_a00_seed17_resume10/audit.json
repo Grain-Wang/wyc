@@ -1,0 +1,126 @@
+{
+  "completion": {
+    "checkpoint_preserved": true,
+    "e_opened": false,
+    "exit_code": 0,
+    "files": {
+      "candidate_manifest.json": {
+        "bytes": 300,
+        "sha256": "dd80ebf2e3e00538fbd08261907e3fbc3a28f35d4808b9a6d42dec0fc8b9ac9d"
+      },
+      "config_used.json": {
+        "bytes": 2438,
+        "sha256": "3de0597a47b72b30193b43d78a6687c91557c8f0d258f91f30238e9821c2c02b"
+      },
+      "data_manifest.json": {
+        "bytes": 301008,
+        "sha256": "11f95b9701278bde962067512a795399fcace3a44df99e925ea722f9435a8445"
+      },
+      "freeze.json": {
+        "bytes": 7579,
+        "sha256": "c5a4759355d4504f388ea6cb12a399a2483348ce0d20118ce7e9f3ecc2eae0c3"
+      },
+      "gpu_budget.json": {
+        "bytes": 517,
+        "sha256": "4fa9bd6c24d89e39b46227432c777ed2abd883c9966c222f8bf5f3ef230d26ea"
+      },
+      "metrics.csv": {
+        "bytes": 535,
+        "sha256": "0c4f766cc124e4aaf01a22bd1dce09610c3d045e86e25946e5b80b142e293fdd"
+      },
+      "per_window_nll.csv": {
+        "bytes": 20739,
+        "sha256": "2d422e91f0d1f32b02c73826bce0d1e5bd580f0a53b59a6c815211866801b706"
+      },
+      "resource_preflight.json": {
+        "bytes": 990,
+        "sha256": "e8607f423a503df7fe0f6f95efc11f7a7a2ed3e045255bd980e6eac426d86918"
+      },
+      "resume_check_nll.csv": {
+        "bytes": 186,
+        "sha256": "852ea54f8298789c44f5cdd8b84ef0c892e724d4cf6abb1821ccc9f172dc1138"
+      },
+      "runtime.json": {
+        "bytes": 428,
+        "sha256": "4b5f233f0f1ae1643a7b3c625c58d9210e97fee5e7cf98dd7b43b3fa9049b507"
+      },
+      "summary.json": {
+        "bytes": 2365,
+        "sha256": "20b64dcea8d56386bd873d6cc20f34b5ef5477e85548df989c628571b65201a0"
+      },
+      "training_curve.csv": {
+        "bytes": 7372,
+        "sha256": "3f12c10e3b26a0d63f0b863acdacbf76bd6a5d141b6a9b862a8e70ed76b9a71d"
+      }
+    },
+    "formal_never_started": true,
+    "metrics": [
+      {
+        "checkpoint_seconds": 0.15995885897427797,
+        "eval_window_seconds": 0.03509237374237273,
+        "nll_ratio": 1.0421504770081178,
+        "parent_s_nll": 2.4612011834979057,
+        "ppl_ratio": 1.1093128880719165,
+        "quality_passed": true,
+        "s_nll": 2.5649419873952866,
+        "s_ppl": 12.999904189491813,
+        "step": 20
+      },
+      {
+        "checkpoint_seconds": 0.15588064026087523,
+        "eval_window_seconds": 0.03484671926707961,
+        "nll_ratio": 1.0003403745493944,
+        "parent_s_nll": 2.4612011834979057,
+        "ppl_ratio": 1.0008380812377886,
+        "quality_passed": true,
+        "s_nll": 2.462038913741708,
+        "s_ppl": 11.728700987058748,
+        "step": 50
+      },
+      {
+        "checkpoint_seconds": 0.18290200270712376,
+        "eval_window_seconds": 0.03520826117892284,
+        "nll_ratio": 0.960315738301673,
+        "parent_s_nll": 2.4612011834979057,
+        "ppl_ratio": 0.9069472839790369,
+        "quality_passed": true,
+        "s_nll": 2.363530231639743,
+        "s_ppl": 10.628406037127863,
+        "step": 100
+      }
+    ],
+    "original_gpu_ledger_preserved": true,
+    "preexisting_result_mtimes_unchanged": 38,
+    "run_id": "20260923_a00_seed17_resume10",
+    "runtime": {
+      "cuda": "12.1",
+      "cumulative_gpu_seconds": 418.11011994164437,
+      "diagnostic_seconds": 228.98928100336343,
+      "ended_at_utc": "2026-09-23T14:40:07.991671+00:00",
+      "executed_code_sha": "c63ec1a028d8f8fdc901a208b67a82e8b15c51c5",
+      "gpu_uuid": "GPU-5c9c1a6d-52ff-000a-11e9-be3f1b36d43d",
+      "original_pilot_seconds": 189.12083893828094,
+      "physical_gpu": 2,
+      "pid": 512009,
+      "status": "COMPLETE",
+      "torch": "2.4.1+cu121"
+    },
+    "s_nll_rows": 192,
+    "source_artifacts_hashes_unchanged": 46,
+    "status": "PASS",
+    "training_rows": 90
+  },
+  "local_cpu_tests_passed": 29,
+  "original_stage0_stop_record_changed": false,
+  "raw_logs_uploaded": false,
+  "remote_cpu_preflight": {
+    "E_opened": false,
+    "T_S_hashes": "PASS",
+    "checkpoint_validation": "PASS",
+    "code_sha": "c63ec1a028d8f8fdc901a208b67a82e8b15c51c5",
+    "cpu_tests_passed": 29,
+    "cuda_initialized": false,
+    "duplicate_stage0_tasks": [],
+    "original_checkpoint_step": 10
+  }
+}

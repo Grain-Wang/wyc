@@ -1,0 +1,12 @@
+{
+  "candidate": {
+    "historical_calibration_nll": 2.688085770855347,
+    "id": "a00",
+    "removed": [
+      12,
+      15
+    ]
+  },
+  "selection": "same already-piloted candidate; no new selection",
+  "source_manifest_sha256": "8ef24b80b4a2a58bdb384ec4cc4c21e86704bed9b50f3e6245a591e8437bc60e"
+}

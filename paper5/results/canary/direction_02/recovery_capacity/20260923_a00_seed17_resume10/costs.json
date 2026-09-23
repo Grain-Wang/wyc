@@ -1,0 +1,22 @@
+{
+  "additional_effective_labels": 183960,
+  "additional_input_tokens": 184320,
+  "additional_unique_windows": 360,
+  "cumulative_gpu_seconds": 418.11011994164437,
+  "diagnostic_wall_gpu_seconds": 228.98928100336343,
+  "hard_limit_seconds": 14400,
+  "new_optimizer_updates": 90,
+  "other_accounted_wall_seconds": 155.8559684017673,
+  "other_wall_includes": "startup, source verification, restoration, base checks, one-window reload check, resource sampling, and I/O",
+  "peak_allocated_mib": 3737.0927734375,
+  "peak_reserved_mib": 4182.0,
+  "prior_pilot_gpu_seconds": 189.12083893828094,
+  "strategy_cost_comparison": "not evaluated: one exploratory candidate only",
+  "three_checkpoint_writes_seconds_sum": 0.49874150194227695,
+  "three_s_evaluations_measured_seconds_sum": 6.729430668056011,
+  "total_effective_labels_including_pilot": 204400,
+  "total_input_tokens_including_pilot": 204800,
+  "total_optimizer_updates": 100,
+  "total_unique_windows": 400,
+  "training_update_measured_seconds_sum": 65.90514043159783
+}
