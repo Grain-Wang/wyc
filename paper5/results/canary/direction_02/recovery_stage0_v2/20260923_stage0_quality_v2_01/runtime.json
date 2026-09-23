@@ -1,0 +1,22 @@
+{
+  "design_version": "D2_STAGE0_QUALITY_V2",
+  "e_forward_windows": 1088,
+  "executed_code_sha": "53182b532ad8980eb0c4f09f122be941e2671b79",
+  "finished_at_utc": "2026-09-23T15:38:05.011423+00:00",
+  "gpu_name": "NVIDIA A800 80GB PCIe",
+  "peak_allocated_mib": 3737.0927734375,
+  "peak_reserved_mib": 4210.0,
+  "phase": "EVALUATED",
+  "s_forward_windows": 4096,
+  "selected_gpu": "2",
+  "training_updates": 1600,
+  "trajectory_count": 16,
+  "versions": {
+    "numpy": "2.2.6",
+    "safetensors": "0.6.2",
+    "scipy": "1.15.3",
+    "tokenizers": "0.22.0",
+    "torch": "2.4.1+cu121",
+    "transformers": "4.56.1"
+  }
+}

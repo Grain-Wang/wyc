@@ -1,10 +1,14 @@
 # AutoResearch 当前接续状态
 
-> **2026-09-23 paper5 / D2-Stage0 QUALITY V2 已授权，正式执行前冻结完成**
+> **2026-09-23 paper5 / D2-Stage0 QUALITY V2 正式16条轨迹完成，停止**
 >
-> 用户基于 `d44f48f49f80bb91d489eb80e2ab6ea0d08bc8b9` 明确授权原 8 候选×seed 17/29 的正式比较。新增 `STAGE0_QUALITY_V2.md`：只将质量准入移至各 seed 的100步E终点，1.15、至少两个候选及Ref100达标要求不变。修订发生在观察a00的S容量曲线后，仍是内部探索验证。原Stage0协议/配置/停止记录和capacity结果保持。
+> 基础归档 `d44f48f49f80bb91d489eb80e2ab6ea0d08bc8b9`；V2实际执行代码 `53182b532ad8980eb0c4f09f122be941e2671b79`。修订只将质量准入移到100步E终点，观察a00容量S曲线后的内部探索性质已披露。8候选×seed17/29全部从新LoRA/AdamW训练100步，capacity未混入正式轨迹，a00同seed重跑不是独立重复。
 >
-> V2 run_id `20260923_stage0_quality_v2_01`，独立结果/缓存目录；原候选及数据manifest逐字节复用。每条从新LoRA/optimizer开始，capacity不是正式样本，a00同seed重跑不是独立重复。先冻结并提交V2，再精确同步A800、CPU预检和GPU2共享资源检查；累计预算从418.11011994164437秒继承，仍为14400秒。所有16条轨迹和S策略选择持久化后才允许读E。完成后归档并停止，不进入复杂方法。
+> 后台任务退出0，16/16轨迹、1600更新、64 checkpoints、4096条S及1088条E测量完成。S策略选择持久化后才读取E。两个seed均8/8候选与Ref100质量达标；四种策略均选a00。seed17/29终点E NLL为2.471813731/2.477565538；G0、B20/BSH相对Ref100差值及95%文档区间均0 [0,0]，有限候选E事后simple regret也为0。Top-1与Top-3未变，Spearman0.857143、Kendall0.785714，只有中段排序变化。
+>
+> 判定：QUALITY USABLE；NO_MATERIAL_SELECTION_GAP；B20、BSH为SIMPLE_BASELINE_SUFFICIENT。零差值源于选择了同一候选，不外推为所有架构无差异。未新增父模型恢复训练，不把相对未适配父模型的改善归因于压缩。正式GPU1957.027秒，含先导/capacity累计2375.137秒，未扩4小时预算。物理GPU2共享；本地/远端各36 CPU tests通过，完整性审计通过。
+>
+> 独立结果目录 `paper5/results/canary/direction_02/recovery_stage0_v2/20260923_stage0_quality_v2_01/`，详见 REPORT.md。原V1协议/配置/停止结果、capacity和D1均保留；58个原结果哈希、55个已有mtime、旧checkpoint/账本不变。结果归档为后续独立commit，与执行代码区分。当前完成后停止，不进入FHRD/RSC或其他方向。
 
 > **2026-09-23 paper5 / exploratory capacity 单候选续训完成，正式 Stage0 仍停止**
 >

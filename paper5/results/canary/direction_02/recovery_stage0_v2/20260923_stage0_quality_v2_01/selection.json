@@ -1,0 +1,373 @@
+{
+  "choices": {
+    "17": {
+      "B0": {
+        "endpoint": 100,
+        "queries": [
+          {
+            "candidate": "a00",
+            "checkpoint": 0
+          },
+          {
+            "candidate": "a01",
+            "checkpoint": 0
+          },
+          {
+            "candidate": "a02",
+            "checkpoint": 0
+          },
+          {
+            "candidate": "a03",
+            "checkpoint": 0
+          },
+          {
+            "candidate": "a04",
+            "checkpoint": 0
+          },
+          {
+            "candidate": "a05",
+            "checkpoint": 0
+          },
+          {
+            "candidate": "a06",
+            "checkpoint": 0
+          },
+          {
+            "candidate": "a07",
+            "checkpoint": 0
+          }
+        ],
+        "selected": "a00",
+        "training_updates": 100
+      },
+      "B20": {
+        "endpoint": 100,
+        "queries": [
+          {
+            "candidate": "a00",
+            "checkpoint": 20
+          },
+          {
+            "candidate": "a01",
+            "checkpoint": 20
+          },
+          {
+            "candidate": "a02",
+            "checkpoint": 20
+          },
+          {
+            "candidate": "a03",
+            "checkpoint": 20
+          },
+          {
+            "candidate": "a04",
+            "checkpoint": 20
+          },
+          {
+            "candidate": "a05",
+            "checkpoint": 20
+          },
+          {
+            "candidate": "a06",
+            "checkpoint": 20
+          },
+          {
+            "candidate": "a07",
+            "checkpoint": 20
+          }
+        ],
+        "selected": "a00",
+        "training_updates": 240
+      },
+      "BSH": {
+        "endpoint": 100,
+        "queries": [
+          {
+            "candidate": "a00",
+            "checkpoint": 20
+          },
+          {
+            "candidate": "a01",
+            "checkpoint": 20
+          },
+          {
+            "candidate": "a02",
+            "checkpoint": 20
+          },
+          {
+            "candidate": "a03",
+            "checkpoint": 20
+          },
+          {
+            "candidate": "a04",
+            "checkpoint": 20
+          },
+          {
+            "candidate": "a05",
+            "checkpoint": 20
+          },
+          {
+            "candidate": "a06",
+            "checkpoint": 20
+          },
+          {
+            "candidate": "a07",
+            "checkpoint": 20
+          },
+          {
+            "candidate": "a00",
+            "checkpoint": 50
+          },
+          {
+            "candidate": "a03",
+            "checkpoint": 50
+          },
+          {
+            "candidate": "a02",
+            "checkpoint": 50
+          },
+          {
+            "candidate": "a07",
+            "checkpoint": 50
+          },
+          {
+            "candidate": "a00",
+            "checkpoint": 100
+          },
+          {
+            "candidate": "a03",
+            "checkpoint": 100
+          }
+        ],
+        "selected": "a00",
+        "training_updates": 380
+      },
+      "Ref100": {
+        "endpoint": 100,
+        "queries": [
+          {
+            "candidate": "a00",
+            "checkpoint": 100
+          },
+          {
+            "candidate": "a01",
+            "checkpoint": 100
+          },
+          {
+            "candidate": "a02",
+            "checkpoint": 100
+          },
+          {
+            "candidate": "a03",
+            "checkpoint": 100
+          },
+          {
+            "candidate": "a04",
+            "checkpoint": 100
+          },
+          {
+            "candidate": "a05",
+            "checkpoint": 100
+          },
+          {
+            "candidate": "a06",
+            "checkpoint": 100
+          },
+          {
+            "candidate": "a07",
+            "checkpoint": 100
+          }
+        ],
+        "selected": "a00",
+        "training_updates": 800
+      }
+    },
+    "29": {
+      "B0": {
+        "endpoint": 100,
+        "queries": [
+          {
+            "candidate": "a00",
+            "checkpoint": 0
+          },
+          {
+            "candidate": "a01",
+            "checkpoint": 0
+          },
+          {
+            "candidate": "a02",
+            "checkpoint": 0
+          },
+          {
+            "candidate": "a03",
+            "checkpoint": 0
+          },
+          {
+            "candidate": "a04",
+            "checkpoint": 0
+          },
+          {
+            "candidate": "a05",
+            "checkpoint": 0
+          },
+          {
+            "candidate": "a06",
+            "checkpoint": 0
+          },
+          {
+            "candidate": "a07",
+            "checkpoint": 0
+          }
+        ],
+        "selected": "a00",
+        "training_updates": 100
+      },
+      "B20": {
+        "endpoint": 100,
+        "queries": [
+          {
+            "candidate": "a00",
+            "checkpoint": 20
+          },
+          {
+            "candidate": "a01",
+            "checkpoint": 20
+          },
+          {
+            "candidate": "a02",
+            "checkpoint": 20
+          },
+          {
+            "candidate": "a03",
+            "checkpoint": 20
+          },
+          {
+            "candidate": "a04",
+            "checkpoint": 20
+          },
+          {
+            "candidate": "a05",
+            "checkpoint": 20
+          },
+          {
+            "candidate": "a06",
+            "checkpoint": 20
+          },
+          {
+            "candidate": "a07",
+            "checkpoint": 20
+          }
+        ],
+        "selected": "a00",
+        "training_updates": 240
+      },
+      "BSH": {
+        "endpoint": 100,
+        "queries": [
+          {
+            "candidate": "a00",
+            "checkpoint": 20
+          },
+          {
+            "candidate": "a01",
+            "checkpoint": 20
+          },
+          {
+            "candidate": "a02",
+            "checkpoint": 20
+          },
+          {
+            "candidate": "a03",
+            "checkpoint": 20
+          },
+          {
+            "candidate": "a04",
+            "checkpoint": 20
+          },
+          {
+            "candidate": "a05",
+            "checkpoint": 20
+          },
+          {
+            "candidate": "a06",
+            "checkpoint": 20
+          },
+          {
+            "candidate": "a07",
+            "checkpoint": 20
+          },
+          {
+            "candidate": "a00",
+            "checkpoint": 50
+          },
+          {
+            "candidate": "a03",
+            "checkpoint": 50
+          },
+          {
+            "candidate": "a02",
+            "checkpoint": 50
+          },
+          {
+            "candidate": "a07",
+            "checkpoint": 50
+          },
+          {
+            "candidate": "a00",
+            "checkpoint": 100
+          },
+          {
+            "candidate": "a03",
+            "checkpoint": 100
+          }
+        ],
+        "selected": "a00",
+        "training_updates": 380
+      },
+      "Ref100": {
+        "endpoint": 100,
+        "queries": [
+          {
+            "candidate": "a00",
+            "checkpoint": 100
+          },
+          {
+            "candidate": "a01",
+            "checkpoint": 100
+          },
+          {
+            "candidate": "a02",
+            "checkpoint": 100
+          },
+          {
+            "candidate": "a03",
+            "checkpoint": 100
+          },
+          {
+            "candidate": "a04",
+            "checkpoint": 100
+          },
+          {
+            "candidate": "a05",
+            "checkpoint": 100
+          },
+          {
+            "candidate": "a06",
+            "checkpoint": 100
+          },
+          {
+            "candidate": "a07",
+            "checkpoint": 100
+          }
+        ],
+        "selected": "a00",
+        "training_updates": 800
+      }
+    }
+  },
+  "e_previously_opened": false,
+  "executed_code_sha": "53182b532ad8980eb0c4f09f122be941e2671b79",
+  "frozen_at_utc": "2026-09-23T15:33:58.916353+00:00",
+  "s_scores_sha256": "5396f4e0fd5ec11ccaa9c6a123a0385b2304405c7259f01e87ea54a258e112ce",
+  "trajectory_sha256": "289c39f8a5a69f59fe6e2cae737c1be404836b3bf52b422d84a03851368f8660"
+}

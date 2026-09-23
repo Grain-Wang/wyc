@@ -1,0 +1,36 @@
+{
+  "allocation_mode": "shared",
+  "gpu_uuid": "GPU-5c9c1a6d-52ff-000a-11e9-be3f1b36d43d",
+  "other_processes_terminated": false,
+  "physical_gpu": 2,
+  "required_free_mib": 24576,
+  "samples": [
+    {
+      "existing_compute_process_count": 1,
+      "free_mib": 80385,
+      "index": 2,
+      "name": "NVIDIA A800 80GB PCIe",
+      "used_mib": 664,
+      "utilization_percent": 7,
+      "uuid": "GPU-5c9c1a6d-52ff-000a-11e9-be3f1b36d43d"
+    },
+    {
+      "existing_compute_process_count": 1,
+      "free_mib": 80385,
+      "index": 2,
+      "name": "NVIDIA A800 80GB PCIe",
+      "used_mib": 664,
+      "utilization_percent": 0,
+      "uuid": "GPU-5c9c1a6d-52ff-000a-11e9-be3f1b36d43d"
+    },
+    {
+      "existing_compute_process_count": 1,
+      "free_mib": 80385,
+      "index": 2,
+      "name": "NVIDIA A800 80GB PCIe",
+      "used_mib": 664,
+      "utilization_percent": 0,
+      "uuid": "GPU-5c9c1a6d-52ff-000a-11e9-be3f1b36d43d"
+    }
+  ]
+}

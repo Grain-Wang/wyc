@@ -1,0 +1,14 @@
+{
+  "a00_same_seed_rerun_independent_replicate": false,
+  "capacity_reused_as_formal_sample": false,
+  "cumulative_gpu_seconds": 2375.137250719592,
+  "formal_gpu_seconds": 1957.0271307779476,
+  "gpu_limit_seconds": 14400,
+  "parent_recovery_training_added": false,
+  "policy_estimate_basis": "unchanged original pilot unit costs; see copied pilot.json and metrics.json",
+  "prior_pilot_and_capacity_gpu_seconds": 418.11011994164437,
+  "s_evaluation_seconds": 163.48436901532114,
+  "training_checkpoint_seconds": 8.488414023071527,
+  "training_construction_seconds": 120.53501816373318,
+  "training_update_seconds": 1194.5622804826126
+}
