@@ -1,0 +1,32 @@
+{
+  "D2_gpu_processes_remaining": 0,
+  "E_accessed_by_model": false,
+  "allocation_mode": "shared",
+  "cuda_device_order": "PCI_BUS_ID",
+  "design_version": "D2_STAGE0_V1",
+  "exit_code": 0,
+  "formal_executed_code_sha": null,
+  "gpu_elapsed_seconds": 189.12083893828094,
+  "gpu_name": "NVIDIA A800 80GB PCIe",
+  "gpu_uuid": "GPU-5c9c1a6d-52ff-000a-11e9-be3f1b36d43d",
+  "integrity_checks": "704 S rows / 11 complete groups; 10 updates; all original artifact SHA256 values and aggregates match",
+  "model_revision": "8faed761d45a263340a0528343f099c05c9a4323",
+  "original_d1_files_and_log_unchanged": 28,
+  "other_processes_terminated": false,
+  "peak_allocated_mib": 3736.2177734375,
+  "peak_reserved_mib": 4202.0,
+  "phase": "PILOT_COMPLETE_FORMAL_STOPPED_BY_QUALITY_GATE",
+  "physical_gpu": 2,
+  "pilot_executed_code_sha": "75e3253b8f8b78c5998730c039ad346231d350bc",
+  "raw_logs_and_adapters": "Retained in private project D2 scratch/cache; not published",
+  "remote_cpu_tests_passed": 25,
+  "training_seed": 17,
+  "versions": {
+    "numpy": "2.2.6",
+    "safetensors": "0.6.2",
+    "scipy": "1.15.3",
+    "tokenizers": "0.22.0",
+    "torch": "2.4.1+cu121",
+    "transformers": "4.56.1"
+  }
+}

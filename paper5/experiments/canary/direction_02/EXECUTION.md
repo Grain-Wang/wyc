@@ -1,9 +1,58 @@
 # D2-Stage0 execution record
 
-Current status: implementation and CPU/data preparation; A800 SSH is restored,
-but GPU admission is blocked by occupancy and missing explicit sharing permission.
-No D2 GPU pilot, optimizer update on the parent model, formal recovery
-trajectory or E measurement has occurred. This is not an experiment result.
+Current status: **pilot completed; formal admission stopped by the fixed quality
+gate**. The single ten-update trajectory finished with exit code 0 on explicitly
+authorized shared physical GPU 2. Formal recovery and E evaluation never started.
+This is a completed pilot, not a completed 16-trajectory Stage0 comparison.
+
+## Completed pilot and decision
+
+Actual pilot execution code: `75e3253b8f8b78c5998730c039ad346231d350bc`.
+That exact commit was ordinarily pushed to GitHub after authentication was
+restored, then synchronized to A800 using bundle and an ordinary fast-forward.
+Thirteen existing D1 archive files matched the incoming Git objects byte-for-byte;
+all 28 existing D1 files including the private log retained their bytes and mtimes.
+No original-worktree edit, force push, reset, rebase or duplicate commit occurred.
+
+Remote CPU tests: 25 passed in 16.17 seconds. Source/tokenizer/model and all T/S/E
+integrity checks passed without E evaluation. The inherited Ruff Python module
+could not find a venv-local binary; the same pinned Ruff 0.12.11 native executable
+completed static checks read-only. The failed invocation and successful checks
+are both retained privately; D1 and D2 package installations were not changed.
+
+The user explicitly authorized sharing GPU 2 under existing laboratory rules.
+Three short prelaunch samples showed no D2 job and sufficient memory; a private
+permission record restricted admission to index 2 and recorded its UUID. The
+launcher and Python admission guards were retained. PCI order and the actual
+model PID's GPU UUID were checked; no other GPU or process was modified.
+The detached session retained launcher PID, heartbeat, private log and exit code.
+
+Engineering passed: finite optimization, actual LoRA change, frozen base bytes,
+physical block mapping and exact save/reload NLL agreement. Candidate a00 (remove
+original blocks 12/15), seed 17, completed exactly ten updates. Parent S NLL was
+2.461201183; a00 changed from 2.624146957 to 2.608408062 (improvement 0.015738895).
+The prespecified PPL ratio limit remains 1.15, excess NLL 0.139761942. Initial
+qualifiers were 0/8, below the required two. The pilot endpoint's PPL ratio was
+1.158593626, also outside the gate. No tolerance was relaxed after observing data.
+
+Quality label: **QUALITY_INFEASIBLE**, scoped to the frozen pilot admission rule.
+Problem signal and simple-baseline sufficiency: **NOT_EVALUATED**. Ten updates
+show a short recovery signal; these observations do not establish that 100 updates
+would fail or invalidate Direction 2 generally. No formal freeze, full trajectories,
+E model losses, G0, bootstrap intervals or formal strategy results were fabricated.
+
+Measured GPU-process wall time: 189.121 seconds. Peak allocated/reserved memory:
+3736.218/4202 MiB. The conservative full-task projection was 10534.927 seconds
+(2.926 hours), within 14400 seconds; shared timings are not a measured speedup.
+Quality, rather than projected cost or engineering, stops this run.
+
+All ten original preparation/pilot files were copied byte-for-byte for local
+archival; five were already committed preparation evidence. The 704 S rows and
+ten training updates were independently checked against the frozen manifests and
+pilot aggregates. Derived pilot-only summary, decision, costs and runtime records
+are under `paper5/results/canary/direction_02/recovery_stage0/20260923_stage0_01/`.
+Raw logs and adapters remain private. Actual execution SHA and later archive
+commit must be reported separately; the latter is the result files' Git commit.
 
 ## Authorized scope and preserved baseline
 
@@ -72,59 +121,36 @@ syntax checks passed. Multi-file Black's sandbox worker pool hung; only this
 task's formatter processes were stopped, then per-file checks passed. This was
 a tooling issue, not a model-run failure. No broad unrelated tests or edits.
 
-These are CPU engineering checks on tiny random test fixtures and prepared
-manifests; they do **not** establish parent-model recovery, candidate quality,
-throughput, selection loss, baseline sufficiency, or A800 feasibility. Those
-remain unmeasured until resource permission and the GPU pilot gates are satisfied.
+Those CPU checks used tiny random fixtures and prepared manifests, and did not
+establish parent-model recovery or scientific outcomes. The subsequent pilot
+evidence above establishes the engineering chain and S admission result only;
+100-step quality, selection loss and baseline sufficiency remain unmeasured.
 
-## GPU admission hold
+## Earlier GPU admission hold (resolved before this pilot)
 
-The live query found all three A800s busy: GPU 0/1/2 utilization was 100/81/95%,
+The earlier CPU-preparation query found all three A800s busy: GPU 0/1/2 utilization was 100/81/95%,
 with 35178/13137/11720 MiB free. These are observations, not allocations. No
 existing D2 GPU process was found. No task-specific co-tenancy permission was
 established; historical permissions for unrelated projects are not reused.
-The user's latest instruction explicitly requires a pause in this situation.
+The user's CPU-preparation instruction required a pause in that situation;
+explicit shared permission for GPU 2 was subsequently provided before the pilot.
 
 `GPU_ACCESS.md` records the operational gate. Both the detached launcher and
 direct Python GPU entry require separately verified task/stage/device permission,
 then recheck live occupancy and duplicate tasks. Exclusive use also requires
-clean repeated samples; sharing requires explicit permission. No real permission
-file or delayed automatic job has been created. The original protocol/config and
+clean repeated samples; sharing requires explicit permission. At that stage no real permission
+file or delayed automatic job had been created. The later explicit GPU 2 shared
+authorization was recorded before the pilot, as described above. The original protocol/config and
 data/candidate manifests remain byte-identical; no scientific settings changed.
 
-## Continuing after resource permission is established
+## Stop boundary
 
-1. Read live Git state and the current record; do not regenerate candidates or
-   splits. Inspect `autoresearch_paper5`, its installed versions and CUDA support.
-   If dependencies are missing/incompatible, create a D2-specific project
-   environment using the recorded direct versions, without upgrading D1/base.
-2. Verify remote `paper5` history without reset/rebase/forced merge. Synchronize
-   the exact ordinary local commit using the authorized Git bundle/SSH path.
-   Check D1 output bytes before and after sync, including any previously
-   untracked copies that became tracked by the D1 archive commit; never overwrite
-   a differing file. Transfer only prepared D2 token files and validate hashes.
-3. Run the D2 CPU tests on A800 with CUDA disabled. Inspect module names and
-   pinned cache file hashes. Verify server permission under GPU_ACCESS.md and
-   re-query occupancy and existing task processes. Only if admitted, use one detached screen session to call
-   `paper5/scripts/direction_02/launch_stage0.sh pilot` from the remote repo.
-   The project-local interpreter, model snapshot, D2 cache and exact SHA are
-   supplied through D2_PYTHON, D2_MODEL_SNAPSHOT, D2_CACHE, D2_EXPECTED_SHA and
-   D2_GPU_PERMISSION_FILE;
-   machine-specific values and raw logs stay private.
-4. Review pilot.json and resource metadata. Check real step/forward/I/O times,
-   base immutability, adapter change, save/reload identity and initial/10-step
-   quality. If engineering, quality or the full 16-trajectory projection fails,
-   retain results and stop. Ten steps without loss improvement is not a general
-   falsification of recovery.
-5. Only after all pilot gates pass, run the CPU `--stage freeze`, commit the
-   formal_freeze.json and related pilot evidence, synchronize that exact SHA,
-   then launch once with `formal`. Formal execution rejects an uncommitted
-   freeze, changed recipe, duplicate phase, missing trajectories or premature E
-   access. The E gate is enforced before loading its separate token file.
-6. Inspect completeness, budgets and checkpoints; archive reviewed small files
-   to the authorized GitHub `paper5` branch and read back its ref, file list and
-   hashes. Keep the actual execution SHA distinct from the later archive commit.
-   No force push or approval-channel substitution. Stop after this Stage0.
+The original post-pilot quality gate failed. Do not invoke `freeze`, start the
+formal launcher, add recovery steps, choose another seed/candidate, weaken the
+threshold or open E. Keep the original protocol and idea unchanged. Finish only
+the authorized small-result archival and GitHub read-back, then stop. A changed
+scientific setting requires a separate user decision. No complex method or new
+direction is authorized by this pilot outcome.
 
 ## Provenance fields
 
@@ -132,9 +158,10 @@ data/candidate manifests remain byte-identical; no scientific settings changed.
 - Initial D2 implementation commit: `66926eeac7df801783a228ea2907738904646359`.
   Its first ordinary push failed authentication. Later delivery and admission
   changes must be distinguished from an actual GPU execution commit.
-- D2 pilot executed code SHA: **not yet applicable — not started**.
+- D2 pilot executed code SHA: `75e3253b8f8b78c5998730c039ad346231d350bc`.
 - D2 formal executed code SHA: **not yet applicable — not started**.
-- D2 numerical result archive SHA: **not yet applicable — no GPU results**.
+- D2 pilot result archive SHA: the later Git commit adding the verified pilot
+  files and this completed execution record; it is not the executed model SHA.
 
 Raw logs/connection diagnostics, tokens, parent weights, LoRA/optimizer
 checkpoints and caches remain excluded from Git. No credentials, connection

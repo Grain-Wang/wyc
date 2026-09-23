@@ -1,0 +1,45 @@
+{
+  "conservative_projection_unit_costs": {
+    "checkpoint_seconds": 0.15584800112992525,
+    "construction_seconds": 9.242491690441966,
+    "eval_window_seconds": 0.11707269924227148,
+    "historical_preselection_estimate_seconds": 753.0116015262902,
+    "update_seconds": 3.609578455798328
+  },
+  "extra_save_reload_forward_checks_S": 2,
+  "extra_structural_forward_checks_T": 8,
+  "formal_updates_executed": 0,
+  "gpu_total_limit_seconds": 14400,
+  "measured_audit_gpu_seconds": 189.12083893828094,
+  "measured_optimizer_updates": 10,
+  "peak_allocated_mib": 3736.2177734375,
+  "peak_reserved_mib": 4202.0,
+  "pilot_S_eval_seconds_per_window": [
+    0.049054178132792,
+    0.03601393198186997
+  ],
+  "pilot_limit_seconds": 1800,
+  "policy_costs_measured": false,
+  "projected_total_gpu_seconds": 10534.92667644564,
+  "projection_is_not_actual_formal_execution": true,
+  "recorded_S_evaluation_windows": 704,
+  "shared_gpu_timing": true,
+  "training_effective_labels": 20440,
+  "training_input_tokens": 20480,
+  "unique_training_windows": 40,
+  "update_max_seconds": 3.609578455798328,
+  "update_mean_seconds": 1.0667333740741014,
+  "update_median_seconds": 0.7771115615032613,
+  "update_seconds": [
+    3.609578455798328,
+    0.7747612111270428,
+    0.7569415653124452,
+    0.7830260777845979,
+    0.7640473637729883,
+    0.7377909729257226,
+    0.7895351992920041,
+    0.7794619118794799,
+    0.7594566941261292,
+    0.9127342887222767
+  ]
+}

@@ -1,5 +1,12 @@
 # D2 GPU access gate — operational supplement, 2026-09-23
 
+Status update after the CPU preflight: the user explicitly authorized shared use
+of physical GPU 2, and a private task/stage/device permission record was created.
+The pilot used this gate and completed on GPU 2. Its fixed quality admission rule
+failed, so formal execution did not start. See EXECUTION.md and the run summary.
+The missing-permission descriptions below document the earlier preparation hold;
+they are retained as history, not as a claim that permission was never provided.
+
 The user clarified that screenshots and free VRAM are not a resource allocation.
 This supplement changes only execution admission; the Stage0 scientific
 protocol, fixed candidates/data, recipe, quality proposal and budgets are unchanged.

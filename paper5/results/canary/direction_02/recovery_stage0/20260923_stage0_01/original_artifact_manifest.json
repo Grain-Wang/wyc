@@ -1,0 +1,47 @@
+{
+  "copied_at_utc": "2026-09-23T14:14:44.813221+00:00",
+  "files": {
+    "candidate_manifest.json": {
+      "bytes": 1971,
+      "sha256": "8ef24b80b4a2a58bdb384ec4cc4c21e86704bed9b50f3e6245a591e8437bc60e"
+    },
+    "config_used.json": {
+      "bytes": 1436,
+      "sha256": "fdc56f76010cb08240b535643aa82f337e40a1553cf4822a584fc191eaa00592"
+    },
+    "data_manifest.json": {
+      "bytes": 301008,
+      "sha256": "11f95b9701278bde962067512a795399fcace3a44df99e925ea722f9435a8445"
+    },
+    "gpu_budget.json": {
+      "bytes": 287,
+      "sha256": "bf95f8dc27d7bd9f4953faaf4143c1e2b2fe5162f6805a4e3674ae6c151f2a01"
+    },
+    "pilot.json": {
+      "bytes": 13012,
+      "sha256": "ac6c06a8d3c9d7208b836b760b8edf0021472b16d42d1e04c68a932668fb431e"
+    },
+    "pilot_nll.csv": {
+      "bytes": 77901,
+      "sha256": "1363be18b52694e2f267189a6951aa9252c64b5a4ae53067efa206298edd56f4"
+    },
+    "pilot_resource_preflight.json": {
+      "bytes": 433,
+      "sha256": "a9d9de3b67101f30a512ec4116a00c4f6533e1788722503b0b3dba3eaf05094e"
+    },
+    "pilot_training_curve.csv": {
+      "bytes": 893,
+      "sha256": "1f6ee9bbfee87146af0ff6483e03f4ab8b8dcf70852d4caa4a55bdeb8c4c792a"
+    },
+    "preflight.json": {
+      "bytes": 859,
+      "sha256": "bc0e7a94bf8bb1f1f59945b4d4f943e60369c2c37c5d52635fa8fc5e46d1f46f"
+    },
+    "preparation.json": {
+      "bytes": 312,
+      "sha256": "790c939fa5eb94eac27ec0c491ec352b4a144d95dfee5835119f15938e473415"
+    }
+  },
+  "pilot_executed_code_sha": "75e3253b8f8b78c5998730c039ad346231d350bc",
+  "source": "Completed A800 pilot output, copied byte-for-byte without rerun"
+}

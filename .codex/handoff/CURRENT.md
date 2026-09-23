@@ -1,15 +1,16 @@
 # AutoResearch 当前接续状态
 
-> **2026-09-23 paper5 Direction 2 / D2-Stage0（当前唯一活动任务）**
+> **2026-09-23 paper5 Direction 2 / D2-Stage0（先导完成，质量门禁停止）**
 >
-> - 用户明确选择 Direction 2，授权一次固定恢复预算问题探针，含实现、CPU 测试、A800 先导、通过门禁后的 16 条恢复轨迹及小型结果归档。不是完整 FHRD/RSC，不实现 Hessian、NTK、JVP/VJP 或 NAS 搜索器；下方 paper1 等旧任务不继承。
-> - D1 当前整层跳过路线结束，CET 暂停；基准 `6ee61e753d8e67b21c56adfb2edeec082e076f10` 的 H1-small INCONCLUSIVE 和多编辑 STOP_COMPLEX_METHOD_INVESTMENT 保留不改。
-> - 新协议：`paper5/experiments/canary/direction_02/STAGE0_PROTOCOL.md`；原 `direction_02_terminal_recovery_nas.md` 不覆盖。Qwen2.5-1.5B 固定 revision、真实移除两个 block、8 个候选、LoRA q/v r=8、CE 恢复、NLL 评价；seeds 17/29，100 updates，0/20/50/100 checkpoints。
-> - 当前独立副本以 D1 归档提交开始；原 AutoResearch 已有修改未动。SSH 已恢复，未发现既有 D2 GPU 任务；三张 A800 实时均忙，且无本轮明确共用许可，GPU 阶段暂停。新增 GPU_ACCESS.md 和双入口许可/占用/重复启动检查；不根据空闲显存自动开跑，不创建虚构许可、不抢占或终止他人进程。
-> - 本地准备已完成：624 篇文档中按文档划分，T/S/E 选定 400/64/64 窗，分别来自 400/64/64 篇互斥文档。8 个双删层候选已按 D1 calibration 的 top-16 / best-plus-hash 规则冻结；25 项 D2 CPU tests、Ruff、逐文件 Black 和 shell 语法检查通过。产物只有准备/预检证据，尚无 pilot、正式恢复、E 测量或科学判定。
-> - 无现成可用小型 C4/FineWeb 子集，按授权使用已缓存 WikiText-2 train，按文档划分 T/S/E，并声明 D1 calibration 历史曝光；仅为内部探索评价。E 只能在全部正式轨迹结束、S 策略持久化后读取。
-> - 初始实现提交为 `66926eeac7df801783a228ea2907738904646359`，此前普通推送因本地 GitHub 认证失败，不能将其写成已上传。恢复链路的实际执行 SHA 和结果归档 SHA 均尚不存在；后续交付必须按实际 Git 状态复核。
-> - 质量标准目前为待先导核验的工作假设，先导/预算通过并提交正式冻结记录之前，不可启动完整恢复。总 GPU 上限 4 小时含先导；CPU 分析 30 分钟。取得适用使用许可后重新检查资源，先单候选 10 步先导；科学设定如需改变则停止说明。
+> - 当前用户选择仍是 Direction 2 的一次 LoRA + next-token CE / NLL 问题探针；不是 FHRD/KL 复现，不实现 Hessian、NTK、JVP/VJP、NAS 或完整方法。下方旧 paper1 等任务不继承。
+> - D1 当前整层跳过路线结束，CET 暂停。基准 `6ee61e753d8e67b21c56adfb2edeec082e076f10` 的 H1-small INCONCLUSIVE 与多编辑 STOP_COMPLEX_METHOD_INVESTMENT 保持不变。
+> - GitHub 认证已恢复；代码 `75e3253b8f8b78c5998730c039ad346231d350bc` 普通推送并精确快进同步 A800。远端 25 项 CPU tests、Ruff/Black/shell 检查和源/tokenizer/T/S/E/模型哈希通过。Ruff 的 `python -m` 继承环境入口缺失，静态检查改用同版本现有原生程序完成，未改 D1 环境。
+> - 用户随后明确授权只共用物理 A800 GPU 2。已有许可机制、连续采样、重复任务检查和 detached screen 均使用；未切到其他卡，未干预现有进程。实际先导执行 SHA 为 `75e3253b8f8b78c5998730c039ad346231d350bc`。
+> - 单候选 a00（原层 12/15）、seed 17 的 10 步先导真正完成，退出码 0；base 不变、LoRA 更新有效、保存重载 NLL 完全一致。GPU 累计 189.121 秒，峰值 allocated/reserved 为 3736.218/4202 MiB；完整任务保守估算 10534.927 秒，预算门槛通过。
+> - **质量门禁未通过，禁止自动正式开跑**：父模型 S NLL 2.461201183，8 个初始候选中 0 个满足既定 PPL 比 <=1.15（至少需 2 个）。a00 从 2.624146957 降至 2.608408062，但终点相对 PPL 1.158593626 仍超标。判定 QUALITY_INFEASIBLE 仅指本轮先导准入；不证明 100 步恢复无效。
+> - 16 条正式轨迹、100 步模型、E 评价、G0、B20/BSH 和 bootstrap 均未执行；问题信号与简单 baseline 均为 NOT_EVALUATED。未创建 formal_freeze，不改阈值、候选或 seed，不进入复杂方法、H2 或其他方向。
+> - 结果入口：`paper5/results/canary/direction_02/recovery_stage0/20260923_stage0_01/summary.md`，含先导逐窗 NLL、10 步曲线、工程/质量/成本/运行记录及原始产物 SHA 清单。结果归档提交是后续提交，必须与实际执行 SHA 区分。
+> - 400/64/64 个 T/S/E 窗及 8 个候选保持冻结，WikiText-2 train 与 D1 calibration 的历史关系已披露；仍仅内部探索评价。原始 A800 产物、私有日志和先导适配器保留，原工作区未动。此轮完成归档后停止；任何科学设定修订需另行决定。
 
 > **2026-09-20 paper5 H1 多编辑隔离修订 V2（当前任务状态）**
 >

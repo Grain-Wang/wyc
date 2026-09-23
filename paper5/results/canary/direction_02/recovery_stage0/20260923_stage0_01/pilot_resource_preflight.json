@@ -1,0 +1,14 @@
+{
+  "allocation_mode": "shared",
+  "existing_compute_process_count": 1,
+  "free_mib": 80383,
+  "index": 2,
+  "minimum_free_mib": 24576,
+  "name": "NVIDIA A800 80GB PCIe",
+  "other_processes_terminated": false,
+  "permission_record_sha256": "e6ffbdd5108922ede1d26c46f0efb7dff720968eeda8f3ece8deec3aa44655cd",
+  "reserve_mib": 4096,
+  "used_mib": 666,
+  "utilization_percent": 0,
+  "uuid": "GPU-5c9c1a6d-52ff-000a-11e9-be3f1b36d43d"
+}
