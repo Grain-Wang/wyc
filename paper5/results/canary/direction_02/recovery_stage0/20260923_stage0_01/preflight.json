@@ -1,0 +1,22 @@
+{
+  "status": "BLOCKED_A800_CONNECTIVITY",
+  "d1_baseline": "6ee61e753d8e67b21c56adfb2edeec082e076f10",
+  "d1_result_files_unchanged": 27,
+  "original_worktree_and_index_unchanged": true,
+  "cpu_tests_passed": 22,
+  "ruff": "PASS",
+  "black_per_file": "PASS",
+  "shell_syntax": "PASS",
+  "a800_environment_inspected": false,
+  "a800_ssh_attempts": 3,
+  "a800_ssh_result": "connection timeout before authentication",
+  "pilot_started": false,
+  "formal_trajectories_started": 0,
+  "e_model_evaluation_started": false,
+  "scientific_decision": "NOT_ASSESSED",
+  "actual_pilot_code_sha": null,
+  "actual_formal_code_sha": null,
+  "numerical_result_archive_sha": null,
+  "data_manifest_sha256": "11f95b9701278bde962067512a795399fcace3a44df99e925ea722f9435a8445",
+  "candidate_manifest_sha256": "8ef24b80b4a2a58bdb384ec4cc4c21e86704bed9b50f3e6245a591e8437bc60e"
+}

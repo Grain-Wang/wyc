@@ -1,0 +1,11 @@
+# Python 3.12. Existing A800 autoresearch_paper5 must be checked before reuse.
+# CPU testing uses torch 2.4.1+cpu; A800 runtime expects 2.4.1+cu121.
+torch==2.4.1
+transformers==4.56.1
+tokenizers==0.22.0
+safetensors==0.6.2
+numpy==2.2.6
+scipy==1.15.3
+pytest==8.4.2
+ruff==0.12.11
+black==25.1.0
