@@ -1,0 +1,727 @@
+{
+  "analysis_seconds": 0.5069940704852343,
+  "base_archive_sha": "123cd0ca2c7011a8bd1560aee47984954fe09a20",
+  "bootstrap": {
+    "confirmatory": false,
+    "documents": 64,
+    "point_estimand": "label-token-weighted NLL",
+    "replicates": 2000,
+    "seed": 20260924,
+    "seeds_pooled": false,
+    "unit": "document"
+  },
+  "cost_limitation": "policy replay and standalone estimates are not measured speedups",
+  "decision": {
+    "complex_method_authorized": false,
+    "engineering": "PASSED",
+    "problem": "NO_MATERIAL_SELECTION_GAP",
+    "quality": "USABLE",
+    "simple_baseline": "SIMPLE_BASELINE_SUFFICIENT",
+    "sufficient_strategies": [
+      "B20",
+      "BSH"
+    ],
+    "verdict": "NO_MATERIAL_SELECTION_GAP"
+  },
+  "executed_code_sha": "28a3db86d1fd85e2505040b4aed8a79f58803978",
+  "interpretation": "post-V2 exploratory coverage; E previously viewed and reused; intervals descriptive, not new confirmation",
+  "parent_e_nll": 2.564784789457917,
+  "quality_excess_nll": 0.13976194237515863,
+  "seeds": {
+    "17": {
+      "G0": {
+        "lower95": 0.0,
+        "point": 0.0,
+        "upper95": 0.0
+      },
+      "candidate_endpoint_e_nll": {
+        "a00": 2.4718137308955193,
+        "a01": 2.5587311144918203,
+        "a02": 2.4988662246614695,
+        "a03": 2.49903953820467,
+        "a04": 2.5146439988166094,
+        "a05": 2.5049994438886642,
+        "a06": 2.517943112179637,
+        "a07": 2.520505353808403,
+        "a08": 2.495571941137314,
+        "a09": 2.4805411994457245
+      },
+      "kendall": 0.7333333333333333,
+      "quality_candidate_count": 10,
+      "quality_usable": true,
+      "s_damage_recovery_nll": {
+        "a00": 0.26061672531068325,
+        "a01": 0.2659821845591068,
+        "a02": 0.2855718173086643,
+        "a03": 0.27319052815437317,
+        "a04": 0.2661583349108696,
+        "a05": 0.2852471675723791,
+        "a06": 0.2997001800686121,
+        "a07": 0.2951474357396364,
+        "a08": 0.24159152805805206,
+        "a09": 0.26844064332544804
+      },
+      "s_rank_0": [
+        "a00",
+        "a08",
+        "a09",
+        "a03",
+        "a02",
+        "a04",
+        "a05",
+        "a07",
+        "a06",
+        "a01"
+      ],
+      "s_rank_100": [
+        "a00",
+        "a09",
+        "a03",
+        "a02",
+        "a08",
+        "a05",
+        "a07",
+        "a06",
+        "a04",
+        "a01"
+      ],
+      "spearman": 0.8545454545454544,
+      "strategies": {
+        "B0": {
+          "difference_vs_ref": {
+            "lower95": 0.0,
+            "point": 0.0,
+            "upper95": 0.0
+          },
+          "endpoint": 100,
+          "endpoint_e_nll": 2.4718137308955193,
+          "hindsight_simple_regret": {
+            "lower95": 0.0,
+            "point": 0.0,
+            "upper95": 0.0
+          },
+          "lower_cost": true,
+          "quality_pass": true,
+          "queries": [
+            {
+              "candidate": "a00",
+              "checkpoint": 0
+            },
+            {
+              "candidate": "a01",
+              "checkpoint": 0
+            },
+            {
+              "candidate": "a02",
+              "checkpoint": 0
+            },
+            {
+              "candidate": "a03",
+              "checkpoint": 0
+            },
+            {
+              "candidate": "a04",
+              "checkpoint": 0
+            },
+            {
+              "candidate": "a05",
+              "checkpoint": 0
+            },
+            {
+              "candidate": "a06",
+              "checkpoint": 0
+            },
+            {
+              "candidate": "a07",
+              "checkpoint": 0
+            },
+            {
+              "candidate": "a08",
+              "checkpoint": 0
+            },
+            {
+              "candidate": "a09",
+              "checkpoint": 0
+            }
+          ],
+          "s_query_windows": 640,
+          "selected": "a00",
+          "standalone_seconds_estimate": 1298.2118839686736,
+          "training_effective_labels": 204400,
+          "training_input_tokens": 204800,
+          "training_updates": 100
+        },
+        "B20": {
+          "difference_vs_ref": {
+            "lower95": 0.0,
+            "point": 0.0,
+            "upper95": 0.0
+          },
+          "endpoint": 100,
+          "endpoint_e_nll": 2.4718137308955193,
+          "hindsight_simple_regret": {
+            "lower95": 0.0,
+            "point": 0.0,
+            "upper95": 0.0
+          },
+          "lower_cost": true,
+          "quality_pass": true,
+          "queries": [
+            {
+              "candidate": "a00",
+              "checkpoint": 20
+            },
+            {
+              "candidate": "a01",
+              "checkpoint": 20
+            },
+            {
+              "candidate": "a02",
+              "checkpoint": 20
+            },
+            {
+              "candidate": "a03",
+              "checkpoint": 20
+            },
+            {
+              "candidate": "a04",
+              "checkpoint": 20
+            },
+            {
+              "candidate": "a05",
+              "checkpoint": 20
+            },
+            {
+              "candidate": "a06",
+              "checkpoint": 20
+            },
+            {
+              "candidate": "a07",
+              "checkpoint": 20
+            },
+            {
+              "candidate": "a08",
+              "checkpoint": 20
+            },
+            {
+              "candidate": "a09",
+              "checkpoint": 20
+            }
+          ],
+          "s_query_windows": 640,
+          "selected": "a00",
+          "standalone_seconds_estimate": 1940.25199433323,
+          "training_effective_labels": 572320,
+          "training_input_tokens": 573440,
+          "training_updates": 280
+        },
+        "BSH": {
+          "difference_vs_ref": {
+            "lower95": 0.0,
+            "point": 0.0,
+            "upper95": 0.0
+          },
+          "endpoint": 100,
+          "endpoint_e_nll": 2.4718137308955193,
+          "hindsight_simple_regret": {
+            "lower95": 0.0,
+            "point": 0.0,
+            "upper95": 0.0
+          },
+          "lower_cost": true,
+          "quality_pass": true,
+          "queries": [
+            {
+              "candidate": "a00",
+              "checkpoint": 20
+            },
+            {
+              "candidate": "a01",
+              "checkpoint": 20
+            },
+            {
+              "candidate": "a02",
+              "checkpoint": 20
+            },
+            {
+              "candidate": "a03",
+              "checkpoint": 20
+            },
+            {
+              "candidate": "a04",
+              "checkpoint": 20
+            },
+            {
+              "candidate": "a05",
+              "checkpoint": 20
+            },
+            {
+              "candidate": "a06",
+              "checkpoint": 20
+            },
+            {
+              "candidate": "a07",
+              "checkpoint": 20
+            },
+            {
+              "candidate": "a08",
+              "checkpoint": 20
+            },
+            {
+              "candidate": "a09",
+              "checkpoint": 20
+            },
+            {
+              "candidate": "a00",
+              "checkpoint": 50
+            },
+            {
+              "candidate": "a09",
+              "checkpoint": 50
+            },
+            {
+              "candidate": "a08",
+              "checkpoint": 50
+            },
+            {
+              "candidate": "a03",
+              "checkpoint": 50
+            },
+            {
+              "candidate": "a02",
+              "checkpoint": 50
+            },
+            {
+              "candidate": "a00",
+              "checkpoint": 100
+            },
+            {
+              "candidate": "a09",
+              "checkpoint": 100
+            }
+          ],
+          "s_query_windows": 1088,
+          "selected": "a00",
+          "standalone_seconds_estimate": 2607.263989086263,
+          "training_effective_labels": 919800,
+          "training_input_tokens": 921600,
+          "training_updates": 450
+        },
+        "Ref100": {
+          "difference_vs_ref": {
+            "lower95": 0.0,
+            "point": 0.0,
+            "upper95": 0.0
+          },
+          "endpoint": 100,
+          "endpoint_e_nll": 2.4718137308955193,
+          "hindsight_simple_regret": {
+            "lower95": 0.0,
+            "point": 0.0,
+            "upper95": 0.0
+          },
+          "lower_cost": false,
+          "quality_pass": true,
+          "queries": [
+            {
+              "candidate": "a00",
+              "checkpoint": 100
+            },
+            {
+              "candidate": "a01",
+              "checkpoint": 100
+            },
+            {
+              "candidate": "a02",
+              "checkpoint": 100
+            },
+            {
+              "candidate": "a03",
+              "checkpoint": 100
+            },
+            {
+              "candidate": "a04",
+              "checkpoint": 100
+            },
+            {
+              "candidate": "a05",
+              "checkpoint": 100
+            },
+            {
+              "candidate": "a06",
+              "checkpoint": 100
+            },
+            {
+              "candidate": "a07",
+              "checkpoint": 100
+            },
+            {
+              "candidate": "a08",
+              "checkpoint": 100
+            },
+            {
+              "candidate": "a09",
+              "checkpoint": 100
+            }
+          ],
+          "s_query_windows": 640,
+          "selected": "a00",
+          "standalone_seconds_estimate": 4538.992634506896,
+          "training_effective_labels": 2044000,
+          "training_input_tokens": 2048000,
+          "training_updates": 1000
+        }
+      },
+      "top1_retained": true,
+      "top3_overlap": 0.6666666666666666
+    },
+    "29": {
+      "G0": {
+        "lower95": 0.0,
+        "point": 0.0,
+        "upper95": 0.0
+      },
+      "candidate_endpoint_e_nll": {
+        "a00": 2.477565538138151,
+        "a01": 2.5471254866570234,
+        "a02": 2.5040323305875063,
+        "a03": 2.5035125371068716,
+        "a04": 2.51747371442616,
+        "a05": 2.5044512785971165,
+        "a06": 2.527337087318301,
+        "a07": 2.5165526438504457,
+        "a08": 2.489895321428776,
+        "a09": 2.4901843313127756
+      },
+      "kendall": 0.8222222222222221,
+      "quality_candidate_count": 10,
+      "quality_usable": true,
+      "s_damage_recovery_nll": {
+        "a00": 0.2554960623383522,
+        "a01": 0.2785503212362528,
+        "a02": 0.2820315547287464,
+        "a03": 0.2677349951118231,
+        "a04": 0.264678418636322,
+        "a05": 0.2894555851817131,
+        "a06": 0.29337247274816036,
+        "a07": 0.29905521869659424,
+        "a08": 0.2560350317507982,
+        "a09": 0.25919931940734386
+      },
+      "s_rank_0": [
+        "a00",
+        "a08",
+        "a09",
+        "a03",
+        "a02",
+        "a04",
+        "a05",
+        "a07",
+        "a06",
+        "a01"
+      ],
+      "s_rank_100": [
+        "a00",
+        "a09",
+        "a08",
+        "a03",
+        "a02",
+        "a05",
+        "a07",
+        "a06",
+        "a04",
+        "a01"
+      ],
+      "spearman": 0.9151515151515152,
+      "strategies": {
+        "B0": {
+          "difference_vs_ref": {
+            "lower95": 0.0,
+            "point": 0.0,
+            "upper95": 0.0
+          },
+          "endpoint": 100,
+          "endpoint_e_nll": 2.477565538138151,
+          "hindsight_simple_regret": {
+            "lower95": 0.0,
+            "point": 0.0,
+            "upper95": 0.0
+          },
+          "lower_cost": true,
+          "quality_pass": true,
+          "queries": [
+            {
+              "candidate": "a00",
+              "checkpoint": 0
+            },
+            {
+              "candidate": "a01",
+              "checkpoint": 0
+            },
+            {
+              "candidate": "a02",
+              "checkpoint": 0
+            },
+            {
+              "candidate": "a03",
+              "checkpoint": 0
+            },
+            {
+              "candidate": "a04",
+              "checkpoint": 0
+            },
+            {
+              "candidate": "a05",
+              "checkpoint": 0
+            },
+            {
+              "candidate": "a06",
+              "checkpoint": 0
+            },
+            {
+              "candidate": "a07",
+              "checkpoint": 0
+            },
+            {
+              "candidate": "a08",
+              "checkpoint": 0
+            },
+            {
+              "candidate": "a09",
+              "checkpoint": 0
+            }
+          ],
+          "s_query_windows": 640,
+          "selected": "a00",
+          "standalone_seconds_estimate": 1298.2118839686736,
+          "training_effective_labels": 204400,
+          "training_input_tokens": 204800,
+          "training_updates": 100
+        },
+        "B20": {
+          "difference_vs_ref": {
+            "lower95": 0.0,
+            "point": 0.0,
+            "upper95": 0.0
+          },
+          "endpoint": 100,
+          "endpoint_e_nll": 2.477565538138151,
+          "hindsight_simple_regret": {
+            "lower95": 0.0,
+            "point": 0.0,
+            "upper95": 0.0
+          },
+          "lower_cost": true,
+          "quality_pass": true,
+          "queries": [
+            {
+              "candidate": "a00",
+              "checkpoint": 20
+            },
+            {
+              "candidate": "a01",
+              "checkpoint": 20
+            },
+            {
+              "candidate": "a02",
+              "checkpoint": 20
+            },
+            {
+              "candidate": "a03",
+              "checkpoint": 20
+            },
+            {
+              "candidate": "a04",
+              "checkpoint": 20
+            },
+            {
+              "candidate": "a05",
+              "checkpoint": 20
+            },
+            {
+              "candidate": "a06",
+              "checkpoint": 20
+            },
+            {
+              "candidate": "a07",
+              "checkpoint": 20
+            },
+            {
+              "candidate": "a08",
+              "checkpoint": 20
+            },
+            {
+              "candidate": "a09",
+              "checkpoint": 20
+            }
+          ],
+          "s_query_windows": 640,
+          "selected": "a00",
+          "standalone_seconds_estimate": 1940.25199433323,
+          "training_effective_labels": 572320,
+          "training_input_tokens": 573440,
+          "training_updates": 280
+        },
+        "BSH": {
+          "difference_vs_ref": {
+            "lower95": 0.0,
+            "point": 0.0,
+            "upper95": 0.0
+          },
+          "endpoint": 100,
+          "endpoint_e_nll": 2.477565538138151,
+          "hindsight_simple_regret": {
+            "lower95": 0.0,
+            "point": 0.0,
+            "upper95": 0.0
+          },
+          "lower_cost": true,
+          "quality_pass": true,
+          "queries": [
+            {
+              "candidate": "a00",
+              "checkpoint": 20
+            },
+            {
+              "candidate": "a01",
+              "checkpoint": 20
+            },
+            {
+              "candidate": "a02",
+              "checkpoint": 20
+            },
+            {
+              "candidate": "a03",
+              "checkpoint": 20
+            },
+            {
+              "candidate": "a04",
+              "checkpoint": 20
+            },
+            {
+              "candidate": "a05",
+              "checkpoint": 20
+            },
+            {
+              "candidate": "a06",
+              "checkpoint": 20
+            },
+            {
+              "candidate": "a07",
+              "checkpoint": 20
+            },
+            {
+              "candidate": "a08",
+              "checkpoint": 20
+            },
+            {
+              "candidate": "a09",
+              "checkpoint": 20
+            },
+            {
+              "candidate": "a00",
+              "checkpoint": 50
+            },
+            {
+              "candidate": "a08",
+              "checkpoint": 50
+            },
+            {
+              "candidate": "a09",
+              "checkpoint": 50
+            },
+            {
+              "candidate": "a03",
+              "checkpoint": 50
+            },
+            {
+              "candidate": "a02",
+              "checkpoint": 50
+            },
+            {
+              "candidate": "a00",
+              "checkpoint": 100
+            },
+            {
+              "candidate": "a09",
+              "checkpoint": 100
+            }
+          ],
+          "s_query_windows": 1088,
+          "selected": "a00",
+          "standalone_seconds_estimate": 2607.263989086263,
+          "training_effective_labels": 919800,
+          "training_input_tokens": 921600,
+          "training_updates": 450
+        },
+        "Ref100": {
+          "difference_vs_ref": {
+            "lower95": 0.0,
+            "point": 0.0,
+            "upper95": 0.0
+          },
+          "endpoint": 100,
+          "endpoint_e_nll": 2.477565538138151,
+          "hindsight_simple_regret": {
+            "lower95": 0.0,
+            "point": 0.0,
+            "upper95": 0.0
+          },
+          "lower_cost": false,
+          "quality_pass": true,
+          "queries": [
+            {
+              "candidate": "a00",
+              "checkpoint": 100
+            },
+            {
+              "candidate": "a01",
+              "checkpoint": 100
+            },
+            {
+              "candidate": "a02",
+              "checkpoint": 100
+            },
+            {
+              "candidate": "a03",
+              "checkpoint": 100
+            },
+            {
+              "candidate": "a04",
+              "checkpoint": 100
+            },
+            {
+              "candidate": "a05",
+              "checkpoint": 100
+            },
+            {
+              "candidate": "a06",
+              "checkpoint": 100
+            },
+            {
+              "candidate": "a07",
+              "checkpoint": 100
+            },
+            {
+              "candidate": "a08",
+              "checkpoint": 100
+            },
+            {
+              "candidate": "a09",
+              "checkpoint": 100
+            }
+          ],
+          "s_query_windows": 640,
+          "selected": "a00",
+          "standalone_seconds_estimate": 4538.992634506896,
+          "training_effective_labels": 2044000,
+          "training_input_tokens": 2048000,
+          "training_updates": 1000
+        }
+      },
+      "top1_retained": true,
+      "top3_overlap": 1.0
+    }
+  },
+  "simple_regret_limitation": "finite-candidate E hindsight reference; intervals descriptive"
+}

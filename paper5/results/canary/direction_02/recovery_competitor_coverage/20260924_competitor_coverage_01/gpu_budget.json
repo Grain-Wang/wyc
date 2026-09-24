@@ -1,0 +1,33 @@
+{
+  "phases": [
+    {
+      "elapsed_seconds": 189.12083893828094,
+      "ended_at_utc": "2026-09-23T14:12:14.120870+00:00",
+      "stage": "pilot",
+      "started_at_utc": "2026-09-23T14:09:18.506028+00:00",
+      "status": "COMPLETE"
+    },
+    {
+      "elapsed_seconds": 228.98928100336343,
+      "ended_at_utc": "2026-09-23T14:40:07.989311+00:00",
+      "stage": "capacity",
+      "started_at_utc": "2026-09-23T14:36:37.362887+00:00",
+      "status": "COMPLETE"
+    },
+    {
+      "elapsed_seconds": 1957.0271307779476,
+      "ended_at_utc": "2026-09-23T15:38:05.027178+00:00",
+      "stage": "formal",
+      "started_at_utc": "2026-09-23T15:05:57.159819+00:00",
+      "status": "COMPLETE"
+    },
+    {
+      "elapsed_seconds": 676.8850039476529,
+      "ended_at_utc": "2026-09-24T06:21:43.885026+00:00",
+      "stage": "competitor_coverage",
+      "started_at_utc": "2026-09-24T06:10:37.965968+00:00",
+      "status": "COMPLETE"
+    }
+  ],
+  "spent_seconds": 3052.022254667245
+}

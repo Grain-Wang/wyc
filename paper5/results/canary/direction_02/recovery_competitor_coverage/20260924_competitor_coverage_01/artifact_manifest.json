@@ -1,0 +1,128 @@
+{
+  "base_archive_sha": "123cd0ca2c7011a8bd1560aee47984954fe09a20",
+  "executed_code_sha": "28a3db86d1fd85e2505040b4aed8a79f58803978",
+  "result_archive_commit": "the later commit containing this manifest; resolve via Git history",
+  "excludes_self_to_avoid_recursive_hash": true,
+  "files": {
+    "REPORT.md": {
+      "bytes": 8281,
+      "sha256": "1cd73b83bafc7e9c558cccf9d7d020bdcf616c9c7ca8903376ed284fe0d05d99"
+    },
+    "audit.json": {
+      "bytes": 3877,
+      "sha256": "42d189fbb4ed7a19fbfc0930f8022e7b876bccd5575f0ec9b9897447fd763219"
+    },
+    "audit_costs.json": {
+      "bytes": 1674,
+      "sha256": "43cbe8604a799862679b2efbf3c6782f805bb9408024b302b4668eebc42376f0"
+    },
+    "budget_projection.json": {
+      "bytes": 647,
+      "sha256": "7db162f3f5e24e2200d36c00372e6acfa6f069b06aa5c83cf82cd5a26a2ecac3"
+    },
+    "candidate_manifest.json": {
+      "bytes": 2377,
+      "sha256": "73eaf664e1b343e0f8fbcfcddd2001af22df5040897faf6c66cde064530014e2"
+    },
+    "config_used.json": {
+      "bytes": 2521,
+      "sha256": "ace00130495b9cc0451ab1f4157493fbb62b1c23ddcb5094596ba63592742837"
+    },
+    "costs.csv": {
+      "bytes": 563,
+      "sha256": "bd4a61a592e7fdf16d86ba663c63ed7437f2fad5a3540dab857fc6944f049c89"
+    },
+    "data_manifest.json": {
+      "bytes": 301008,
+      "sha256": "11f95b9701278bde962067512a795399fcace3a44df99e925ea722f9435a8445"
+    },
+    "e_losses.json": {
+      "bytes": 34566,
+      "sha256": "6c1e835fa12cd451b8b98ecdafc6075468922e8e47133fd06ef72387fe52e3d4"
+    },
+    "e_unsealed.json": {
+      "bytes": 205,
+      "sha256": "0e312572fecca9a48164a9e63a6fe2f8764c84047aa1d2b9ccecc93b474ed719"
+    },
+    "expanded_per_window_nll.csv": {
+      "bytes": 695320,
+      "sha256": "afbab048744dac069a045fa2779f54b9ed5a71d82647cc5ed841021aa94dd709"
+    },
+    "freeze.json": {
+      "bytes": 16111,
+      "sha256": "d34cabb7e3559d0e4bab2aae59419a4114a61fcda019d5494818f68b8d55af3d"
+    },
+    "gpu_budget.json": {
+      "bytes": 984,
+      "sha256": "0e04f85a6143221cd8c26e920d6e35c799ca54796b78cc5f04b00005f91793ef"
+    },
+    "metrics.json": {
+      "bytes": 18603,
+      "sha256": "50980e957fd5954534409294a3f64e19d6e1d088a381680c7b266cfd1bca013d"
+    },
+    "new_trajectories.json": {
+      "bytes": 19154,
+      "sha256": "290f8c8bc4ef348fc581920b5473bdb533382c93afed8e8beb97c117debee778"
+    },
+    "original_vs_expanded.json": {
+      "bytes": 36522,
+      "sha256": "e97b3c5aee2c4fff1661ed6db5183b89fe32dd6326a16a9af2f8c825a61ea496"
+    },
+    "per_document_nll.csv": {
+      "bytes": 664388,
+      "sha256": "adfd9aecc5b196a1f2bfe43b1214232645d9369afa173797f6dc2f4618c97784"
+    },
+    "per_window_nll.csv": {
+      "bytes": 137648,
+      "sha256": "553368479f661b2de0e45c373228f7d29ece445be9d978d97f30633ac119f07c"
+    },
+    "pilot.json": {
+      "bytes": 13012,
+      "sha256": "ac6c06a8d3c9d7208b836b760b8edf0021472b16d42d1e04c68a932668fb431e"
+    },
+    "prior_gpu_budget.json": {
+      "bytes": 744,
+      "sha256": "bc5dae79b75b0234f2f08614ef4879d2ac396508d7e852939c956209deaa0dae"
+    },
+    "quality_by_checkpoint.json": {
+      "bytes": 14065,
+      "sha256": "c341b1f2f2127d66da64d8016fa57d7f22627381b2abd2499e831d525bba9710"
+    },
+    "resource_preflight.json": {
+      "bytes": 949,
+      "sha256": "35b8e9eb11fbe673aac1a676734396b11f0bd9923d5c43b4011ba2a6345df1f2"
+    },
+    "runtime.json": {
+      "bytes": 1716,
+      "sha256": "c69f6ab8cb8895d78a5f00c2e08789d222f931b4dd424baa884993a0c2a7e93e"
+    },
+    "s_scores.json": {
+      "bytes": 2772,
+      "sha256": "7fd551377aff2344f043521a902804dcb6588dcfe22cc96a51bb08f1a4928148"
+    },
+    "selection.json": {
+      "bytes": 9637,
+      "sha256": "22d01735ef6b659fe703d2066ee7e642b38e928851506ee8c10be4e332b7fe42"
+    },
+    "state.json": {
+      "bytes": 504,
+      "sha256": "f946e9778bdedd58a9791cdf4148a2a26c41026f0a9349655bc493ed5a1e0b2b"
+    },
+    "strategy_results.csv": {
+      "bytes": 449,
+      "sha256": "a94c6e9d06256b29be5fd60166fe39edf8171fe190dc2abf71e104fc129c942c"
+    },
+    "summary.md": {
+      "bytes": 1491,
+      "sha256": "4d22e0af51e7a64bdd145b9250f072f70f4045c0fe9a1c6cfb17c7ebc1bdd21a"
+    },
+    "training_curve.csv": {
+      "bytes": 32277,
+      "sha256": "b515da41189daa3eeaaa132ff8cd9dfccbe4cda87f3c066c4a3e68d581bb6107"
+    },
+    "trajectories.json": {
+      "bytes": 95832,
+      "sha256": "c5c4e350a097927cbe4c51168cb53733148cfe1ea4fd259c577d253f86894400"
+    }
+  }
+}

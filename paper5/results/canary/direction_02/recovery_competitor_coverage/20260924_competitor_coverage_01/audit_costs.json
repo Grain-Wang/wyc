@@ -1,0 +1,51 @@
+{
+  "additional_gpu_seconds": 676.8850039476529,
+  "additional_limit_seconds": 3600,
+  "checkpoint_seconds": 3.027449317276478,
+  "cpu_analysis_including_io_seconds": 11.035849574021995,
+  "cumulative_gpu_seconds": 3052.022254667245,
+  "cumulative_limit_seconds": 14400,
+  "endpoint_e_costs": [
+    {
+      "adapter_load_seconds": 0.2184879295527935,
+      "candidate": "a08",
+      "construction_seconds": 19.314395401626825,
+      "e_evaluation_seconds": 5.984952946193516,
+      "seed": 17
+    },
+    {
+      "adapter_load_seconds": 0.30182463116943836,
+      "candidate": "a09",
+      "construction_seconds": 22.89326896518469,
+      "e_evaluation_seconds": 7.189946303144097,
+      "seed": 17
+    },
+    {
+      "adapter_load_seconds": 0.2991633703932166,
+      "candidate": "a08",
+      "construction_seconds": 29.210179798305035,
+      "e_evaluation_seconds": 5.170770576223731,
+      "seed": 29
+    },
+    {
+      "adapter_load_seconds": 0.04487385414540768,
+      "candidate": "a09",
+      "construction_seconds": 26.466099462471902,
+      "e_evaluation_seconds": 10.782671152614057,
+      "seed": 29
+    }
+  ],
+  "new_e_windows": 256,
+  "new_effective_labels": 817600,
+  "new_input_tokens": 819200,
+  "new_s_windows": 1024,
+  "new_training_updates": 400,
+  "policy_estimates": "same original pilot unit costs; historical preselection and I/O included; not measured speedups",
+  "prior_gpu_seconds": 2375.137250719592,
+  "reused_training_updates": 1600,
+  "s_evaluation_seconds": 50.07974065002054,
+  "training_construction_seconds": 26.55923262052238,
+  "training_update_seconds": 370.77559300418943,
+  "unique_t_input_tokens": 204800,
+  "unique_t_windows": 400
+}

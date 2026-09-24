@@ -1,0 +1,18 @@
+{
+  "decision": {
+    "complex_method_authorized": false,
+    "engineering": "PASSED",
+    "problem": "NO_MATERIAL_SELECTION_GAP",
+    "quality": "USABLE",
+    "simple_baseline": "SIMPLE_BASELINE_SUFFICIENT",
+    "sufficient_strategies": [
+      "B20",
+      "BSH"
+    ],
+    "verdict": "NO_MATERIAL_SELECTION_GAP"
+  },
+  "ended_at_utc": "2026-09-24T06:21:58.181499+00:00",
+  "executed_code_sha": "28a3db86d1fd85e2505040b4aed8a79f58803978",
+  "next_experiment_authorized": false,
+  "phase": "COMPLETE"
+}

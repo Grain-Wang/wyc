@@ -1,0 +1,56 @@
+{
+  "base_archive_sha": "123cd0ca2c7011a8bd1560aee47984954fe09a20",
+  "design_version": "D2_STAGE0_COMPETITOR_COVERAGE_V1",
+  "evaluation_costs": [
+    {
+      "adapter_load_seconds": 0.2184879295527935,
+      "candidate": "a08",
+      "construction_seconds": 19.314395401626825,
+      "e_evaluation_seconds": 5.984952946193516,
+      "seed": 17
+    },
+    {
+      "adapter_load_seconds": 0.30182463116943836,
+      "candidate": "a09",
+      "construction_seconds": 22.89326896518469,
+      "e_evaluation_seconds": 7.189946303144097,
+      "seed": 17
+    },
+    {
+      "adapter_load_seconds": 0.2991633703932166,
+      "candidate": "a08",
+      "construction_seconds": 29.210179798305035,
+      "e_evaluation_seconds": 5.170770576223731,
+      "seed": 29
+    },
+    {
+      "adapter_load_seconds": 0.04487385414540768,
+      "candidate": "a09",
+      "construction_seconds": 26.466099462471902,
+      "e_evaluation_seconds": 10.782671152614057,
+      "seed": 29
+    }
+  ],
+  "executed_code_sha": "28a3db86d1fd85e2505040b4aed8a79f58803978",
+  "finished_at_utc": "2026-09-24T06:21:43.845442+00:00",
+  "gpu_name": "NVIDIA A800 80GB PCIe",
+  "gpu_uuid": "GPU-5c9c1a6d-52ff-000a-11e9-be3f1b36d43d",
+  "new_e_forward_windows": 256,
+  "new_s_forward_windows": 1024,
+  "new_trajectory_count": 4,
+  "new_updates": 400,
+  "peak_allocated_mib": 3737.0927734375,
+  "peak_reserved_mib": 4210.0,
+  "phase": "EVALUATED",
+  "physical_gpu": 2,
+  "reused_execution_code_sha": "53182b532ad8980eb0c4f09f122be941e2671b79",
+  "reused_trajectory_count": 16,
+  "versions": {
+    "numpy": "2.2.6",
+    "safetensors": "0.6.2",
+    "scipy": "1.15.3",
+    "tokenizers": "0.22.0",
+    "torch": "2.4.1+cu121",
+    "transformers": "4.56.1"
+  }
+}

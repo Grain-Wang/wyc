@@ -1,0 +1,534 @@
+{
+  "e": {
+    "17": {
+      "a00": {
+        "nll": 2.4718137308955193,
+        "ppl_ratio": 0.9112198719275874,
+        "quality_pass": true
+      },
+      "a01": {
+        "nll": 2.5587311144918203,
+        "ppl_ratio": 0.9939646116052733,
+        "quality_pass": true
+      },
+      "a02": {
+        "nll": 2.4988662246614695,
+        "ppl_ratio": 0.9362071014032541,
+        "quality_pass": true
+      },
+      "a03": {
+        "nll": 2.49903953820467,
+        "ppl_ratio": 0.93636937283468,
+        "quality_pass": true
+      },
+      "a04": {
+        "nll": 2.5146439988166094,
+        "ppl_ratio": 0.9510955097272022,
+        "quality_pass": true
+      },
+      "a05": {
+        "nll": 2.5049994438886642,
+        "ppl_ratio": 0.9419667092122739,
+        "quality_pass": true
+      },
+      "a06": {
+        "nll": 2.517943112179637,
+        "ppl_ratio": 0.9542384632621648,
+        "quality_pass": true
+      },
+      "a07": {
+        "nll": 2.520505353808403,
+        "ppl_ratio": 0.9566865877804367,
+        "quality_pass": true
+      },
+      "a08": {
+        "nll": 2.495571941137314,
+        "ppl_ratio": 0.9331280442021792,
+        "quality_pass": true
+      },
+      "a09": {
+        "nll": 2.4805411994457245,
+        "ppl_ratio": 0.9192073190997571,
+        "quality_pass": true
+      }
+    },
+    "29": {
+      "a00": {
+        "nll": 2.477565538138151,
+        "ppl_ratio": 0.9164761350013824,
+        "quality_pass": true
+      },
+      "a01": {
+        "nll": 2.5471254866570234,
+        "ppl_ratio": 0.9824957088795359,
+        "quality_pass": true
+      },
+      "a02": {
+        "nll": 2.5040323305875063,
+        "ppl_ratio": 0.941056161051136,
+        "quality_pass": true
+      },
+      "a03": {
+        "nll": 2.5035125371068716,
+        "ppl_ratio": 0.9405671333014392,
+        "quality_pass": true
+      },
+      "a04": {
+        "nll": 2.51747371442616,
+        "ppl_ratio": 0.9537906509804899,
+        "quality_pass": true
+      },
+      "a05": {
+        "nll": 2.5044512785971165,
+        "ppl_ratio": 0.9414504972541556,
+        "quality_pass": true
+      },
+      "a06": {
+        "nll": 2.527337087318301,
+        "ppl_ratio": 0.9632447920452256,
+        "quality_pass": true
+      },
+      "a07": {
+        "nll": 2.5165526438504457,
+        "ppl_ratio": 0.9529125469364591,
+        "quality_pass": true
+      },
+      "a08": {
+        "nll": 2.489895321428776,
+        "ppl_ratio": 0.9278460373120248,
+        "quality_pass": true
+      },
+      "a09": {
+        "nll": 2.4901843313127756,
+        "ppl_ratio": 0.9281142327413362,
+        "quality_pass": true
+      }
+    }
+  },
+  "parent_e_nll": 2.564784789457917,
+  "parent_recovery_added": false,
+  "parent_s_nll": 2.4612011834979057,
+  "s": {
+    "17": {
+      "0": {
+        "a00": {
+          "nll": 2.624146956950426,
+          "ppl_ratio": 1.1769728647830462,
+          "quality_pass": false
+        },
+        "a01": {
+          "nll": 2.726725561544299,
+          "ppl_ratio": 1.3041146456021135,
+          "quality_pass": false
+        },
+        "a02": {
+          "nll": 2.675399612635374,
+          "ppl_ratio": 1.2388684580049447,
+          "quality_pass": false
+        },
+        "a03": {
+          "nll": 2.657037289813161,
+          "ppl_ratio": 1.216327540594967,
+          "quality_pass": false
+        },
+        "a04": {
+          "nll": 2.679046969860792,
+          "ppl_ratio": 1.243395304320935,
+          "quality_pass": false
+        },
+        "a05": {
+          "nll": 2.685199372470379,
+          "ppl_ratio": 1.2510687537063596,
+          "quality_pass": false
+        },
+        "a06": {
+          "nll": 2.7058944888412952,
+          "ppl_ratio": 1.277229533656373,
+          "quality_pass": false
+        },
+        "a07": {
+          "nll": 2.7009509913623333,
+          "ppl_ratio": 1.2709311335659457,
+          "quality_pass": false
+        },
+        "a08": {
+          "nll": 2.637774780392647,
+          "ppl_ratio": 1.1931222336198428,
+          "quality_pass": false
+        },
+        "a09": {
+          "nll": 2.6401467733085155,
+          "ppl_ratio": 1.1959556702230376,
+          "quality_pass": false
+        }
+      },
+      "100": {
+        "a00": {
+          "nll": 2.363530231639743,
+          "ppl_ratio": 0.9069472839790369,
+          "quality_pass": true
+        },
+        "a01": {
+          "nll": 2.4607433769851923,
+          "ppl_ratio": 0.9995422982646982,
+          "quality_pass": true
+        },
+        "a02": {
+          "nll": 2.3898277953267097,
+          "ppl_ratio": 0.9311141601986863,
+          "quality_pass": true
+        },
+        "a03": {
+          "nll": 2.3838467616587877,
+          "ppl_ratio": 0.9255617561676428,
+          "quality_pass": true
+        },
+        "a04": {
+          "nll": 2.4128886349499226,
+          "ppl_ratio": 0.9528359330456673,
+          "quality_pass": true
+        },
+        "a05": {
+          "nll": 2.3999522048979998,
+          "ppl_ratio": 0.9405890240815691,
+          "quality_pass": true
+        },
+        "a06": {
+          "nll": 2.406194308772683,
+          "ppl_ratio": 0.9464786411505307,
+          "quality_pass": true
+        },
+        "a07": {
+          "nll": 2.405803555622697,
+          "ppl_ratio": 0.9461088738886725,
+          "quality_pass": true
+        },
+        "a08": {
+          "nll": 2.3961832523345947,
+          "ppl_ratio": 0.9370506608183293,
+          "quality_pass": true
+        },
+        "a09": {
+          "nll": 2.3717061299830675,
+          "ppl_ratio": 0.9143927881434767,
+          "quality_pass": true
+        }
+      },
+      "20": {
+        "a00": {
+          "nll": 2.5649419873952866,
+          "ppl_ratio": 1.1093128880719165,
+          "quality_pass": true
+        },
+        "a01": {
+          "nll": 2.6681046467274427,
+          "ppl_ratio": 1.2298638389666807,
+          "quality_pass": false
+        },
+        "a02": {
+          "nll": 2.6107169035822153,
+          "ppl_ratio": 1.1612717259579493,
+          "quality_pass": false
+        },
+        "a03": {
+          "nll": 2.600305123254657,
+          "ppl_ratio": 1.149243545890517,
+          "quality_pass": true
+        },
+        "a04": {
+          "nll": 2.625926362350583,
+          "ppl_ratio": 1.1790690410750955,
+          "quality_pass": false
+        },
+        "a05": {
+          "nll": 2.620823457837105,
+          "ppl_ratio": 1.1730676895283827,
+          "quality_pass": false
+        },
+        "a06": {
+          "nll": 2.6296920012682676,
+          "ppl_ratio": 1.18351735946679,
+          "quality_pass": false
+        },
+        "a07": {
+          "nll": 2.61849064193666,
+          "ppl_ratio": 1.170334328024128,
+          "quality_pass": false
+        },
+        "a08": {
+          "nll": 2.584698686376214,
+          "ppl_ratio": 1.131447179177257,
+          "quality_pass": true
+        },
+        "a09": {
+          "nll": 2.5812200270593166,
+          "ppl_ratio": 1.127518097835716,
+          "quality_pass": true
+        }
+      },
+      "50": {
+        "a00": {
+          "nll": 2.462038913741708,
+          "ppl_ratio": 1.0008380812377886,
+          "quality_pass": true
+        },
+        "a01": {
+          "nll": 2.5501172468066216,
+          "ppl_ratio": 1.0929889106032016,
+          "quality_pass": true
+        },
+        "a02": {
+          "nll": 2.498923161998391,
+          "ppl_ratio": 1.038442483404681,
+          "quality_pass": true
+        },
+        "a03": {
+          "nll": 2.4830668661743402,
+          "ppl_ratio": 1.0221064886420872,
+          "quality_pass": true
+        },
+        "a04": {
+          "nll": 2.5161035247147083,
+          "ppl_ratio": 1.056437439242742,
+          "quality_pass": true
+        },
+        "a05": {
+          "nll": 2.5053140446543694,
+          "ppl_ratio": 1.0451002994610559,
+          "quality_pass": true
+        },
+        "a06": {
+          "nll": 2.5123363211750984,
+          "ppl_ratio": 1.052465111363953,
+          "quality_pass": true
+        },
+        "a07": {
+          "nll": 2.5095326025038958,
+          "ppl_ratio": 1.0495184280462337,
+          "quality_pass": true
+        },
+        "a08": {
+          "nll": 2.489147614687681,
+          "ppl_ratio": 1.0283405959636953,
+          "quality_pass": true
+        },
+        "a09": {
+          "nll": 2.477147612720728,
+          "ppl_ratio": 1.0160742520607362,
+          "quality_pass": true
+        }
+      }
+    },
+    "29": {
+      "0": {
+        "a00": {
+          "nll": 2.624146956950426,
+          "ppl_ratio": 1.1769728647830462,
+          "quality_pass": false
+        },
+        "a01": {
+          "nll": 2.726725561544299,
+          "ppl_ratio": 1.3041146456021135,
+          "quality_pass": false
+        },
+        "a02": {
+          "nll": 2.675399612635374,
+          "ppl_ratio": 1.2388684580049447,
+          "quality_pass": false
+        },
+        "a03": {
+          "nll": 2.657037289813161,
+          "ppl_ratio": 1.216327540594967,
+          "quality_pass": false
+        },
+        "a04": {
+          "nll": 2.679046969860792,
+          "ppl_ratio": 1.243395304320935,
+          "quality_pass": false
+        },
+        "a05": {
+          "nll": 2.685199372470379,
+          "ppl_ratio": 1.2510687537063596,
+          "quality_pass": false
+        },
+        "a06": {
+          "nll": 2.7058944888412952,
+          "ppl_ratio": 1.277229533656373,
+          "quality_pass": false
+        },
+        "a07": {
+          "nll": 2.7009509913623333,
+          "ppl_ratio": 1.2709311335659457,
+          "quality_pass": false
+        },
+        "a08": {
+          "nll": 2.637774780392647,
+          "ppl_ratio": 1.1931222336198428,
+          "quality_pass": false
+        },
+        "a09": {
+          "nll": 2.6401467733085155,
+          "ppl_ratio": 1.1959556702230376,
+          "quality_pass": false
+        }
+      },
+      "100": {
+        "a00": {
+          "nll": 2.368650894612074,
+          "ppl_ratio": 0.9116033662941212,
+          "quality_pass": true
+        },
+        "a01": {
+          "nll": 2.4481752403080463,
+          "ppl_ratio": 0.9870585272413407,
+          "quality_pass": true
+        },
+        "a02": {
+          "nll": 2.3933680579066277,
+          "ppl_ratio": 0.9344163907502652,
+          "quality_pass": true
+        },
+        "a03": {
+          "nll": 2.389302294701338,
+          "ppl_ratio": 0.9306249876667021,
+          "quality_pass": true
+        },
+        "a04": {
+          "nll": 2.41436855122447,
+          "ppl_ratio": 0.9542470943927222,
+          "quality_pass": true
+        },
+        "a05": {
+          "nll": 2.3957437872886658,
+          "ppl_ratio": 0.9366389502794567,
+          "quality_pass": true
+        },
+        "a06": {
+          "nll": 2.412522016093135,
+          "ppl_ratio": 0.9524866694524095,
+          "quality_pass": true
+        },
+        "a07": {
+          "nll": 2.401895772665739,
+          "ppl_ratio": 0.9424189002596197,
+          "quality_pass": true
+        },
+        "a08": {
+          "nll": 2.3817397486418486,
+          "ppl_ratio": 0.9236136385747028,
+          "quality_pass": true
+        },
+        "a09": {
+          "nll": 2.3809474539011717,
+          "ppl_ratio": 0.9228821541603345,
+          "quality_pass": true
+        }
+      },
+      "20": {
+        "a00": {
+          "nll": 2.5684236139059067,
+          "ppl_ratio": 1.1131818324330396,
+          "quality_pass": true
+        },
+        "a01": {
+          "nll": 2.665767677128315,
+          "ppl_ratio": 1.226993040355044,
+          "quality_pass": false
+        },
+        "a02": {
+          "nll": 2.6128173414617777,
+          "ppl_ratio": 1.1637134685462138,
+          "quality_pass": false
+        },
+        "a03": {
+          "nll": 2.6060537174344063,
+          "ppl_ratio": 1.1558691062324837,
+          "quality_pass": false
+        },
+        "a04": {
+          "nll": 2.6287227608263493,
+          "ppl_ratio": 1.1823708023128225,
+          "quality_pass": false
+        },
+        "a05": {
+          "nll": 2.633595708757639,
+          "ppl_ratio": 1.1881464945628253,
+          "quality_pass": false
+        },
+        "a06": {
+          "nll": 2.641121283173561,
+          "ppl_ratio": 1.1971217088876387,
+          "quality_pass": false
+        },
+        "a07": {
+          "nll": 2.6276474203914404,
+          "ppl_ratio": 1.181100034556471,
+          "quality_pass": false
+        },
+        "a08": {
+          "nll": 2.579990979284048,
+          "ppl_ratio": 1.1261331754682071,
+          "quality_pass": true
+        },
+        "a09": {
+          "nll": 2.5948584098368883,
+          "ppl_ratio": 1.143000961864976,
+          "quality_pass": true
+        }
+      },
+      "50": {
+        "a00": {
+          "nll": 2.4628572836518288,
+          "ppl_ratio": 1.0016574722451186,
+          "quality_pass": true
+        },
+        "a01": {
+          "nll": 2.5491781942546368,
+          "ppl_ratio": 1.091963018336172,
+          "quality_pass": true
+        },
+        "a02": {
+          "nll": 2.499146781861782,
+          "ppl_ratio": 1.0386747257369908,
+          "quality_pass": true
+        },
+        "a03": {
+          "nll": 2.4869001377373934,
+          "ppl_ratio": 1.0260320193852932,
+          "quality_pass": true
+        },
+        "a04": {
+          "nll": 2.517354294657707,
+          "ppl_ratio": 1.0577596261418498,
+          "quality_pass": true
+        },
+        "a05": {
+          "nll": 2.5077553503215313,
+          "ppl_ratio": 1.0476548256657907,
+          "quality_pass": true
+        },
+        "a06": {
+          "nll": 2.51606672629714,
+          "ppl_ratio": 1.0563985647319827,
+          "quality_pass": true
+        },
+        "a07": {
+          "nll": 2.5141376946121454,
+          "ppl_ratio": 1.0543627026811475,
+          "quality_pass": true
+        },
+        "a08": {
+          "nll": 2.48911140486598,
+          "ppl_ratio": 1.0283033606082144,
+          "quality_pass": true
+        },
+        "a09": {
+          "nll": 2.4814203549176455,
+          "ppl_ratio": 1.0204249635079126,
+          "quality_pass": true
+        }
+      }
+    }
+  },
+  "threshold": 1.15
+}

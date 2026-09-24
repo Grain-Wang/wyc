@@ -1,12 +1,16 @@
 # AutoResearch 当前接续状态
 
-> **2026-09-24 paper5 / 一次最强竞争者覆盖补充获批，尚未运行**
+> **2026-09-24 paper5 / 一次最强竞争者覆盖补充完成，停止**
 >
-> 基础归档 `123cd0ca2c7011a8bd1560aee47984954fe09a20`。已按历史 calibration CSV 重现原候选排名和哈希抽样，确认 `(12,15)` 为第一名且已入选，第二/第三名 `(10,15)`、`(10,12)` 未入选。仅新增 a08/a09 各 seed17/29 的100步轨迹；原16条只读复用。独立协议 STAGE0_COMPETITOR_COVERAGE.md，run_id `20260924_competitor_coverage_01`。
+> 基础归档 `123cd0ca2c7011a8bd1560aee47984954fe09a20`；新增轨迹执行代码 `28a3db86d1fd85e2505040b4aed8a79f58803978`。只新增a08=(10,15)、a09=(10,12)各seed17/29×100步，共4/4完成；原16条只读复用。已核验两者为原竞争池第二、第三名且未入选。查看V2结果后提出，E已曝光，属内部探索补充，不覆盖原八候选结论。
 >
-> 这是查看V2结果后的探索补充，E已曝光；不覆盖下方原八候选结果或判定。扩展十候选重新进行 B0/B20/BSH/Ref100 的 S-only 选择，BSH=10→5→2，预算100/280/450/1000；四条训练和选择记录全部完成后才评价新增E。质量1.15、差值0.02、数据/配方保持。
+> seed17: B0=a00，Ref100=a00，G0=0.000000000 [0.000000000, 0.000000000]，质量10/10；seed29: B0=a00，Ref100=a00，G0=0.000000000 [0.000000000, 0.000000000]，质量10/10。
 >
-> 只用获准共享物理GPU2；从2375.137250719592秒继承原账本，追加最多3600秒且累计不超14400秒。代码提交、确切同步及CPU/资源自检通过后可连续执行，无新先导、不扩量、不进入复杂方法。原V2结论 NO_MATERIAL_SELECTION_GAP / SIMPLE_BASELINE_SUFFICIENT 保留；本补充结果尚未产生。
+> 扩展判定：USABLE / NO_MATERIAL_SELECTION_GAP / SIMPLE_BASELINE_SUFFICIENT；简单策略达标：B20, BSH。原V2的NO_MATERIAL_SELECTION_GAP、SIMPLE_BASELINE_SUFFICIENT保持。详情见独立目录 `paper5/results/canary/direction_02/recovery_competitor_coverage/20260924_competitor_coverage_01/REPORT.md`，原8/扩展10分开报告，区间只作探索描述。
+>
+> 物理GPU2共享，后台退出0；追加676.885秒，累计3052.022秒，未扩预算。44项本地及远端CPU测试通过；16个新checkpoint、S/E顺序、旧结果/缓存哈希和mtime审计通过。4条新轨迹和10候选S策略持久化后才评价新增E。原协议、阈值、数据、V1/capacity/D1和原AutoResearch修改均保留。结果归档commit与执行SHA区分；完整小型产物/审计单独归档，日志和权重不上传。
+>
+> 当前完成后停止，不再自动补候选，不进入FHRD/RSC或其他复杂方法。建议结束当前候选家族/恢复配方的问题验证，暂停D2复杂预测器。
 
 > **2026-09-23 paper5 / D2-Stage0 QUALITY V2 正式16条轨迹完成，停止**
 >
