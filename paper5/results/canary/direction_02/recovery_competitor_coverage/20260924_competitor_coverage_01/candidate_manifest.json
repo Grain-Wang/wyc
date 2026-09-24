@@ -1,0 +1,170 @@
+{
+  "base_archive_sha": "123cd0ca2c7011a8bd1560aee47984954fe09a20",
+  "candidates": [
+    {
+      "historical_calibration_nll": 2.688085770855347,
+      "id": "a00",
+      "removed": [
+        12,
+        15
+      ]
+    },
+    {
+      "historical_calibration_nll": 2.792131113509337,
+      "id": "a01",
+      "removed": [
+        3,
+        15
+      ]
+    },
+    {
+      "historical_calibration_nll": 2.744295660406351,
+      "id": "a02",
+      "removed": [
+        8,
+        15
+      ]
+    },
+    {
+      "historical_calibration_nll": 2.715254529068867,
+      "id": "a03",
+      "removed": [
+        12,
+        17
+      ]
+    },
+    {
+      "historical_calibration_nll": 2.7357341684401035,
+      "id": "a04",
+      "removed": [
+        6,
+        10
+      ]
+    },
+    {
+      "historical_calibration_nll": 2.7391976540287337,
+      "id": "a05",
+      "removed": [
+        6,
+        12
+      ]
+    },
+    {
+      "historical_calibration_nll": 2.7690049707889557,
+      "id": "a06",
+      "removed": [
+        8,
+        17
+      ]
+    },
+    {
+      "historical_calibration_nll": 2.7700047778586545,
+      "id": "a07",
+      "removed": [
+        8,
+        10
+      ]
+    },
+    {
+      "id": "a08",
+      "removed": [
+        10,
+        15
+      ]
+    },
+    {
+      "id": "a09",
+      "removed": [
+        10,
+        12
+      ]
+    }
+  ],
+  "competitive_pool": [
+    [
+      12,
+      15
+    ],
+    [
+      10,
+      15
+    ],
+    [
+      10,
+      12
+    ],
+    [
+      15,
+      17
+    ],
+    [
+      12,
+      17
+    ],
+    [
+      6,
+      15
+    ],
+    [
+      10,
+      17
+    ],
+    [
+      6,
+      10
+    ],
+    [
+      6,
+      12
+    ],
+    [
+      8,
+      15
+    ],
+    [
+      6,
+      17
+    ],
+    [
+      8,
+      17
+    ],
+    [
+      8,
+      10
+    ],
+    [
+      10,
+      19
+    ],
+    [
+      3,
+      15
+    ],
+    [
+      12,
+      19
+    ]
+  ],
+  "e_previously_viewed": true,
+  "layer_numbering": "original parent zero-based",
+  "new_candidates": [
+    {
+      "id": "a08",
+      "removed": [
+        10,
+        15
+      ]
+    },
+    {
+      "id": "a09",
+      "removed": [
+        10,
+        12
+      ]
+    }
+  ],
+  "original_manifest_sha256": "8ef24b80b4a2a58bdb384ec4cc4c21e86704bed9b50f3e6245a591e8437bc60e",
+  "original_rule_reproduced": true,
+  "selection_basis": "fixed historical calibration ranks 2 and 3; post-V2 authorization"
+}

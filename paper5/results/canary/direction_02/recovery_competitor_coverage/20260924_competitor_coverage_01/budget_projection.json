@@ -1,0 +1,21 @@
+{
+  "additional_limit_seconds": 3600,
+  "counts": {
+    "checkpoint_writes": 16,
+    "constructions": 8,
+    "e_windows": 256,
+    "s_windows": 1024,
+    "updates": 400
+  },
+  "cumulative_limit_seconds": 14400,
+  "prior_gpu_seconds": 2375.137250719592,
+  "projected_additional_gpu_seconds": 3288.2503634020686,
+  "projected_cumulative_gpu_seconds": 5663.387614121661,
+  "unit_cost_bounds": {
+    "checkpoint_seconds": 0.2440315606072545,
+    "construction_seconds": 12.411723796278238,
+    "eval_window_seconds": 0.11707269924227148,
+    "historical_preselection_estimate_seconds": 753.0116015262902,
+    "update_seconds": 4.347788896411657
+  }
+}

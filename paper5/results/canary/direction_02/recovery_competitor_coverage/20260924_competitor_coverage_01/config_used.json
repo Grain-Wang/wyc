@@ -1,0 +1,99 @@
+{
+  "attention": "eager",
+  "bootstrap_replicates": 2000,
+  "bootstrap_seed": 20260924,
+  "budget_fixed_reserve_seconds": 300,
+  "budget_safety_factor": 1.5,
+  "candidate_count": 10,
+  "candidate_seed": 20260923,
+  "checkpoints": [
+    0,
+    20,
+    50,
+    100
+  ],
+  "competitive_pool_size": 16,
+  "coverage": {
+    "additional_gpu_seconds_limit": 3600,
+    "base_archive_sha": "123cd0ca2c7011a8bd1560aee47984954fe09a20",
+    "e_previously_viewed": true,
+    "interpretation": "post-V2 exploratory reuse of internal evaluation set; no new confirmatory claim",
+    "new_candidates": [
+      {
+        "id": "a08",
+        "removed": [
+          10,
+          15
+        ]
+      },
+      {
+        "id": "a09",
+        "removed": [
+          10,
+          12
+        ]
+      }
+    ],
+    "new_trajectory_count": 4,
+    "policy_sizes": [
+      10,
+      5,
+      2
+    ],
+    "source_run_id": "20260923_stage0_quality_v2_01"
+  },
+  "cpu_seconds_limit": 1800,
+  "d1_archive_commit": "6ee61e753d8e67b21c56adfb2edeec082e076f10",
+  "data_seed": 20260923,
+  "design_version": "D2_STAGE0_COMPETITOR_COVERAGE_V1",
+  "dtype": "bfloat16",
+  "gpu_seconds_limit": 14400,
+  "gradient_accumulation": 4,
+  "gradient_clip": 1.0,
+  "initial_free_memory_mib": 24576,
+  "learning_rate": 0.0001,
+  "lora_alpha": 16,
+  "lora_dropout": 0.0,
+  "lora_parameter_dtype": "float32",
+  "lora_rank": 8,
+  "lora_targets": [
+    "q_proj",
+    "v_proj"
+  ],
+  "material_gap_nats": 0.02,
+  "memory_reserve_mib": 4096,
+  "microbatch": 1,
+  "model_id": "Qwen/Qwen2.5-1.5B",
+  "model_revision": "8faed761d45a263340a0528343f099c05c9a4323",
+  "optimizer": "AdamW",
+  "pilot_seconds_limit": 1800,
+  "pilot_seed": 17,
+  "pilot_updates": 10,
+  "proposed_quality_max_ppl_ratio": 1.15,
+  "quality_admission": {
+    "base_archive_sha": "d44f48f49f80bb91d489eb80e2ab6ea0d08bc8b9",
+    "capacity_run_id": "20260923_a00_seed17_resume10",
+    "gpu_uuid": "GPU-5c9c1a6d-52ff-000a-11e9-be3f1b36d43d",
+    "observed_capacity_s_before_revision": true,
+    "physical_gpu": 2,
+    "quality_assessed_at": "100-step E endpoints, separately per seed",
+    "source_run_id": "20260923_stage0_01",
+    "version": "V2"
+  },
+  "quality_min_candidates": 2,
+  "removed_blocks": 2,
+  "run_id": "20260924_competitor_coverage_01",
+  "sequence_length": 512,
+  "source_sha256": "9e9fa1ad55b1c2c95b08e37dd8e653f638fac2c6de904b79e813611eefbc985f",
+  "training_seeds": [
+    17,
+    29
+  ],
+  "updates": 100,
+  "weight_decay": 0.0,
+  "windows": {
+    "E": 64,
+    "S": 64,
+    "T": 400
+  }
+}

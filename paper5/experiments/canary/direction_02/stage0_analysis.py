@@ -10,16 +10,29 @@ from scipy.stats import kendalltau, spearmanr
 UPDATES = {"B0": 100, "B20": 240, "BSH": 380, "Ref100": 800}
 
 
-def replay(scores: dict[int, dict[str, float]]) -> dict[str, Any]:
+def replay(
+    scores: dict[int, dict[str, float]],
+    *,
+    policy_sizes: tuple[int, int, int] = (8, 4, 2),
+) -> dict[str, Any]:
     """Freeze strategy choices with an explicit log of permitted S queries."""
     ids = sorted(scores[0])
-    if len(ids) != 8 or set(scores) != {0, 20, 50, 100}:
-        raise ValueError("Expected eight complete trajectories at 0/20/50/100")
+    count, survivors20, survivors50 = policy_sizes
+    if policy_sizes not in {(8, 4, 2), (10, 5, 2)}:
+        raise ValueError("Unauthorized policy sizes")
+    if len(ids) != count or set(scores) != {0, 20, 50, 100}:
+        raise ValueError("Expected complete trajectories at 0/20/50/100")
     for values in scores.values():
         if sorted(values) != ids or not np.isfinite(list(values.values())).all():
             raise ValueError("Missing or nonfinite S loss")
     result = {}
-    for strategy in UPDATES:
+    updates = {
+        "B0": 100,
+        "B20": count * 20 + 80,
+        "BSH": count * 20 + survivors20 * 30 + survivors50 * 50,
+        "Ref100": count * 100,
+    }
+    for strategy in updates:
         queries = []
 
         def best(step: int, pool: list[str], count: int) -> list[str]:
@@ -33,13 +46,13 @@ def replay(scores: dict[int, dict[str, float]]) -> dict[str, Any]:
         elif strategy == "Ref100":
             chosen = best(100, ids, 1)[0]
         else:
-            four = best(20, ids, 4)
-            two = best(50, four, 2)
+            four = best(20, ids, survivors20)
+            two = best(50, four, survivors50)
             chosen = best(100, two, 1)[0]
         result[strategy] = {
             "selected": chosen,
             "endpoint": 100,
-            "training_updates": UPDATES[strategy],
+            "training_updates": updates[strategy],
             "queries": queries,
         }
     return result
@@ -132,11 +145,21 @@ def analyze(
     labels: list[int],
     cfg: dict[str, Any],
     unit_costs: dict[str, float],
+    *,
+    policy_sizes: tuple[int, int, int] = (8, 4, 2),
 ) -> dict[str, Any]:
     """Analyze complete endpoints using the choices persisted before E access."""
     names = sorted(e_losses["17"])
-    if len(names) != 8 or sorted(e_losses["29"]) != names:
+    count, survivors20, survivors50 = policy_sizes
+    if policy_sizes not in {(8, 4, 2), (10, 5, 2)}:
+        raise ValueError("Unauthorized policy sizes")
+    if len(names) != count or sorted(e_losses["29"]) != names:
         raise ValueError("Incomplete endpoints")
+    for seed in ("17", "29"):
+        if selection[seed] != replay(
+            {int(k): v for k, v in s_losses[seed].items()}, policy_sizes=policy_sizes
+        ):
+            raise ValueError("Choices differ from permitted S-only replay")
     arrays = [e_losses[seed][name] for seed in ("17", "29") for name in names]
     matrix = np.asarray([*arrays, e_losses["parent"]], dtype=float)
     weights = np.asarray(labels, dtype=float)
@@ -157,9 +180,14 @@ def analyze(
         common = unit_costs["historical_preselection_estimate_seconds"]
         for strategy, record in choices.items():
             query_windows = len(record["queries"]) * cfg["windows"]["S"]
-            constructions = 9 if strategy == "B0" else 8
+            constructions = count + 1 if strategy == "B0" else count
             # Includes one endpoint E evaluation and persistence at policy stage boundaries.
-            writes = {"B0": 1, "B20": 9, "BSH": 14, "Ref100": 8}[strategy]
+            writes = {
+                "B0": 1,
+                "B20": count + 1,
+                "BSH": count + survivors20 + survivors50,
+                "Ref100": count,
+            }[strategy]
             seconds = (
                 common
                 + record["training_updates"] * unit_costs["update_seconds"]
@@ -188,7 +216,7 @@ def analyze(
             }
         for strategy, row in strategies.items():
             row["lower_cost"] = bool(
-                row["training_updates"] <= 0.5 * UPDATES["Ref100"]
+                row["training_updates"] <= 0.5 * count * 100
                 and row["standalone_seconds_estimate"]
                 < strategies["Ref100"]["standalone_seconds_estimate"]
             )
