@@ -1,5 +1,14 @@
 # AutoResearch 当前接续状态
 
+> **2026-09-24 paper5 / D2 当前探针正式收尾；Direction 3–5 定向复评完成，等待选择**
+>
+> - 固定数值结果归档 `319cb64e8a95705c29fd5f893354ca0632adf894`；原 V2 归档 `123cd0ca2c7011a8bd1560aee47984954fe09a20`。原 8 候选加唯一一次新增 2 候选，共 10 候选、两个 seed；原 16 条只读复用。恢复后质量可用，B0/B20/BSH/Ref100 两个 seed 均选 a00，保留 NO_MATERIAL_SELECTION_GAP 与 SIMPLE_BASELINE_SUFFICIENT。
+> - 结束当前“双层删除＋100 步 CE/LoRA”问题验证，不再追加候选、步数、seed；FHRD/RSC 暂停。这不是否定完整方法或所有恢复感知 NAS。D1 当前路线结束、CET 暂停及既有判定不变。
+> - 收尾入口：`paper5/analysis/direction_02_closeout.md`。本轮只读取报告核对，没有重做已完成的全量 CPU 审计，没有运行模型或修改/复制历史结果、缓存、checkpoint。
+> - 定向复评入口：`paper5/analysis/next_direction_decision_after_d2.md`。查阅 D3–5 原方案、旧排序及原论文/作者代码，首选 D4 的固定候选小样本选择损失探针，备选 D3；D5 暂不建议启动。旧 idea/排序不覆盖；FANG/GPrune、FlexMoE、EvoPress 等近邻限制及未验证假设已说明。
+> - 最小探针仅为待批准草案，须纳入强候选、独立文档划分与质量门槛，先比较分层评分和增加少量校准样本。不能以普通统计或排名波动宣称新算法；尚不是 Paper Candidate。
+> - **尚无新方向获得 GPU 实验授权。** 不启动新 runner、数据准备、FHRD/RSC、PDR-NAS/ADCS 或新方向实验；等待用户确认。此次为文档提交，不是新的实验执行或数值结果归档。
+
 > **2026-09-24 paper5 / 一次最强竞争者覆盖补充完成，停止**
 >
 > 基础归档 `123cd0ca2c7011a8bd1560aee47984954fe09a20`；新增轨迹执行代码 `28a3db86d1fd85e2505040b4aed8a79f58803978`。只新增a08=(10,15)、a09=(10,12)各seed17/29×100步，共4/4完成；原16条只读复用。已核验两者为原竞争池第二、第三名且未入选。查看V2结果后提出，E已曝光，属内部探索补充，不覆盖原八候选结论。
